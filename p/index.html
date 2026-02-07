@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Choose University</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container{
+      margin: 10px;
+      padding: 10px;
+    }
+    table{
+      width:100%;
+      max-width:700px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div id="nav"></div>
+
+<div class="container">
+  <center><h1>Choose University</h1>
+
+  <!-- FORM -->
+  <form id="universityForm">
+    <table>
+      <tr>
+        <th>University Name</th>
+        <th>Choose</th>
+      </tr>
+
+      <tr>
+        <td>Dr. A. P. J. Abdul Kalam Technical University (AKTU)</td>
+        <td><input type="radio" name="file" value="aktu" required></td>
+      </tr>
+
+      <tr>
+        <td>Chhatrapati Shahu Ji Maharaj University (CSJMU)</td>
+        <td><input type="radio" name="file" value="csjmu" required></td>
+      </tr>
+
+      <tr>
+        <td>Dr. Bhim Rao Ambedkar University (DBRAU)</td>
+        <td><input type="radio" name="file" value="dbrau" required></td>
+      </tr>
+
+      <tr>
+        <td>Chaudhary Charan Singh University (CCSU)</td>
+        <td><input type="radio" name="file" value="ccsu" required></td>
+      </tr>
+    </table><br>
+
+      <button type="submit" class="btn">Submit</button>
+    </center>
+  </form>
+</div>
+
+<!-- NAV INCLUDE -->
+<script>
+fetch("../nav.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("nav").innerHTML = data;
+  });
+</script>
+
+<!-- FORM LOGIC (PHP replacement) -->
+<script>
+document.getElementById("universityForm").addEventListener("submit", function(e){
+  e.preventDefault(); // stop POST
+
+  const selected = document.querySelector('input[name="file"]:checked');
+
+  if(!selected){
+    alert("Kyo, maje lene he!!");
+    window.location.href = "https://sabkacode.vercel.app/p";
+    return;
+  }
+
+  const map = {
+    csjmu: "https://sabkacode.vercel.app/p/csjmu",
+    dbrau: "https://sabkacode.vercel.app/p/dbrau",
+    ccsu:  "https://sabkacode.vercel.app/p/ccsu",
+    aktu:  "https://sabkacode.vercel.app/p/aktu"
+  };
+
+  const target = map[selected.value];
+
+  if(target){
+    window.location.href = target;
+  }else{
+    alert("Kyo, maje lene he!!");
+    window.location.href = "https://sabkacode.vercel.app/p";
+  }
+});
+</script>
+
+</body>
+</html>
