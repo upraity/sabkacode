@@ -211,7 +211,7 @@
 
 <!-- NAV INCLUDE SCRIPT -->
 <script>
-fetch("../nav.html")
+fetch("../../nav.html")
   .then(response => response.text())
   .then(data => {
     document.getElementById("nav").innerHTML = data;
@@ -227,15 +227,15 @@ fetch("../nav.html")
 
     if(!selected){
         alert("Kyo, maje lene he!!");
-        window.location.href = "https://sabkacode.vercel.app/p";
+        window.location.href = "https://sabkacode.vercel.app/notes";
         return;
     }
 
     const map = {
-        csjmu: "https://sabkacode.vercel.app/p/csjmu",
-        dbrau: "https://sabkacode.vercel.app/p/dbrau",
-        ccsu:  "https://sabkacode.vercel.app/p/ccsu",
-        aktu:  "https://sabkacode.vercel.app/p/aktu"
+        csjmu: "https://sabkacode.vercel.app/notes/csjmu",
+        dbrau: "https://sabkacode.vercel.app/notes/dbrau",
+        ccsu:  "https://sabkacode.vercel.app/notes/ccsu",
+        aktu:  "https://sabkacode.vercel.app/notes/aktu"
     };
 
     const target = map[selected.value];
@@ -244,7 +244,7 @@ fetch("../nav.html")
         window.location.href = target;
     }else{
         alert("Kyo, maje lene he!!");
-        window.location.href = "https://sabkacode.vercel.app/p";
+        window.location.href = "https://sabkacode.vercel.app/notes";
     }
     });
 </script>
