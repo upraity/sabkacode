@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>SabkaCode - with coding</title>
+
     <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "otqed8ed9r");
-</script>
+    </script>
+
     <style>
         
         main {
@@ -48,10 +49,12 @@
             bottom: 0;
             width: 100%;
         }
+
         a{
             text-decoration:none;
             color:black;
         }
+
         .goto{
             background-color: #4caf50;
             color: #fff;
@@ -66,10 +69,12 @@
             right: 20px;
             height:53px;
         }
-         .goto:hover{
+
+        .goto:hover{
             background-color:#3498db;
         }
-         .whats{
+
+        .whats{
             background-color: #4caf50;
             color: #fff;
             padding: 12px 13.5px;
@@ -82,263 +87,176 @@
             bottom: 120px;
             right: 20px;
             height:57px;
-
         }
-         .whats:hover{
+
+        .whats:hover{
             background-color:#3498db;
         }
+
         #pageCount{
-        color:transparent;
-    }
-    </style>
-    <script language="JavaScript" type="text/javascript">
-        //Message to display whenever right click on website
-        var message = "Sorry, Right Click have been disabled."; 
-        function click(e) {
-        if (document.all) {
-        if (event.button == 2 || event.button == 3) {
-        alert(message);
-        return false;
+            color:transparent;
         }
+
+        /* ============================= */
+        /* Scoped Styling for New Content */
+        /* ============================= */
+
+        .extra-content h2 {
+            font-size: 24px;
+            margin-top: 40px;
+            color: #2c3e50;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
         }
-        else {
-        if (e.button == 2 || e.button == 3) {
-        e.preventDefault();
-        e.stopPropagation();
-        alert(message);
-        return false;
+
+        .extra-content h3 {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #34495e;
         }
+
+        .extra-content p {
+            font-size: 16px;
+            color: #555;
+            margin: 15px 0;
+            line-height: 1.6;
         }
+
+        .extra-content ul {
+            margin: 15px 0 15px 20px;
+            padding-left: 15px;
         }
-        if (document.all) {
-        document.onmousedown = click;
+
+        .extra-content ul li {
+            margin-bottom: 8px;
+            font-size: 15px;
+            color: #444;
         }
-        else {
-        document.onclick = click;
+
+        .extra-content h3 + p {
+            background: #f9f9f9;
+            padding: 10px 15px;
+            border-radius: 5px;
         }
-        document.oncontextmenu = function () {
-        return false;
-        };
-    </script>
-    <style>
-        /* ===== Enhanced Content Styling ===== */
-
-h1 {
-    font-size: 32px;
-    margin-top: 20px;
-    color: #2c3e50;
-    text-align: center;
-}
-
-h2 {
-    font-size: 24px;
-    margin-top: 40px;
-    color: #2c3e50;
-    border-left: 4px solid #3498db;
-    padding-left: 10px;
-}
-
-h3 {
-    font-size: 18px;
-    margin-top: 20px;
-    color: #34495e;
-}
-
-p {
-    font-size: 16px;
-    color: #555;
-    margin: 15px 0;
-}
-
-ul {
-    margin: 15px 0 15px 20px;
-    padding-left: 15px;
-}
-
-ul li {
-    margin-bottom: 8px;
-    font-size: 15px;
-    color: #444;
-}
-
-/* FAQ Section Styling */
-h3 + p {
-    background: #f9f9f9;
-    padding: 10px 15px;
-    border-radius: 5px;
-}
-
-/* Improve Card Look Slightly */
-.card {
-    transition: all 0.3s ease;
-}
-
-.card h3 {
-    margin-top: 0;
-}
-
-.card p {
-    font-size: 14px;
-}
-
-/* Improve overall spacing */
-main {
-    padding-bottom: 40px;
-}
-
-/* Responsive Improvements */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 24px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    p {
-        font-size: 15px;
-    }
-}
 
     </style>
-    </head>
-    <body>
+</head>
 
-        <!--<?php
-           /*if(isset($_SESSION['loggedin'])){
-                echo '<a href="https://dj.000.pe/logout.php">Logout</a>';
-            }
-            else{
-                echo '<a href="https://dj.000.pe/login.php">Login</a>';
-                echo '<a href="https://dj.000.pe/signin.php">Sign up</a>';
-            }*/
-            include 'nav.php';
-        ?>-->
-        <div id="nav"></div>
-    <main><center><span id="pageCount"><span></center>
-        <!-- Card grid for different sections -->
-        <h2>Welcome to SabkaCode!</h2>
-        <p>Welcome to SabkaCode, your one-stop destination for all things programming. Here you can find syllabus, previous paper, notes, code and related to various programming language and topics.</p><br>
-        <h2>Explore SabkaCode Sections</h2>
-        <div class="card-container">
-            <!-- Card 1 - Home -->
-            <div class="card">
-                <h3>Home</h3>
-                <p>Discover the latest updates and announcements.</p>
-            </div>
-            <!-- Card 2 - Notes -->
-            <a href="/notes">
-                <div class="card">
-                    <h3>Notes</h3>
-                    <p>Access comprehensive study materials and notes. Find detailed and easy to understand notes on different programming languages and concepts.
-                    </p>
-                </div>
-            </a>
-            <!-- Card 3 - Codes -->
-            <div class="card">
-                <h3>Codes</h3>
-                <p>Explore coding examples and solutions. Explore a vast collection of code samples and examples for various programming tasks.</p>
-            </div>
-            <!-- Card 4 - Resources -->
-            <div class="card">
-                <h3>Resources</h3>
-                <p>Find previous papers and detailed syllabus information. Create a front page of assignment & practical file. And you see your result here.</p>
-            </div>
-            <!--Card 5 - Previous Paper-->
-            <a href="/p">
-                <div class="card">
-                    <h3>Previous Paper</h3>
-                    <p>Access previous paper for coding exams and assessments.</p><br>
-                </div>
-            </a>
-            <a href="/jee">
-            <!-- Card 6 - Jee -->
-            <div class="card">
-                <h3>Jee Previous Paper</h3>
-                <p>Find Jee previous papers and download it.</p>
-            </div>
-            </a>
-        </div><br><BR>
-        <p>
-SabkaCode is an educational platform designed to help students understand programming subjects in a structured and practical way. 
-The purpose of this platform is to provide reliable academic notes, coding examples, syllabus coverage, and previous year question papers 
-in one organized location so that students do not have to search multiple websites for study materials.
+<body>
+
+<div id="nav"></div>
+
+<main>
+
+<center><span id="pageCount"></span></center>
+
+<h2>Welcome to SabkaCode!</h2>
+<p>Welcome to SabkaCode, your one-stop destination for all things programming. Here you can find syllabus, previous paper, notes, code and related to various programming language and topics.</p>
+
+<h2>Explore SabkaCode Sections</h2>
+
+<div class="card-container">
+
+    <div class="card">
+        <h3>Home</h3>
+        <p>Discover the latest updates and announcements.</p>
+    </div>
+
+    <a href="/notes">
+        <div class="card">
+            <h3>Notes</h3>
+            <p>Access comprehensive study materials and notes. Find detailed and easy to understand notes on different programming languages and concepts.</p>
+        </div>
+    </a>
+
+    <div class="card">
+        <h3>Codes</h3>
+        <p>Explore coding examples and solutions. Explore a vast collection of code samples and examples for various programming tasks.</p>
+    </div>
+
+    <div class="card">
+        <h3>Resources</h3>
+        <p>Find previous papers and detailed syllabus information. Create a front page of assignment & practical file. And you see your result here.</p>
+    </div>
+
+    <a href="/p">
+        <div class="card">
+            <h3>Previous Paper</h3>
+            <p>Access previous paper for coding exams and assessments.</p>
+        </div>
+    </a>
+
+    <a href="/jee">
+        <div class="card">
+            <h3>Jee Previous Paper</h3>
+            <p>Find Jee previous papers and download it.</p>
+        </div>
+    </a>
+
+</div>
+
+<!-- ================= EXTRA CONTENT START ================= -->
+
+<div class="extra-content">
+
+<p>
+SabkaCode is an educational platform designed to help students understand programming subjects in a structured and practical way. The purpose of this platform is to provide reliable academic notes, coding examples, syllabus coverage, and previous year question papers in one organized location.
 </p>
 
 <p>
-Many students face difficulty in understanding programming concepts due to scattered information and lack of structured resources. 
-SabkaCode aims to simplify that process by presenting content in a systematic format. Whether you are a beginner starting with basic programming 
-concepts or a university student preparing for examinations, this platform provides learning support in a simple and clear manner.
+Many students face difficulty in understanding programming concepts due to scattered information and lack of structured resources. SabkaCode simplifies that process by presenting content in a systematic format for beginners and university students.
 </p>
 
 <h2>Why Choose SabkaCode?</h2>
 
 <p>
-SabkaCode focuses on clarity and structured presentation. Instead of overwhelming students with unnecessary information, 
-we aim to provide concise explanations supported by practical examples. Each section is designed to make learning easier 
-and help students build strong conceptual foundations.
+SabkaCode focuses on clarity and structured presentation. Instead of overwhelming students with unnecessary information, the platform provides concise explanations supported by practical examples.
 </p>
 
 <ul>
 <li>Structured and easy-to-understand notes</li>
 <li>Academic syllabus coverage</li>
-<li>Previous year question papers for exam preparation</li>
+<li>Previous year question papers</li>
 <li>Practical coding examples</li>
 <li>Simple language for beginners</li>
 </ul>
 
-<p>
-Our goal is not just to provide content, but to ensure that students can actually understand and apply what they learn. 
-Concept clarity is the primary focus of SabkaCode.
-</p>
-
 <h2>Who Can Benefit From SabkaCode?</h2>
 
-<p>
-This platform is suitable for:
-</p>
+<p>This platform is suitable for:</p>
 
 <ul>
 <li>University students preparing for semester examinations</li>
 <li>Students looking for previous year papers</li>
-<li>Beginners learning HTML, programming fundamentals and coding logic</li>
-<li>Competitive exam aspirants seeking reference material</li>
+<li>Beginners learning programming</li>
+<li>Competitive exam aspirants</li>
 </ul>
-
-<p>
-The resources available here are organized to save time and provide direct access to relevant material without confusion.
-</p>
 
 <h2>Frequently Asked Questions</h2>
 
 <h3>Is SabkaCode free to use?</h3>
-<p>
-Yes. SabkaCode provides educational content freely for students and learners. The aim of this platform is to make learning accessible.
-</p>
+<p>Yes. SabkaCode provides educational content freely for students and learners.</p>
 
 <h3>Does SabkaCode provide official exam papers?</h3>
-<p>
-SabkaCode shares previous year question papers and reference materials for educational purposes. 
-Students should always verify official announcements from their respective institutions.
-</p>
+<p>SabkaCode shares previous year question papers and reference materials for educational purposes.</p>
 
 <h3>Is the content updated regularly?</h3>
-<p>
-We aim to update content whenever necessary to keep it relevant and useful for students preparing for exams or learning programming.
-</p>
+<p>Content is updated when required to maintain relevance.</p>
 
 <h3>Can beginners start learning from SabkaCode?</h3>
-<p>
-Yes. The explanations are written in simple language so that beginners can understand concepts step by step.
-</p>
+<p>Yes. The explanations are written in simple language for beginners.</p>
 
-    </main><br><br>
+</div>
 
+<!-- ================= EXTRA CONTENT END ================= -->
+
+</main>
+
+<br><br>
 
 </body>
 </html>
-<!-- NAV INCLUDE SCRIPT -->
+
 <script>
 fetch("nav.html")
   .then(response => response.text())
