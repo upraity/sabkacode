@@ -2,29 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Choose University</title>
+  <title>Previous Year Question Papers - SabkaCode</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Access previous year question papers for AKTU, CSJMU, DBRAU and CCSU. Prepare effectively for university exams with structured guidance.">
+
   <style>
     .container{
       margin: 10px;
       padding: 10px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
     table{
       width:100%;
       max-width:700px;
+    }
+    p{
+      line-height:1.6;
+      font-size:16px;
+    }
+    h2{
+      margin-top:40px;
     }
   </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <div id="nav"></div>
 
 <div class="container">
-  <center><h1>Choose University</h1>
 
-  <!-- FORM -->
+  <center><h1>Choose University</h1></center>
+
+  <p>
+  Previous year question papers play a crucial role in university examination preparation. 
+  They help students understand the exam pattern, important topics, frequently asked questions, 
+  and marking distribution. Practicing past papers improves time management skills and boosts confidence.
+  </p>
+
+  <p>
+  On this page, you can select your university and access structured previous year question papers 
+  for different courses and semesters. The papers provided are organized in a systematic manner 
+  to help students quickly navigate to their required subject.
+  </p>
+
+  <h2>Why Solve Previous Year Question Papers?</h2>
+
+  <p>
+  Solving previous year papers allows students to analyze the type of questions commonly asked in exams. 
+  It helps in identifying repeated topics and understanding the level of difficulty. 
+  Many university exams follow a pattern, and practicing older papers gives a clear advantage.
+  </p>
+
+  <ul>
+    <li>Understand exam structure and marking scheme</li>
+    <li>Identify important and repeated questions</li>
+    <li>Improve speed and accuracy</li>
+    <li>Build confidence before exams</li>
+    <li>Evaluate preparation level</li>
+  </ul>
+
+  <h2>Select Your University</h2>
+
   <form id="universityForm">
     <table>
       <tr>
@@ -53,9 +94,35 @@
       </tr>
     </table><br>
 
+    <center>
       <button type="submit" class="btn">Submit</button>
     </center>
   </form>
+
+  <h2>How to Use These Papers Effectively</h2>
+
+  <p>
+  Instead of just reading the paper, try solving it in a timed environment. 
+  Simulate actual exam conditions and attempt questions honestly. 
+  After solving, compare answers with your notes and revise weak topics.
+  </p>
+
+  <p>
+  Regular practice with previous year question papers significantly increases performance 
+  and reduces exam stress.
+  </p>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <h3>Are these official question papers?</h3>
+  <p>These papers are shared for academic and reference purposes to help students in preparation.</p>
+
+  <h3>Do question papers repeat in university exams?</h3>
+  <p>While exact questions may not repeat, similar patterns and topics are often seen in exams.</p>
+
+  <h3>Should I rely only on previous papers?</h3>
+  <p>No. Previous papers should be used along with proper study of syllabus and notes.</p>
+
 </div>
 
 <!-- NAV INCLUDE -->
@@ -67,33 +134,29 @@ fetch("../nav.html")
   });
 </script>
 
-<!-- FORM LOGIC (PHP replacement) -->
+<!-- FORM LOGIC -->
 <script>
 document.getElementById("universityForm").addEventListener("submit", function(e){
-  e.preventDefault(); // stop POST
+  e.preventDefault();
 
   const selected = document.querySelector('input[name="file"]:checked');
 
   if(!selected){
-    alert("Kyo, maje lene he!!");
-    window.location.href = "https://sabkacode.vercel.app/p";
+    alert("Please select a university.");
     return;
   }
 
   const map = {
-    csjmu: "https://sabkacode.vercel.app/p/csjmu",
-    dbrau: "https://sabkacode.vercel.app/p/dbrau",
-    ccsu:  "https://sabkacode.vercel.app/p/ccsu",
-    aktu:  "https://sabkacode.vercel.app/p/aktu"
+    csjmu: "../p/csjmu",
+    dbrau: "../p/dbrau",
+    ccsu:  "../p/ccsu",
+    aktu:  "../p/aktu"
   };
 
   const target = map[selected.value];
 
   if(target){
     window.location.href = target;
-  }else{
-    alert("Kyo, maje lene he!!");
-    window.location.href = "https://sabkacode.vercel.app/p";
   }
 });
 </script>
