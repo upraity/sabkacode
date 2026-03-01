@@ -73,3 +73,12 @@ This disclaimer may be updated or modified at any time without prior notice.
 
 </body>
 </html>
+
+<script>
+fetch("nav.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("nav").innerHTML = data;
+  })
+  .catch(error => console.error("Nav load error:", error));
+</script>
