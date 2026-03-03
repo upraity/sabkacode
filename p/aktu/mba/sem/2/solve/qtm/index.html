@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Previous Paper - Operations Research Solutions 2022</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+    padding:0;
+}
+.container{
+    /*width:90%;
+    background:#ffffff;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+    max-width:1100px;*/
+    padding:20px;
+    margin:20px auto;
+    border-radius:10px;
+    line-height:1.7;
+}
+h2{
+    text-align:center;
+    color:#1e3a8a;
+}
+h3{
+    margin-top:35px;
+    color:#0f172a;
+    border-left:6px solid #2563eb;
+    padding-left:10px;
+}
+ul{
+    margin-top:5px;
+}
+.highlight{
+    color:#b91c1c;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+  <div id="nav"></div>
+  <script>
+fetch("nav.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("nav").innerHTML = data;
+  })
+  .catch(error => console.error("Nav load error:", error));
+</script>
+<div class="container">
+    <h2>Previous Paper Solution 2022</h2>
+<h2>Operations Research</h2><hr>
+<h3>About This Paper</h3>
+<p>
+This page contains detailed solutions of MBA (QTM) – Operations Research 
+Previous Year Question Paper 2022. 
+All answers are written in simple and exam-oriented format 
+suitable for 2 to 10 marks university questions.
+</p>
+  <p>
+University: Dr. A.P.J. Abdul Kalam Technical University (AKTU)<br>
+Course: MBA – Quantitative Techniques for Management (QTM)<br>
+Year: 2022
+</p>
+
+<h3>Important Topics Covered</h3>
+<p>
+This paper covers Linear Programming, Transportation Problem, 
+Assignment Model, Game Theory, Queuing Theory, Replacement Model, 
+CPM and Decision Tree Analysis.
+</p>
+  
+<!-- ================= SECTION A – FULL DETAILED ================= -->
+
+<h2>Section A</h2>
+<!-- Q1 -->
+<h3>1. State the Scope of Operations Research</h3>
+
+<p><b>Operations Research (OR)</b> is a scientific approach to decision-making using mathematical models and analytical techniques.</p>
+
+<ul>
+<li><b>Production Management:</b> Product mix, scheduling, inventory control.</li>
+<li><b>Marketing:</b> Advertising budget allocation, sales forecasting.</li>
+<li><b>Finance:</b> Capital budgeting, portfolio management.</li>
+<li><b>Personnel Management:</b> Manpower planning, job assignment.</li>
+<li><b>Transportation & Logistics:</b> Distribution planning, routing.</li>
+<li><b>Project Management:</b> CPM, PERT techniques.</li>
+</ul>
+
+<p class="highlight">Conclusion: OR helps in optimal use of limited resources in managerial decisions.</p>
+
+<!-- Q2 -->
+<h3>2. Define Uncertainty in Business</h3>
+
+<p>Uncertainty refers to a situation where future outcomes are unknown and probabilities cannot be assigned.</p>
+
+<ul>
+<li>Lack of reliable data</li>
+<li>Unpredictable market conditions</li>
+<li>No past information available</li>
+</ul>
+
+<p><b>Example:</b> Launching a new product without demand history.</p>
+
+<p class="highlight">Uncertainty increases risk and makes decision-making complex.</p>
+
+<!-- Q3 -->
+<h3>3. What is LPP in OR?</h3>
+
+<p><b>Linear Programming Problem (LPP)</b> is a mathematical technique to maximize or minimize a linear objective function subject to linear constraints.</p>
+
+<ul>
+<li>Decision Variables</li>
+<li>Objective Function</li>
+<li>Constraints</li>
+<li>Non-negativity condition</li>
+</ul>
+
+<p><b>Example:</b> Maximizing profit under labor and material constraints.</p>
+
+<p class="highlight">LPP ensures optimal allocation of resources.</p>
+
+<!-- Q4 -->
+<h3>4. Define Vogel’s Method in Transportation Problem</h3>
+
+<p>Vogel’s Approximation Method (VAM) is used to obtain an initial feasible solution for a transportation problem.</p>
+
+<ul>
+<li>Compute row and column penalties</li>
+<li>Select highest penalty</li>
+<li>Allocate maximum possible to least cost cell</li>
+<li>Repeat until supply and demand satisfied</li>
+</ul>
+
+<p class="highlight">VAM generally gives a better initial solution than NW Corner method.</p>
+
+<!-- Q5 -->
+<h3>5. State about Assignment Model</h3>
+
+<p>The Assignment Model is a special case of transportation problem where one-to-one allocation is done.</p>
+
+<ul>
+<li>Equal number of jobs and machines</li>
+<li>Supply = Demand = 1</li>
+<li>Solved using Hungarian Method</li>
+</ul>
+
+<p><b>Objective:</b> Minimize cost or maximize profit.</p>
+
+<p class="highlight">Ensures optimal job allocation.</p>
+
+<!-- Q6 -->
+<h3>6. What is Two-Person Zero-Sum Game?</h3>
+
+<p>A competitive situation where gain of one player equals loss of the other.</p>
+
+<ul>
+<li>Only two players</li>
+<li>Total payoff = Zero</li>
+<li>Uses payoff matrix</li>
+<li>Maximin and Minimax principles applied</li>
+</ul>
+
+<p class="highlight">Used in competitive business strategies.</p>
+
+<!-- Q7 -->
+<h3>7. What is Sequencing Problem in OR?</h3>
+
+<p>Sequencing problem determines the optimal order of jobs on machines to minimize total time.</p>
+
+<ul>
+<li>n Jobs – 2 Machines (Johnson’s Rule)</li>
+<li>n Jobs – 3 Machines</li>
+<li>Minimize idle time</li>
+</ul>
+
+<p class="highlight">Improves production efficiency.</p>
+
+<!-- Q8 -->
+<h3>8. Define Queue Model</h3>
+
+<p>A Queue Model studies waiting lines to minimize waiting time and service cost.</p>
+
+<ul>
+<li>Arrival rate (λ)</li>
+<li>Service rate (μ)</li>
+<li>Queue discipline (FIFO)</li>
+</ul>
+
+<p><b>Example:</b> Bank counter waiting system.</p>
+
+<p class="highlight">Balances service efficiency and cost.</p>
+
+<!-- Q9 -->
+<h3>9. What is Replacement Concept?</h3>
+
+<p>Replacement concept determines optimal time to replace equipment to minimize cost.</p>
+
+<ul>
+<li>Gradual deterioration</li>
+<li>Sudden failure</li>
+<li>Cost comparison method</li>
+</ul>
+
+<p class="highlight">Helps reduce maintenance and breakdown cost.</p>
+
+<!-- Q10 -->
+<h3>10. Define CPM for Network</h3>
+
+<p><b>Critical Path Method (CPM)</b> is a network technique used in project planning and control.</p>
+
+<ul>
+<li>Identifies critical path</li>
+<li>Determines project duration</li>
+<li>Calculates float</li>
+</ul>
+
+<p class="highlight">Ensures timely project completion.</p>
+    
+<!-- ================= SECTION B – FULL DETAILED (10 MARKS EACH) ================= -->
+
+<h2>Section B</h2>
+
+<!-- Q2(a) -->
+<h3>Q2(a) Discuss Two Operations Research Methods to Solve Industrial Management Problems</h3>
+
+<h4>Answer:</h4>
+
+<p>Operations Research (OR) provides scientific and quantitative techniques to solve complex industrial management problems. Two important OR methods widely used in industries are Linear Programming and Transportation Model.</p>
+
+<h4>1. Linear Programming (LP)</h4>
+
+<p>Linear Programming is a mathematical optimization technique used to maximize or minimize a linear objective function subject to linear constraints.</p>
+
+<p><b>Basic Components of LP:</b></p>
+<ul>
+<li>Decision Variables (e.g., x₁, x₂)</li>
+<li>Objective Function (Max Z = ax₁ + bx₂)</li>
+<li>Constraints (resource limitations)</li>
+<li>Non-negativity condition (x₁ ≥ 0, x₂ ≥ 0)</li>
+</ul>
+
+<p><b>Industrial Applications:</b></p>
+<ul>
+<li>Product mix decisions – deciding how many units of each product to produce.</li>
+<li>Production planning – optimal use of labor, machine hours and raw materials.</li>
+<li>Cost minimization – reducing operational cost.</li>
+<li>Profit maximization – choosing best combination of outputs.</li>
+</ul>
+
+<p><b>Example:</b> Agar factory ke paas limited labour hours aur raw material ho, LP determine karta hai kaunsa product kitna produce kare taki maximum profit mile.</p>
+
+<p><b>Advantages:</b></p>
+<ul>
+<li>Scientific decision-making</li>
+<li>Optimal resource utilization</li>
+<li>Improves productivity</li>
+</ul>
+
+<hr>
+
+<h4>2. Transportation Model</h4>
+
+<p>The Transportation Model is used to determine the least cost method of transporting goods from several sources to several destinations.</p>
+
+<p><b>Objective:</b> Minimize total transportation cost.</p>
+
+<p><b>Methods Used:</b></p>
+<ul>
+<li>North-West Corner Method</li>
+<li>Least Cost Method</li>
+<li>Vogel’s Approximation Method</li>
+<li>MODI Method (for optimality)</li>
+</ul>
+
+<p><b>Industrial Applications:</b></p>
+<ul>
+<li>Supply chain management</li>
+<li>Distribution planning</li>
+<li>Warehouse allocation</li>
+<li>Logistics optimization</li>
+</ul>
+
+<p><b>Example:</b> Multiple factories se goods ko multiple warehouses tak bhejna at minimum transportation cost.</p>
+
+<p><b>Conclusion:</b> Linear Programming and Transportation models help industries reduce cost, increase efficiency and improve managerial decision-making.</p>
+
+<hr>
+
+<!-- Q2(b) -->
+<h3>Q2(b) Describe the Steps Involved in North-West Corner Method</h3>
+
+<h4>Answer:</h4>
+
+<p>The North-West Corner Method (NWCM) is a technique used to obtain an Initial Basic Feasible Solution (IBFS) of a transportation problem.</p>
+
+<h4>Steps:</h4>
+
+<p><b>Step 1: Start from North-West Corner</b><br>
+Transportation table ke top-left cell se allocation start karo.</p>
+
+<p><b>Step 2: Allocate Minimum of Supply and Demand</b><br>
+Allocation = min(Supply, Demand)<br>
+(Hinglish: jo value chhoti ho supply ya demand usko allocate kar do)</p>
+
+<p><b>Step 3: Adjust Supply and Demand</b><br>
+Allocated quantity ko supply aur demand se subtract karo.</p>
+
+<p><b>Step 4: Move to Next Cell</b><br>
+If supply becomes zero → move down.<br>
+If demand becomes zero → move right.</p>
+
+<p><b>Step 5: Repeat the Process</b><br>
+Continue allocation until all supply and demand are satisfied.</p>
+
+<p><b>Important Condition:</b><br>
+Total allocations must be = m + n − 1 (non-degenerate solution).</p>
+
+<p><b>Limitation:</b> This method ignores transportation cost, so it may not give optimal solution.</p>
+
+<hr>
+
+<!-- Q2(c) -->
+<h3>Q2(c) Explain Hungarian Algorithm for Assignment Problem</h3>
+
+<h4>Answer:</h4>
+
+<p>The Hungarian Algorithm is used to solve assignment problems where the objective is to minimize cost or maximize profit.</p>
+
+<h4>Steps of Hungarian Method:</h4>
+
+<p><b>Step 1: Row Reduction</b><br>
+Har row ka smallest element find karo aur usko puri row se subtract karo.</p>
+
+<p><b>Step 2: Column Reduction</b><br>
+Har column ka smallest element subtract karo.</p>
+
+<p><b>Step 3: Cover All Zeros</b><br>
+Minimum number of horizontal and vertical lines draw karo to cover all zeros.</p>
+
+<p><b>Step 4: Optimality Test</b><br>
+If number of lines = order of matrix → optimal solution found.<br>
+If not, smallest uncovered element subtract karke matrix adjust karo.</p>
+
+<p><b>Step 5: Make Assignment</b><br>
+Independent zeros choose karo (ek row aur ek column me sirf ek assignment).</p>
+
+<p><b>Advantages:</b></p>
+<ul>
+<li>Gives optimal solution</li>
+<li>Systematic method</li>
+<li>Useful for job-machine allocation</li>
+</ul>
+
+<p><b>Conclusion:</b> Hungarian method ensures minimum total cost assignment efficiently.</p>
+
+<hr>
+
+<!-- Q2(d) -->
+<h3>Q2(d) Applications of Johnson’s Algorithm for Sequencing Problem</h3>
+
+<h4>Answer:</h4>
+
+<p>Johnson’s Algorithm is used for sequencing n jobs on two machines to minimize total elapsed time.</p>
+
+<h4>Conditions:</h4>
+<ul>
+<li>Each job must pass through two machines in same order.</li>
+<li>No job passing allowed.</li>
+</ul>
+
+<h4>Procedure:</h4>
+<ul>
+<li>Find the smallest processing time.</li>
+<li>If smallest time is on Machine 1 → place job at beginning.</li>
+<li>If smallest time is on Machine 2 → place job at end.</li>
+<li>Repeat until all jobs are sequenced.</li>
+</ul>
+
+<h4>Applications:</h4>
+<ul>
+<li>Manufacturing industries</li>
+<li>Textile production</li>
+<li>Printing and packaging units</li>
+<li>Automobile assembly lines</li>
+</ul>
+
+<p><b>Benefits:</b></p>
+<ul>
+<li>Reduces machine idle time</li>
+<li>Minimizes total processing time</li>
+<li>Improves production efficiency</li>
+</ul>
+
+<hr>
+
+<!-- Q2(e) -->
+<h3>Q2(e) What is Project Management? Discuss Drawing of Network Diagrams</h3>
+
+<h4>Answer:</h4>
+
+<p>Project Management involves planning, scheduling and controlling activities to complete a project within specified time and cost limits.</p>
+
+<h4>Objectives:</h4>
+<ul>
+<li>Timely completion of project</li>
+<li>Cost control</li>
+<li>Effective resource utilization</li>
+</ul>
+
+<h4>Network Diagram:</h4>
+
+<p>A network diagram represents project activities and their relationships graphically.</p>
+
+<h4>Rules for Drawing Network:</h4>
+<ul>
+<li>Activities are represented by arrows.</li>
+<li>Events are represented by circles.</li>
+<li>No loops allowed.</li>
+<li>Network flows from left to right.</li>
+<li>Each activity must have unique start and end nodes.</li>
+<li>Dummy activities used when necessary.</li>
+</ul>
+
+<h4>Importance:</h4>
+<ul>
+<li>Identifies Critical Path</li>
+<li>Calculates float time</li>
+<li>Helps in monitoring project progress</li>
+</ul>
+
+<p><b>Conclusion:</b> CPM and PERT are powerful tools in project management for effective planning and control.</p>
+    
+<!-- ================= QUESTION 3 ================= -->
+<!-- ================= SECTION C – FULL DETAILED (10 MARKS EACH) ================= -->
+
+<h2>Section B</h2>
+<h2>Question 3</h2>
+
+<!-- Q3(a) -->
+<h3>Q3(a) What are the Three Operations Research Techniques Used for Managerial Decision Making?</h3>
+
+<h4>Answer:</h4>
+
+<p>Operations Research (OR) provides scientific and quantitative techniques that help managers take rational and optimal decisions. The three important OR techniques used in managerial decision-making are:</p>
+
+<hr>
+
+<h4>1. Linear Programming (LP)</h4>
+
+<p>Linear Programming is a mathematical optimization technique used to maximize or minimize a linear objective function subject to linear constraints.</p>
+
+<p><b>Main Elements:</b></p>
+<ul>
+<li>Decision Variables</li>
+<li>Objective Function (Maximize Profit / Minimize Cost)</li>
+<li>Constraints (Limited Resources)</li>
+<li>Non-negativity condition</li>
+</ul>
+
+<p><b>Managerial Applications:</b></p>
+<ul>
+<li>Product mix decisions</li>
+<li>Production planning</li>
+<li>Resource allocation</li>
+<li>Cost control</li>
+</ul>
+
+<p><b>Example:</b> Agar ek company do products banati hai aur labour hours limited hain, LP determine karta hai kitna production kare taki maximum profit mile.</p>
+
+<p><b>Importance:</b></p>
+<ul>
+<li>Optimal use of scarce resources</li>
+<li>Improves profitability</li>
+<li>Scientific and logical decision-making</li>
+</ul>
+
+<hr>
+
+<h4>2. Transportation and Assignment Models</h4>
+
+<p><b>Transportation Model:</b> Used to minimize cost of distributing goods from multiple sources to multiple destinations.</p>
+
+<p><b>Applications:</b></p>
+<ul>
+<li>Supply chain management</li>
+<li>Logistics planning</li>
+<li>Warehouse allocation</li>
+</ul>
+
+<p><b>Assignment Model:</b> Special case of transportation problem where one-to-one assignment is made.</p>
+
+<p><b>Applications:</b></p>
+<ul>
+<li>Assigning jobs to machines</li>
+<li>Assigning workers to tasks</li>
+<li>Project allocation</li>
+</ul>
+
+<p><b>Importance:</b> Reduces operational cost and improves efficiency.</p>
+
+<hr>
+
+<h4>3. Decision Theory / Decision Tree Technique</h4>
+
+<p>This technique is used when decisions are taken under conditions of certainty, risk, and uncertainty.</p>
+
+<p><b>Applications:</b></p>
+<ul>
+<li>New product launch decision</li>
+<li>Investment planning</li>
+<li>Business expansion decisions</li>
+</ul>
+
+<p><b>Importance:</b></p>
+<ul>
+<li>Evaluates alternative strategies</li>
+<li>Considers probabilities and payoffs</li>
+<li>Helps reduce risk</li>
+</ul>
+
+<p><b>Conclusion:</b> Linear Programming, Transportation/Assignment Models and Decision Tree techniques are powerful tools that enable managers to take scientific, cost-effective and optimal decisions.</p>
+
+<hr>
+
+<!-- Q3(b) -->
+<h3>Q3(b) Discuss Decision Tree Approach and Its Importance in Management</h3>
+
+<h4>Answer:</h4>
+
+<p>A Decision Tree is a graphical representation of decision alternatives and possible outcomes including probabilities and payoffs. It is mainly used in decision-making under risk and uncertainty.</p>
+
+<hr>
+
+<h4>Components of Decision Tree</h4>
+
+<ul>
+<li><b>Decision Node (□):</b> Represents a decision point.</li>
+<li><b>Chance Node (○):</b> Represents uncertain events.</li>
+<li><b>Branches:</b> Show alternatives or outcomes.</li>
+<li><b>Payoffs:</b> Monetary gains or losses.</li>
+</ul>
+
+<hr>
+
+<h4>Steps in Decision Tree Analysis</h4>
+
+<p><b>Step 1:</b> Define the problem clearly.</p>
+
+<p><b>Step 2:</b> Identify possible alternatives (e.g., launch product or not).</p>
+
+<p><b>Step 3:</b> Assign probabilities to different outcomes.</p>
+
+<p><b>Step 4:</b> Calculate Expected Monetary Value (EMV).</p>
+
+<p><b>Formula:</b></p>
+
+<p><b>EMV = Σ (Probability × Payoff)</b></p>
+
+<hr>
+
+<h4>Example:</h4>
+
+<p>A company is deciding whether to launch a new product.</p>
+
+<ul>
+<li>High demand (Probability = 0.6) → Profit = ₹5,00,000</li>
+<li>Low demand (Probability = 0.4) → Loss = ₹2,00,000</li>
+</ul>
+
+<p><b>EMV Calculation:</b></p>
+
+<p>
+EMV = (0.6 × 5,00,000) + (0.4 × -2,00,000)<br>
+= 3,00,000 − 80,000<br>
+= ₹2,20,000
+</p>
+
+<p>Since EMV is positive, launching the product is a better decision.</p>
+
+<hr>
+
+<h4>Importance of Decision Tree in Management</h4>
+
+<ul>
+<li>Provides visual clarity of complex decisions</li>
+<li>Helps evaluate risk scientifically</li>
+<li>Improves strategic planning</li>
+<li>Supports financial forecasting</li>
+<li>Encourages rational decision-making</li>
+</ul>
+
+<p><b>Conclusion:</b> Decision Tree is a powerful managerial tool that helps in selecting the best alternative by evaluating probabilities and expected values systematically.</p>
+    
+<!-- ================= QUESTION 4 ================= -->
+
+<h2>Question 4 – Linear Programming Problem </h2>
+
+<h3>Q4(a) Solve the Following LPP by Graphical Method</h3>
+
+<h4>Given:</h4>
+
+<p><b>Maximize</b></p>
+<p>Z = 6L₁ + 11L₂</p>
+
+<p><b>Subject to:</b></p>
+<p>1) 2L₁ + L₂ ≤ 104</p>
+<p>2) L₁ + 2L₂ ≤ 76</p>
+<p>3) L₁ ≥ 0 , L₂ ≥ 0</p>
+
+<hr>
+
+<h4>Solution:</h4>
+
+<p>This Linear Programming Problem is solved using the Graphical Method because it contains only two decision variables.</p>
+
+<hr>
+
+<h5>Step 1: Convert Inequalities into Equations</h5>
+
+<p>2L₁ + L₂ = 104</p>
+<p>L₁ + 2L₂ = 76</p>
+
+<p>(Boundary lines draw karne ke liye inequality ko equal banate hain.)</p>
+
+<hr>
+
+<h5>Step 2: Find Intercepts</h5>
+
+<p><b>For 2L₁ + L₂ = 104</b></p>
+<ul>
+<li>If L₁ = 0 → L₂ = 104</li>
+<li>If L₂ = 0 → L₁ = 52</li>
+</ul>
+
+<p>Points: (0,104) and (52,0)</p>
+
+<br>
+
+<p><b>For L₁ + 2L₂ = 76</b></p>
+<ul>
+<li>If L₁ = 0 → L₂ = 38</li>
+<li>If L₂ = 0 → L₁ = 76</li>
+</ul>
+
+<p>Points: (0,38) and (76,0)</p>
+
+<hr>
+
+<h5>Step 3: Find Intersection Point</h5>
+
+<p>
+2L₁ + L₂ = 104  ...(1)<br>
+L₁ + 2L₂ = 76   ...(2)
+</p>
+
+Multiply equation (2) by 2:
+
+<p>2L₁ + 4L₂ = 152</p>
+
+Subtract equation (1):
+
+<p>3L₂ = 48</p>
+<p>L₂ = 16</p>
+
+Substitute in (1):
+
+<p>2L₁ + 16 = 104</p>
+<p>L₁ = 44</p>
+
+<p><b>Intersection Point = (44,16)</b></p>
+
+<hr>
+
+<h5>Step 4: Corner Points of Feasible Region</h5>
+
+<ul>
+<li>(0,0)</li>
+<li>(52,0)</li>
+<li>(0,38)</li>
+<li>(44,16)</li>
+</ul>
+
+<hr>
+
+<h5>Step 5: Calculate Z at Each Point</h5>
+
+<p><b>Z(0,0) = 0</b></p>
+
+<p><b>Z(52,0) = 312</b></p>
+
+<p><b>Z(0,38) = 418</b></p>
+
+<p><b>Z(44,16) = 440</b></p>
+
+<hr>
+
+<h4>Final Answer:</h4>
+
+<p><b>Maximum Z = 440</b></p>
+<p><b>L₁ = 44 , L₂ = 16</b></p>
+
+<p>The optimal solution lies at the intersection point of the two constraints.</p>
+    
+<!-- ================= QUESTION 4(b) ================= -->
+
+<h3>Q4(b) Explain Graphical Method of Solving Linear Programming Problem</h3>
+
+<h4>Introduction:</h4>
+
+<p>The Graphical Method is used to solve Linear Programming Problems (LPP) when there are only two decision variables. It provides a visual representation of constraints and helps identify the optimal solution from the feasible region.</p>
+
+<hr>
+
+<h4>Conditions for Applying Graphical Method:</h4>
+
+<ul>
+<li>The problem must contain only two decision variables.</li>
+<li>All constraints must be linear.</li>
+<li>Non-negativity conditions must be satisfied.</li>
+</ul>
+
+<hr>
+
+<h4>Steps in Graphical Method:</h4>
+
+<h5>Step 1: Formulate the LPP</h5>
+
+<p>Define:</p>
+<ul>
+<li>Decision Variables</li>
+<li>Objective Function (Max or Min)</li>
+<li>Constraints</li>
+</ul>
+
+<p>(Sabse pehle problem ko mathematical form me convert karte hain.)</p>
+
+<hr>
+
+<h5>Step 2: Convert Inequalities into Equations</h5>
+
+<p>Replace ≤ or ≥ signs with equal (=) sign to draw boundary lines.</p>
+
+<hr>
+
+<h5>Step 3: Plot Constraint Lines on Graph</h5>
+
+<ul>
+<li>Find intercepts of each equation.</li>
+<li>Plot them on coordinate plane.</li>
+<li>Draw straight lines for each constraint.</li>
+</ul>
+
+<hr>
+
+<h5>Step 4: Identify Feasible Region</h5>
+
+<p>The feasible region is the common shaded area that satisfies all constraints.</p>
+
+<p>(Ye area first quadrant me hota hai kyunki variables non-negative hote hain.)</p>
+
+<hr>
+
+<h5>Step 5: Find Corner (Extreme) Points</h5>
+
+<p>Determine coordinates of all intersection points of constraint lines.</p>
+
+<hr>
+
+<h5>Step 6: Evaluate Objective Function</h5>
+
+<p>Substitute each corner point into objective function.</p>
+
+<p>The point giving maximum or minimum value is the optimal solution.</p>
+
+<hr>
+
+<h4>Advantages of Graphical Method:</h4>
+
+<ul>
+<li>Simple and easy to understand</li>
+<li>Provides visual clarity</li>
+<li>Best for small problems (2 variables)</li>
+</ul>
+
+<hr>
+
+<h4>Limitations:</h4>
+
+<ul>
+<li>Cannot be used when variables are more than two.</li>
+<li>Not suitable for large-scale problems.</li>
+</ul>
+
+<hr>
+
+<h4>Conclusion:</h4>
+
+<p>The Graphical Method is a fundamental technique in Linear Programming that helps managers determine the optimal solution visually by analyzing feasible region and corner points.</p>
+    
+<!-- ================= QUESTION 5 ================= -->
+
+<h2>Question 5 – Assignment Model & Game Theory</h2>
+
+<!-- ================= 5(a) ================= -->
+
+<h3>Q5(a) Find the Optimal Solution of the Assignment Problem</h3>
+
+<h4>Given Cost Matrix:</h4>
+
+<p>
+m1 → 12  8  7  8<br>
+m2 → 6   6  4  8<br>
+m3 → 3   5  7  4<br>
+m4 → 1   3  5  4
+</p>
+
+<h4>Solution Using Hungarian Method:</h4>
+
+<h5>Step 1: Row Reduction</h5>
+
+<p>Har row ka smallest element subtract karte hain.</p>
+
+<ul>
+<li>Row m1: Minimum = 7 → (5,1,0,1)</li>
+<li>Row m2: Minimum = 4 → (2,2,0,4)</li>
+<li>Row m3: Minimum = 3 → (0,2,4,1)</li>
+<li>Row m4: Minimum = 1 → (0,2,4,3)</li>
+</ul>
+
+<h5>Step 2: Column Reduction</h5>
+
+<p>Ab har column ka smallest element subtract karte hain.</p>
+
+<ul>
+<li>Column 1: Minimum = 0</li>
+<li>Column 2: Minimum = 1</li>
+<li>Column 3: Minimum = 0</li>
+<li>Column 4: Minimum = 1</li>
+</ul>
+
+<h5>Step 3: Cover All Zeros</h5>
+
+<p>Minimum number of horizontal and vertical lines draw kiye to cover all zeros.</p>
+
+<p>Since number of lines = 4 (order of matrix), optimal solution exists.</p>
+
+<h5>Step 4: Make Assignments</h5>
+
+<p>Independent zeros choose karte hain (ek row aur ek column me ek assignment).</p>
+
+<ul>
+<li>m1 → J2 (Cost = 8)</li>
+<li>m2 → J3 (Cost = 4)</li>
+<li>m3 → J4 (Cost = 4)</li>
+<li>m4 → J1 (Cost = 1)</li>
+</ul>
+
+<h4>Total Minimum Cost Calculation:</h4>
+
+<p>
+Total Cost = 8 + 4 + 4 + 1 = <b>17</b>
+</p>
+
+<h4>Final Answer:</h4>
+
+<p><b>Optimal Assignment:</b> m1–J2, m2–J3, m3–J4, m4–J1</p>
+<p><b>Minimum Total Cost = 17</b></p>
+
+<hr>
+
+<!-- ================= 5(b) ================= -->
+
+<h3>Q5(b) What is Game Theory? Discuss the Steps in Two-Person Zero-Sum Game</h3>
+
+<h4>Meaning of Game Theory:</h4>
+
+<p>Game Theory is a mathematical technique used to study competitive situations where two or more players take strategic decisions.</p>
+
+<p>In a <b>Two-Person Zero-Sum Game</b>, the gain of one player is equal to the loss of the other player.</p>
+
+<p>Total payoff = Zero.</p>
+
+<hr>
+
+<h4>Key Characteristics:</h4>
+
+<ul>
+<li>Only two players</li>
+<li>Strategies available to each player</li>
+<li>Payoff matrix represents gains and losses</li>
+<li>Rational decision-making assumed</li>
+</ul>
+
+<hr>
+
+<h4>Steps to Solve Two-Person Zero-Sum Game:</h4>
+
+<h5>Step 1: Construct Payoff Matrix</h5>
+
+<p>Rows represent Player A strategies and columns represent Player B strategies.</p>
+
+<h5>Step 2: Apply Maximin Principle</h5>
+
+<p>Player A finds minimum payoff in each row and selects maximum among them.</p>
+
+<h5>Step 3: Apply Minimax Principle</h5>
+
+<p>Player B finds maximum payoff in each column and selects minimum among them.</p>
+
+<h5>Step 4: Check for Saddle Point</h5>
+
+<p>If Maximin = Minimax → Saddle point exists and pure strategy solution is obtained.</p>
+
+<p>If not equal → Mixed strategy method is used.</p>
+
+<hr>
+
+<h4>Example:</h4>
+
+<p>
+      B1   B2<br>
+A1    4    2<br>
+A2    3    5
+</p>
+
+<p>
+Row minimums → 2 and 3 → Maximin = 3<br>
+Column maximums → 4 and 5 → Minimax = 4
+</p>
+
+<p>Since Maximin ≠ Minimax, no saddle point exists.</p>
+
+<hr>
+
+<h4>Importance in Management:</h4>
+
+<ul>
+<li>Helps in competitive pricing decisions</li>
+<li>Used in advertising competition</li>
+<li>Supports strategic planning</li>
+<li>Useful in market competition analysis</li>
+</ul>
+
+<h4>Conclusion:</h4>
+
+<p>Game Theory provides a logical framework to analyze competitive situations and select optimal strategies.</p>
+    
+<!-- ================= QUESTION 6 ================= -->
+
+<h2>Question 6 – Queuing Theory</h2>
+
+<!-- ================= 6(a) ================= -->
+
+<h3>Q6(a) Solve the Following Queuing Problem</h3>
+
+<h4>Given Data:</h4>
+
+<ul>
+<li>Number of adjusters (Servers) = 3</li>
+<li>Arrival rate = 20 claims per 8-hour day</li>
+<li>Average service time = 40 minutes per claimant</li>
+<li>Working hours per day = 8 hours</li>
+</ul>
+
+<hr>
+
+<h4>Step 1: Convert Data into Standard Form</h4>
+
+<p><b>Arrival Rate (λ):</b></p>
+
+<p>
+λ = 20 claims per 8 hours<br>
+λ = 20 / 8 = 2.5 claims per hour
+</p>
+
+<p><b>Service Rate (μ):</b></p>
+
+<p>
+Average service time = 40 minutes = 40/60 hours = 2/3 hour<br>
+μ = 1 / (2/3) = 1.5 per hour (per adjuster)
+</p>
+
+<p>Total service rate (for 3 servers):</p>
+
+<p>
+sμ = 3 × 1.5 = 4.5 per hour
+</p>
+
+<hr>
+
+<h4>(i) How Many Hours per Week Can an Adjuster Expect to Spend with Claimants?</h4>
+
+<h5>Step 2: Calculate Utilization Factor (ρ)</h5>
+
+<p>
+ρ = λ / (sμ)<br>
+ρ = 2.5 / 4.5<br>
+ρ = 0.556
+</p>
+
+<p>This means each adjuster is busy 55.6% of the time.</p>
+
+<h5>Step 3: Calculate Weekly Busy Hours</h5>
+
+<p>
+Working hours per week = 5 × 8 = 40 hours
+</p>
+
+<p>
+Busy hours = 0.556 × 40 = 22.24 hours
+</p>
+
+<h4>Answer (i):</h4>
+
+<p><b>An adjuster spends approximately 22.24 hours per week attending claimants.</b></p>
+
+<hr>
+
+<h4>(ii) Average Time Spent by a Claimant in the Branch Office</h4>
+
+<h5>Step 4: Calculate Average Time in System (W)</h5>
+
+<p>
+First find λ/s:<br>
+λ/s = 2.5 / 3 = 0.833
+</p>
+
+<p>
+W = 1 / (μ − λ/s)
+</p>
+
+<p>
+W = 1 / (1.5 − 0.833)<br>
+W = 1 / 0.667<br>
+W ≈ 1.5 hours
+</p>
+
+<h4>Answer (ii):</h4>
+
+<p><b>On average, a claimant spends approximately 1.5 hours in the branch office.</b></p>
+
+<hr>
+
+<!-- ================= 6(b) ================= -->
+
+<h3>Q6(b) Discuss the Applications of Poisson Distribution in Queuing Model</h3>
+
+<h4>Meaning of Poisson Distribution:</h4>
+
+<p>Poisson Distribution is used to describe the probability of a given number of arrivals occurring in a fixed time interval.</p>
+
+<p><b>Formula:</b></p>
+
+<p>
+P(x) = (e^−λ × λ^x) / x!
+</p>
+
+<p>Where:</p>
+<ul>
+<li>λ = Average arrival rate</li>
+<li>x = Number of arrivals</li>
+<li>e = 2.718</li>
+</ul>
+
+<hr>
+
+<h4>Applications in Queuing Model:</h4>
+
+<ul>
+<li><b>Bank Counters:</b> Number of customers arriving per hour.</li>
+<li><b>Call Centers:</b> Telephone calls arriving per minute.</li>
+<li><b>Hospital Emergency Units:</b> Patient arrivals.</li>
+<li><b>Traffic Flow:</b> Vehicles arriving at toll booths.</li>
+<li><b>Insurance Offices:</b> Claim arrivals per day.</li>
+</ul>
+
+<hr>
+
+<h4>Example Calculation:</h4>
+
+<p>If average arrivals λ = 4 per hour, find probability of exactly 2 arrivals.</p>
+
+<p>
+P(2) = (e^−4 × 4²) / 2!<br>
+= (e^−4 × 16) / 2<br>
+= 8e^−4
+</p>
+
+<hr>
+
+<h4>Importance in Queuing Theory:</h4>
+
+<ul>
+<li>Helps estimate waiting time</li>
+<li>Determines queue length</li>
+<li>Supports service facility planning</li>
+<li>Forms basis of M/M/1 and M/M/s models</li>
+</ul>
+
+<h4>Conclusion:</h4>
+
+<p>Poisson distribution plays a fundamental role in modeling random arrivals in queuing systems and helps in efficient service system design.</p>
+    
+<!-- ================= QUESTION 7 ================= -->
+
+<h2>Question 7 – Replacement Model and CPM </h2>
+
+<!-- ================= 7(a) ================= -->
+
+<h3>Q7(a) Discuss Replacement of Assets Which Fail Suddenly</h3>
+
+<h4>Introduction:</h4>
+
+<p>Replacement problems arise when machines, equipment or components become inefficient or fail. In case of sudden failure, items fail completely without prior warning.</p>
+
+<p>Examples include electric bulbs, fuses, electronic parts and machine components.</p>
+
+<hr>
+
+<h4>Nature of Sudden Failure:</h4>
+
+<ul>
+<li>Failure occurs randomly.</li>
+<li>No gradual deterioration warning.</li>
+<li>Maintenance cost is usually negligible before failure.</li>
+</ul>
+
+<hr>
+
+<h4>Replacement Policies:</h4>
+
+<h5>1. Individual Replacement Policy</h5>
+
+<ul>
+<li>Item is replaced only when it fails.</li>
+<li>No preventive replacement.</li>
+<li>Suitable when failure cost is low.</li>
+</ul>
+
+<h5>2. Group Replacement Policy</h5>
+
+<ul>
+<li>All items are replaced together at fixed intervals.</li>
+<li>Failed items between intervals are replaced individually.</li>
+<li>Economical when failure rate increases with time.</li>
+</ul>
+
+<hr>
+
+<h4>Decision Rule:</h4>
+
+<p>Compare:</p>
+
+<ul>
+<li>Average cost per period under individual replacement</li>
+<li>Average cost per period under group replacement</li>
+</ul>
+
+<p>The policy with minimum average cost is selected.</p>
+
+<hr>
+
+<h4>Advantages of Replacement Analysis:</h4>
+
+<ul>
+<li>Reduces breakdown cost</li>
+<li>Improves system reliability</li>
+<li>Ensures smooth operations</li>
+<li>Minimizes total maintenance expenditure</li>
+</ul>
+
+<h4>Conclusion:</h4>
+
+<p>Replacement analysis helps management decide the most economical time and method for replacing assets that fail suddenly.</p>
+
+<hr>
+
+<!-- ================= 7(b) ================= -->
+
+<h3>Q7(b) Find the Critical Path and Minimum Completion Time Using CPM</h3>
+
+<h4>Given Data:</h4>
+
+<ul>
+<li>v1 = 10 days</li>
+<li>v2 = 10 days</li>
+<li>v3 = 6 days</li>
+<li>v4 = 8 days</li>
+<li>v5 = 12 days</li>
+</ul>
+
+<hr>
+
+<h4>Precedence Relationships:</h4>
+
+<ul>
+<li>v1 and v2 start together.</li>
+<li>v3 starts after 5 days of v1.</li>
+<li>v4 starts after:
+    <ul>
+        <li>4 days of v1</li>
+        <li>3 days of v3</li>
+        <li>6 days of v2</li>
+    </ul>
+</li>
+<li>v5 starts after:
+    <ul>
+        <li>v1 is completed</li>
+        <li>v2 is half completed (5 days)</li>
+    </ul>
+</li>
+</ul>
+
+<hr>
+
+<h4>Step 1: Calculate Earliest Start (ES) and Earliest Finish (EF)</h4>
+
+<h5>Activity v1:</h5>
+<p>ES = 0</p>
+<p>EF = 0 + 10 = 10</p>
+
+<h5>Activity v2:</h5>
+<p>ES = 0</p>
+<p>EF = 10</p>
+
+<h5>Activity v3:</h5>
+<p>Starts after 5 days of v1</p>
+<p>ES = 5</p>
+<p>EF = 5 + 6 = 11</p>
+
+<h5>Activity v4:</h5>
+
+<p>Depends on:</p>
+
+<ul>
+<li>v1 (4 days → time = 4)</li>
+<li>v3 (5 + 3 = 8)</li>
+<li>v2 (6 days)</li>
+</ul>
+
+<p>Maximum of (4, 8, 6) = 8</p>
+
+<p>ES = 8</p>
+<p>EF = 8 + 8 = 16</p>
+
+<h5>Activity v5:</h5>
+
+<ul>
+<li>v1 completed → 10</li>
+<li>v2 half completed → 5</li>
+</ul>
+
+<p>Maximum = 10</p>
+
+<p>ES = 10</p>
+<p>EF = 10 + 12 = 22</p>
+
+<hr>
+
+<h4>Step 2: Determine Project Completion Time</h4>
+
+<p>Final activities finish at:</p>
+
+<ul>
+<li>v4 = 16 days</li>
+<li>v5 = 22 days</li>
+</ul>
+
+<p><b>Project completion time = 22 days</b></p>
+
+<hr>
+
+<h4>Step 3: Identify Critical Path</h4>
+
+<p>The longest path is:</p>
+
+<p><b>v1 → v5</b></p>
+
+<p>Total Duration = 10 + 12 = 22 days</p>
+
+<hr>
+
+<h4>Final Answer:</h4>
+
+<p><b>Critical Path = v1 → v5</b></p>
+<p><b>Minimum Completion Time = 22 days</b></p>
+
+<p>Critical path activities have zero slack and determine the total project duration.</p>
+
+</div>
+</body>
+</html>
