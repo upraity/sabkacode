@@ -1,3 +1,10 @@
+fetch("nav.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("nav").innerHTML = data;
+  })
+  .catch(error => console.error("Nav load error:", error));
+
 let isOpen = false;
 
             document.getElementById("click").addEventListener("click", function () {
