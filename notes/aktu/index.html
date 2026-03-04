@@ -135,11 +135,3 @@ students get accurate and exam-relevant study material for AKTU.
 <!-- NAV INCLUDE SCRIPT -->
 <script src="/script.js"></script>
 
-<script>
-fetch("../../../../nav.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("nav").innerHTML = data;
-  })
-  .catch(error => console.error("Nav load error:", error));
-</script>
