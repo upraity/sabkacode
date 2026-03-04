@@ -246,6 +246,119 @@
         color:transparent;
     }
     </style>
+	<style>
+
+body{
+font-family:Arial, sans-serif;
+margin:0;
+}
+
+header{
+background:#3498db;
+color:white;
+text-align:center;
+padding:1em;
+}
+
+nav{
+background:#2c3e50;
+text-align:center;
+padding:8px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+padding:8px 15px;
+display:inline-block;
+}
+
+nav a:hover{
+background:rgba(0,0,0,0.4);
+}
+
+footer{
+background:#34495e;
+color:white;
+text-align:center;
+padding:1em;
+position:fixed;
+bottom:0;
+width:100%;
+}
+
+/* FLOATING BUTTONS */
+
+.clicable{
+position:fixed;
+bottom:60px;
+right:40px;
+width:55px;
+height:55px;
+border:none;
+background:transparent;
+z-index:9999;
+cursor:pointer;
+}
+
+.clicable i{
+font-size:55px;
+}
+
+/* SOCIAL BUTTON STYLE */
+
+.whats,
+.whats1,
+.whats2{
+position:fixed;
+height:55px;
+width:55px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+opacity:0;
+transform:translateY(15px) scale(0.7);
+transition:all .4s ease;
+z-index:9999;
+pointer-events:none;
+}
+
+/* TELEGRAM */
+
+.whats1{
+background:#3498db;
+color:white;
+font-size:30px;
+bottom:140px;
+right:35px;
+}
+
+/* ARATTAI */
+
+.whats2{
+bottom:125px;
+right:100px;
+}
+
+/* WHATSAPP */
+
+.whats{
+background:#4caf50;
+color:white;
+font-size:30px;
+bottom:60px;
+right:120px;
+}
+
+/* VISIBLE STATE */
+
+.visible{
+opacity:1;
+transform:translateY(0) scale(1);
+pointer-events:auto;
+}
+
+</style>
 </head>
 
 <body>
@@ -262,22 +375,7 @@
         <a href="https://sabkacode.vercel.app">Home</a>
         <div class="dropdown">
 	    <a href="https://sabkacode.vercel.app/notes">Notes</i></a>
-            <!--<div class="dropdown-content">
-                <a href="https://dj.000.pe/c">C</a><br>
-                <a href="https://dj.000.pe/html">Html</a><br>
-                <a href="https://dj.000.pe/maths">Maths</a><br>
-                <a href="https://dj.000.pe/de">DE</a><br>
-                <a href="https://dj.000.pe/cpp">Cpp</a><bR>
-                <a href="https://dj.000.pe/dsa">DSA</a><br>
-                <a href="https://dj.000.pe/nm">NM</a><br>
-                <a href="https://dj.000.pe/os">OS</a><br>
-                <a href="https://dj.000.pe/coa">COA</a><br>
-                <a href="https://dj.000.pe/dbms">DBMS</a><br>
-                <a href="https://dj.000.pe/stats">Stats</a><br>
-                <a href="https://dj.000.pe/php">PHP</a><br>                
-                <a href="https://dj.000.pe/java">JAVA</a><br>
-                <a href="https://dj.000.pe/ai">AI</a><br>
-            </div>-->
+           
         </div>
         <div class="dropdown">
             <a href="#">Resources</i></a>
@@ -380,6 +478,58 @@
         window.location.href = "https://chat.arattai.in/groups/n43545f313238383531313639383036383535383136355f32303030353332363533342d47437c3031303134303039303132333137363136323533383832353530";
     }
 </script>
+	<script>
+
+let isOpen=false;
+
+const mainBtn=document.getElementById("click");
+const btn1=document.getElementById("btn1");
+const btn2=document.getElementById("btn2");
+const btn3=document.getElementById("btn3");
+
+mainBtn.addEventListener("click",function(){
+
+if(!isOpen){
+
+btn1.classList.add("visible");
+btn2.classList.add("visible");
+btn3.classList.add("visible");
+
+mainBtn.querySelector("i").style.color="#0d47a1";
+
+isOpen=true;
+
+}else{
+
+btn1.classList.remove("visible");
+btn2.classList.remove("visible");
+btn3.classList.remove("visible");
+
+mainBtn.querySelector("i").style.color="#34495e";
+
+isOpen=false;
+
+}
+
+});
+
+
+/* LINKS */
+
+btn1.onclick=function(){
+window.location.href="https://t.me/sabkacode";
+}
+
+btn2.onclick=function(){
+window.location.href="https://chat.arattai.in/groups/n43545f313238383531313639383036383535383136355f32303030353332363533342d47437c3031303134303039303132333137363136323533383832353530";
+}
+
+btn3.onclick=function(){
+window.location.href="https://wa.me/918938870794";
+}
+
+</script>
+
 </body>
 </html>
 
