@@ -302,6 +302,73 @@
     #pageCount{
         color:transparent;
     }
+
+	
+/* Overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    z-index: 9999;
+}
+
+/* Show class */
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Popup Box */
+.popup-box {
+    background: #fff;
+    padding: 25px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    transform: scale(0.7);
+    transition: 0.3s ease;
+}
+
+/* Animation */
+.popup-overlay.active .popup-box {
+    transform: scale(1);
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Button */
+.popup-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-btn:hover {
+    background: #0056b3;
+}
     </style>
 	<style>
 
@@ -464,6 +531,16 @@ pointer-events:auto;
 			</div>
 		</div>      
     </nav>
+
+	<!-- Popup -->
+<div class="popup-overlay" id="popup">
+    <div class="popup-box">
+        <span class="close-btn" id="closeBtn"></span>
+        <h2>Welcome 👋</h2>
+        <p>Thanks for visiting our website!<BR>Please fill the form</p>
+         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScIHOsG_FDVr6QEB0kPqMl3r53ujusnnYHJr53t48FzAKMajg/viewform?embedded=true" width="400" height="450px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+</div>
 		<button id="btn1" class="whats1 hidden" onclick="tele()"><i class="fa-brands fa-telegram"></i></button>
         <img id="btn2" class="whats2 hidden" src="https://htmlify.me/djdj/youtube/arattai.svg" width="55px" height="55px" onclick="arattai()">
         <button id="btn3" class="whats hidden" onclick="whats()"><i class="fab fa-whatsapp whatsapp-icon"></i></button>
@@ -474,6 +551,27 @@ pointer-events:auto;
         © 2026 SabkaCode – Resources
     </footer>
 	<script src="/script.js"></script>
+	
+<script>
+// Show popup on load
+window.onload = function() {
+    setTimeout(() => {
+        document.getElementById("popup").classList.add("active");
+    }, 500); // 0.5 sec delay
+}
+
+// Close button
+document.getElementById("closeBtn").onclick = function() {
+    document.getElementById("popup").classList.remove("active");
+}
+
+// Close on outside click
+document.getElementById("popup").onclick = function(e) {
+    if(e.target === this) {
+        this.classList.remove("active");
+    }
+}
+</script>
     <!--
 <script>
              let isOpen = false;
