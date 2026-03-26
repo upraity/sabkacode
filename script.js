@@ -72,3 +72,23 @@ window.location.href="https://t.me/sabkacode";
 function arattai(){
 window.location.href="https://chat.arattai.in/groups/n43545f313238383531313639383036383535383136355f32303030353332363533342d47437c3031303134303039303132333137363136323533383832353530";
 }
+
+
+// Show popup on load
+window.onload = function() {
+    setTimeout(() => {
+        document.getElementById("popup").classList.add("active");
+    }, 500); // 0.5 sec delay
+}
+
+// Close button
+document.getElementById("closeBtn").onclick = function() {
+    document.getElementById("popup").classList.remove("active");
+}
+
+// Close on outside click
+document.getElementById("popup").onclick = function(e) {
+    if(e.target === this) {
+        this.classList.remove("active");
+    }
+}
