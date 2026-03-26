@@ -92,3 +92,9 @@ document.getElementById("popup").onclick = function(e) {
         this.classList.remove("active");
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("closeBtn").onclick = function() {
+        document.getElementById("popup").classList.remove("active");
+    };
+});
