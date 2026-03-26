@@ -550,6 +550,13 @@ pointer-events:auto;
         <!-- Add footer content, copyright information, etc. -->
         © 2026 SabkaCode – Resources
     </footer>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("closeBtn").onclick = function() {
+        document.getElementById("popup").classList.remove("active");
+    };
+});
+	</script>
 	<script src="/script.js"></script>
 	
 
