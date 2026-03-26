@@ -552,26 +552,7 @@ pointer-events:auto;
     </footer>
 	<script src="/script.js"></script>
 	
-<script>
-// Show popup on load
-window.onload = function() {
-    setTimeout(() => {
-        document.getElementById("popup").classList.add("active");
-    }, 500); // 0.5 sec delay
-}
 
-// Close button
-document.getElementById("closeBtn").onclick = function() {
-    document.getElementById("popup").classList.remove("active");
-}
-
-// Close on outside click
-document.getElementById("popup").onclick = function(e) {
-    if(e.target === this) {
-        this.classList.remove("active");
-    }
-}
-</script>
     <!--
 <script>
              let isOpen = false;
