@@ -150,7 +150,7 @@
             color: #fff;
         }
 
-        footer {
+       /* footer {
             background-color: #34495e;
             color: #fff;
             text-align: center;
@@ -158,7 +158,7 @@
            position: fixed;
             bottom: 0;
             width: 100%;
-        }
+        }*/
         a{
             text-decoration:none;
             color:black;
@@ -401,7 +401,7 @@ nav a:hover{
 background:rgba(0,0,0,0.4);
 }
 
-footer{
+/*footer{
 background:#34495e;
 color:white;
 text-align:center;
@@ -409,7 +409,7 @@ padding:1em;
 position:fixed;
 bottom:0;
 width:100%;
-}
+}*/
 
 /* FLOATING BUTTONS */
 
@@ -482,6 +482,64 @@ transform:translateY(0) scale(1);
 pointer-events:auto;
 }
 
+.footer {
+    background: #1e2a38;
+    color: #fff;
+    padding: 40px 20px 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.footer h3 {
+    margin-bottom: 15px;
+    color: #3498db;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.footer a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.footer a:hover {
+    color: #fff;
+    padding-left: 5px;
+    transition: 0.3s;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    padding-top: 15px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 18px;
+    color: #ccc;
+}
+
+.social-icons a:hover {
+    color: #3498db;
+}
+
 </style>
 </head>
 
@@ -546,127 +604,67 @@ pointer-events:auto;
         <button id="btn3" class="whats hidden" onclick="whats()"><i class="fab fa-whatsapp whatsapp-icon"></i></button>
         <button class="clicable" id="click" > <i class="fa-solid fa-circle-user" style="color: #34495e;"></i></button>
 
-    <footer>
-        <!-- Add footer content, copyright information, etc. -->
+   <!-- <footer>
         © 2026 SabkaCode – Resources
     </footer>
+	-->
+	
+<footer class="footer">
+
+<div class="footer-container">
+
+<!-- ABOUT -->
+<div>
+<h3>About SabkaCode</h3>
+<p>
+SabkaCode is an educational platform providing programming notes, previous year papers,
+and study resources for students of BCA, MCA, MBA and more.
+</p>
+</div>
+
+<!-- QUICK LINKS -->
+<div>
+<h3>Quick Links</h3>
+<a href="/">Home</a>
+<a href="/notes">Notes</a>
+<a href="/p">Previous Papers</a>
+<a href="/solve">Solved Papers</a>
+<a href="/blog">Blog</a>
+</div>
+
+<!-- IMPORTANT -->
+<div>
+<h3>Important Links</h3>
+<a href="/about">About Us</a>
+<a href="/contact">Contact Us</a>
+<a href="/privacy">Privacy Policy</a>
+<a href="/disclaimer">Disclaimer</a>
+<a href="/terms">Terms & Conditions</a>
+</div>
+
+<!-- CONTACT -->
+<div>
+<h3>Contact</h3>
+<p>Email: sabkacode@gmail.com</p>
+
+<div class="social-icons">
+<a href="#"><i class="fab fa-telegram"></i></a>
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 SabkaCode | All Rights Reserved
+</div>
+
+</footer>
 	
 	<script src="/script.js" defer></script>
-	
 
-    <!--
-<script>
-             let isOpen = false;
-
-            document.getElementById("click").addEventListener("click", function () {
-                const btn1 = document.getElementById("btn1");
-                const btn2 = document.getElementById("btn2");
-                const btn3 = document.getElementById("btn3");
-                const click = document.getElementById("click");
-
-                if (!isOpen) {
-                    // SHOW buttons
-                    btn1.classList.remove("hidden"); 
-                    btn2.classList.remove("hidden"); 
-                    btn3.classList.remove("hidden");
-                    click.style.color = "#0d47a1"; // dark blue
-
-                    setTimeout(() => {
-                        btn1.classList.add("visible");
-                        btn2.classList.add("visible");
-                        btn3.classList.add("visible");
-                    }, 50);
-
-                    
-                    isOpen = true;
-
-                } else {
-
-                    // HIDE animation
-                    btn1.classList.remove("visible");
-                    btn2.classList.remove("visible");
-                    btn3.classList.remove("visible");
-
-                    btn1.classList.add("hide");
-                    btn2.classList.add("hide");
-                    btn3.classList.add("hide");
-
-                    // After animation ends → fully hide (display:none)
-                    setTimeout(() => {
-                        btn1.classList.add("hidden");
-                        btn2.classList.add("hidden");
-                        btn3.classList.add("hidden");
-
-                        btn1.classList.remove("hide");
-                        btn2.classList.remove("hide");
-                        btn3.classList.remove("hide");
-                    }, 300);
-
-                    isOpen = false;
-                }
-            });
-    function whats(){
-        window.location.href = "https://wa.me/918938870794";
-        // window.location.href = "https://whatsapp.com/channel/0029VaElLRrAYlUMk0qIHX1G";
-    }
-    function tele(){
-        window.location.href = "https://t.me/sabkacode";
-    }
-    function arattai(){
-        window.location.href = "https://chat.arattai.in/groups/n43545f313238383531313639383036383535383136355f32303030353332363533342d47437c3031303134303039303132333137363136323533383832353530";
-    }
-</script>
-	<script>
-
-let isOpen=false;
-
-const mainBtn=document.getElementById("click");
-const btn1=document.getElementById("btn1");
-const btn2=document.getElementById("btn2");
-const btn3=document.getElementById("btn3");
-
-mainBtn.addEventListener("click",function(){
-
-if(!isOpen){
-
-btn1.classList.add("visible");
-btn2.classList.add("visible");
-btn3.classList.add("visible");
-
-mainBtn.querySelector("i").style.color="#0d47a1";
-
-isOpen=true;
-
-}else{
-
-btn1.classList.remove("visible");
-btn2.classList.remove("visible");
-btn3.classList.remove("visible");
-
-mainBtn.querySelector("i").style.color="#34495e";
-
-isOpen=false;
-
-}
-
-});
-
-
-/* LINKS */
-
-btn1.onclick=function(){
-window.location.href="https://t.me/sabkacode";
-}
-
-btn2.onclick=function(){
-window.location.href="https://chat.arattai.in/groups/n43545f313238383531313639383036383535383136355f32303030353332363533342d47437c3031303134303039303132333137363136323533383832353530";
-}
-
-btn3.onclick=function(){
-window.location.href="https://wa.me/918938870794";
-}
-
-</script>-->
 
 </body>
 </html>
