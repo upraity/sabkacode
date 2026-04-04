@@ -102,3 +102,46 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("popup").classList.remove("active");
     };
 });
+
+
+//nav 
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+        const floatingToggle = document.getElementById("floatingToggle");
+        const socialStack = document.getElementById("socialStack");
+        const dropButtons = document.querySelectorAll(".drop-btn");
+
+        menuToggle.addEventListener("click", () => {
+            const isOpen = navLinks.classList.toggle("open");
+            menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            menuToggle.innerHTML = isOpen
+                ? '<i class="fa-solid fa-xmark"></i>'
+                : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        floatingToggle.addEventListener("click", () => {
+            socialStack.classList.toggle("open");
+        });
+
+        dropButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                if (window.innerWidth > 860) {
+                    return;
+                }
+
+                const parent = button.parentElement;
+                const isOpen = parent.classList.toggle("open");
+                button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            });
+        });
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 860) {
+                navLinks.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                document.querySelectorAll(".drop").forEach((drop) => {
+                    drop.classList.remove("open");
+                });
+            }
+        });
