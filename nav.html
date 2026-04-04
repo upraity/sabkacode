@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SabkaCode provides programming notes, previous year papers, and learning resources for students.">
+    <meta name="keywords" content="SabkaCode, programming notes, previous papers, study materials, coding notes">
+    <meta name="author" content="SabkaCode">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="SabkaCode - Programming Notes and Previous Papers">
+    <meta property="og:description" content="Programming notes, previous papers, and study resources for students.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sabkacode.vercel.app/">
+    <meta property="og:image" content="https://sabkacode.vercel.app/logo.png">
+    <meta name="theme-color" content="#3498db">
+    <title>SabkaCode Navigation</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3498db;
+            --primary-dark: #1f3650;
+            --surface: rgba(255, 255, 255, 0.12);
+            --text: #102030;
+            --white: #ffffff;
+            --shadow: 0 16px 40px rgba(17, 39, 61, 0.18);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(52, 152, 219, 0.2), transparent 32%),
+                linear-gradient(180deg, #eef8ff 0%, #ffffff 100%);
+            color: var(--text);
+        }
+
+        .site-shell {
+            width: min(1180px, calc(100% - 24px));
+            margin: 18px auto;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            padding: 18px 22px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, #3498db 0%, #1f3650 100%);
+            color: var(--white);
+            box-shadow: var(--shadow);
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .brand-block {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        .brand-mark {
+            width: 58px;
+            height: 58px;
+            display: grid;
+            place-items: center;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.16);
+            font-size: 28px;
+        }
+
+        .brand-copy h1 {
+            margin: 0;
+            font-size: 30px;
+            line-height: 1.1;
+        }
+
+        .brand-copy p {
+            margin: 6px 0 0;
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 14px;
+        }
+
+        .quick-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .quick-actions a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px 14px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .nav-card {
+            margin-top: 14px;
+            padding: 12px;
+            border-radius: 24px;
+            background: rgba(31, 54, 80, 0.96);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-direction: column;
+        }
+
+        .menu-toggle {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border: none;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .nav-links a,
+        .drop-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 14px;
+            border: none;
+            border-radius: 14px;
+            background: transparent;
+            color: var(--white);
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .nav-links a:hover,
+        .drop-btn:hover,
+        .drop:hover .drop-btn {
+            background: var(--surface);
+        }
+
+        .drop {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            min-width: 220px;
+            display: none;
+            padding: 10px;
+            border-radius: 18px;
+            background: #ffffff;
+            box-shadow: 0 20px 36px rgba(15, 27, 39, 0.16);
+            z-index: 20;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 14px;
+            border-radius: 12px;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .dropdown-menu a:hover {
+            background: #eef7ff;
+        }
+
+        .drop:hover .dropdown-menu {
+            display: block;
+        }
+
+        .floating-button {
+            position: fixed;
+            right: 22px;
+            bottom: 24px;
+            width: 58px;
+            height: 58px;
+            display: grid;
+            place-items: center;
+            border: none;
+            border-radius: 50%;
+            background: #ffffff;
+            color: var(--primary-dark);
+            font-size: 28px;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            z-index: 40;
+        }
+
+        .social-stack {
+            position: fixed;
+            right: 22px;
+            bottom: 94px;
+            display: grid;
+            gap: 12px;
+            z-index: 39;
+        }
+
+        .social-stack a {
+            width: 54px;
+            height: 54px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 24px;
+            box-shadow: 0 14px 28px rgba(17, 39, 61, 0.2);
+            opacity: 0;
+            transform: translateY(12px) scale(0.82);
+            pointer-events: none;
+            transition: 0.25s ease;
+        }
+
+        .social-stack a:nth-child(1) {
+            background: #229ed9;
+        }
+
+        .social-stack a:nth-child(2) {
+            background: #25d366;
+        }
+
+        .social-stack a:nth-child(3) {
+            background: #ff5b5b;
+        }
+
+        .social-stack.open a {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        @media (max-width: 860px) {
+            .topbar {
+                align-items: center;
+            }
+
+            .nav-row {
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .menu-toggle {
+                display: inline-flex;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: stretch;
+                margin-top: 12px;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a,
+            .drop-btn {
+                width: 100%;
+                justify-content: flex-start;
+                background: rgba(255, 255, 255, 0.04);
+            }
+
+            .drop {
+                width: 100%;
+            }
+
+            .nav-links a i,
+            .drop-btn span {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .drop-btn {
+                position: relative;
+                padding-right: 44px;
+            }
+
+            .drop-btn .fa-chevron-down {
+                position: absolute;
+                right: 16px;
+            }
+
+            .dropdown-menu {
+                position: static;
+                display: none;
+                min-width: 100%;
+                margin-top: 8px;
+            }
+
+            .drop.open .dropdown-menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="site-shell">
+        <header class="topbar">
+            <a class="brand-block" href="https://sabkacode.vercel.app/">
+                <div class="brand-mark">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="brand-copy">
+                    <h1>SabkaCode</h1>
+                    <p>Programming Notes, Previous Papers, and learning resources for students</p>
+                </div>
+            </a>
+
+            <div class="quick-actions">
+                <a href="https://t.me/sabkacode" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-telegram"></i>
+                    Join Telegram
+                </a>
+                <a href="https://whatsapp.com/channel/0029VaElLRrAYlUMk0qIHX1G" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Join Channel
+                </a>
+            </div>
+        </header>
+
+        <nav class="nav-card">
+            <div class="nav-row">
+                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="nav-links" id="navLinks">
+                    <a href="https://sabkacode.vercel.app/">
+                        <i class="fa-solid fa-house"></i>
+                        Home
+                    </a>
+                    <a href="https://sabkacode.vercel.app/notes">
+                        <i class="fa-solid fa-book"></i>
+                        Notes
+                    </a>
+
+                    <div class="drop" id="resourcesDrop">
+                        <button class="drop-btn" type="button">
+                            <span><i class="fa-solid fa-layer-group"></i> Resources</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="https://sabkacode.vercel.app/jee">JEE Papers</a>
+                            <a href="https://dj.is-best.net/frontpage">Front Page</a>
+                            <a href="https://sabkacode.vercel.app/p">Previous Papers</a>
+                            <a href="https://sabkacode.vercel.app/solve">Solved Papers</a>
+                            <a href="https://djupraity.vercel.app/encrypt">Encrypt Tool</a>
+                        </div>
+                    </div>
+
+                    <a href="https://sabkacode.vercel.app/blog/">
+                        <i class="fa-solid fa-newspaper"></i>
+                        Blog
+                    </a>
+
+                    <div class="drop" id="contactDrop">
+                        <button class="drop-btn" type="button">
+                            <span><i class="fa-solid fa-address-card"></i> Contact</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="https://sabkacode.vercel.app/contactus.html">Contact Us</a>
+                            <a href="https://sabkacode.vercel.app/aboutus.html">About Us</a>
+                            <a href="https://sabkacode.vercel.app/disclaimer.html">Disclaimer</a>
+                            <a href="https://sabkacode.vercel.app/termscondition.html">Terms & Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="social-stack" id="socialStack">
+        <a href="https://t.me/sabkacode" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+            <i class="fa-brands fa-telegram"></i>
+        </a>
+        <a href="https://wa.me/918938870794" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://chat.arattai.in/groups/n43545f313238383531313639383036383535383136355f32303030353332363533342d47437c3031303134303039303132333137363136323533383832353530" target="_blank" rel="noopener noreferrer" aria-label="Arattai">
+            <i class="fa-solid fa-comment-dots"></i>
+        </a>
+    </div>
+
+    <button class="floating-button" id="floatingToggle" type="button" aria-label="Open social links">
+        <i class="fa-solid fa-circle-user"></i>
+    </button>
+
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+        const floatingToggle = document.getElementById("floatingToggle");
+        const socialStack = document.getElementById("socialStack");
+        const dropButtons = document.querySelectorAll(".drop-btn");
+
+        menuToggle.addEventListener("click", () => {
+            const isOpen = navLinks.classList.toggle("open");
+            menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            menuToggle.innerHTML = isOpen
+                ? '<i class="fa-solid fa-xmark"></i>'
+                : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        floatingToggle.addEventListener("click", () => {
+            socialStack.classList.toggle("open");
+        });
+
+        dropButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                if (window.innerWidth > 860) {
+                    return;
+                }
+
+                const parent = button.parentElement;
+                const isOpen = parent.classList.toggle("open");
+                button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            });
+        });
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 860) {
+                navLinks.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                document.querySelectorAll(".drop").forEach((drop) => {
+                    drop.classList.remove("open");
+                });
+            }
+        });
+    </script>
+</body>
+</html>
