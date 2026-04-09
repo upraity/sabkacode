@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read SabkaCode blog articles on study tips, coding guides, exams, and productivity.">
+    <title>SabkaCode Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div id="nav"></div>
+
+    <main class="blog-home">
+        <section class="blog-hero">
+            <span class="eyebrow">SabkaCode Blog</span>
+            <h1>Learn Smarter With Notes, Coding Guides, and Study Strategy</h1>
+            <p>Explore hand-picked articles for students who want better exam results, cleaner coding habits, and stronger daily productivity.</p>
+
+            <div class="blog-search">
+                <input type="text" placeholder="Search articles..." id="searchInput" aria-label="Search articles">
+            </div>
+        </section>
+
+        <section class="featured-posts">
+            <div class="section-heading">
+                <h2>Featured Articles</h2>
+                <a href="#all-posts">Browse all posts</a>
+            </div>
+
+            <div class="blog-grid">
+                <article class="card blog-card featured">
+                    <a href="/blog/post1.html">
+                        <span class="post-tag">Study Tips</span>
+                        <h3>How to Prepare for Exams Effectively</h3>
+                        <p>Build a study plan that improves retention, reduces stress, and keeps revision focused.</p>
+                        <span class="meta">5 min read</span>
+                    </a>
+                </article>
+
+                <article class="card blog-card featured">
+                    <a href="/blog/post2.html">
+                        <span class="post-tag">Coding</span>
+                        <h3>Beginner's Guide to Coding in 2026</h3>
+                        <p>Choose the right tools, follow a simple roadmap, and avoid the beginner mistakes that slow people down.</p>
+                        <span class="meta">6 min read</span>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section class="all-posts" id="all-posts">
+            <div class="section-heading">
+                <h2>All Articles</h2>
+                <p id="resultsInfo">Showing all posts</p>
+            </div>
+
+            <div class="blog-grid" id="blogContainer">
+                <article class="card blog-card" data-title="How to Prepare for Exams Effectively" data-category="Study Tips Exams">
+                    <a href="/blog/post1.html">
+                        <span class="post-tag">Study Tips</span>
+                        <h3>How to Prepare for Exams Effectively</h3>
+                        <p>Step-by-step guide to improve your exam performance with active recall and weekly revision.</p>
+                        <span class="meta">5 min read</span>
+                    </a>
+                </article>
+
+                <article class="card blog-card" data-title="Beginner's Guide to Coding in 2026" data-category="Coding Career">
+                    <a href="/blog/post2.html">
+                        <span class="post-tag">Coding</span>
+                        <h3>Beginner's Guide to Coding in 2026</h3>
+                        <p>Learn programming from scratch with a beginner-friendly roadmap that actually stays practical.</p>
+                        <span class="meta">6 min read</span>
+                    </a>
+                </article>
+
+                <article class="card blog-card" data-title="Top Productivity Tips for Students" data-category="Productivity Students">
+                    <a href="/blog/post3.html">
+                        <span class="post-tag">Productivity</span>
+                        <h3>Top Productivity Tips for Students</h3>
+                        <p>Improve focus, manage distractions, and get more meaningful work done every day.</p>
+                        <span class="meta">4 min read</span>
+                    </a>
+                </article>
+            </div>
+
+            <div class="pagination">
+                <button type="button" id="prevBtn">Previous</button>
+                <button type="button" id="nextBtn">Next</button>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="section-heading">
+                <h2>Categories</h2>
+            </div>
+            <div class="category-list">
+                <span>Study Tips</span>
+                <span>Coding</span>
+                <span>Exams</span>
+                <span>Productivity</span>
+            </div>
+        </section>
+
+        <section class="blog-cta">
+            <h2>Stay Updated</h2>
+            <p>Get the latest articles and free study resources directly from SabkaCode.</p>
+            <a class="cta-button" href="https://whatsapp.com/channel/0029VaElLRrAYlUMk0qIHX1G" target="_blank" rel="noopener noreferrer">Join Our Channel</a>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+    <script src="script.js"></script>
+</body>
+</html>
