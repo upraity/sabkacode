@@ -1,0 +1,14 @@
+# robots.txt for https://sabkacode.vercel.app/
+# Keep public pages crawlable and keep thin/legacy files out of search.
+
+User-agent: *
+Allow: /
+
+# Legacy archive and helper partials should not appear in search results.
+Disallow: /blog_old/
+Disallow: /nav.html
+Disallow: /newnav.html
+Disallow: /footer.html
+Disallow: /footer.clean.html
+
+Sitemap: https://sabkacode.vercel.app/sitemap.xml
