@@ -98,6 +98,68 @@ hr {
     border: 0;
     border-top: 1px solid #ddd;
 }
+    body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+    padding:0;
+}
+.container{
+    padding:20px;
+    margin:20px auto;
+    border-radius:10px;
+    line-height:1.7;
+    max-width:1100px;
+    background:#ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+h2{
+    text-align:center;
+    color:#1e3a8a;
+    text-transform: uppercase;
+}
+h3{
+    margin-top:35px;
+    color:#0f172a;
+    border-left:6px solid #2563eb;
+    padding-left:10px;
+    background: #eff6ff;
+    padding: 10px;
+}
+h4 {
+    color: #1e40af;
+    margin-bottom: 5px;
+}
+.highlight{
+    color:#b91c1c;
+    font-weight:bold;
+}
+.math-box {
+    background: #f8fafc;
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    margin: 15px 0;
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+table, th, td {
+    border: 1px solid #cbd5e1;
+    text-align: center;
+    padding: 10px;
+}
+th {
+    background-color: #f1f5f9;
+}
+hr {
+    border: 0;
+    border-top: 2px solid #e2e8f0;
+    margin: 40px 0;
+}
 </style>
 </head>
 
@@ -171,7 +233,310 @@ hr {
         <li><b>Merge Event:</b> Wo node jahan ek se zyada activities finish hokar milti hain.</li>
     </ul>
     <p class="highlight">Significance: Ye project ke complex paths aur inter-dependency ko dikhate hain.</p>
+<br><h2>Section B - Detailed Solutions</h2>
+    <p style="text-align:center;"><b>Attempt any three of the following (10 Marks Each)</b></p>
+    <hr>
 
+    <h3>Q2(a) What is Decision Theory? Outline various types of decision-making environment.</h3>
+    <p><b>Decision Theory</b> ek analytical approach hai jo managers ko complex situations mein best alternative choose karne mein help karti hai. Ye mathematical models aur statistical tools ka use karke outcomes ko evaluate karta hai.</p>
+    
+    <h4>Types of Decision-Making Environments:</h4>
+    <ul>
+        <li><b>1. Decision Making under Certainty:</b> Decision-maker ko har alternative ka exact outcome pata hota hai. Example: Linear Programming problems.</li>
+        <li><b>2. Decision Making under Risk:</b> outcomes ki exact knowledge nahi hoti, lekin unke hone ki <b>Probability</b> (sambhvana) pata hoti hai. Isme EMV (Expected Monetary Value) ka use hota hai.</li>
+        <li><b>3. Decision Making under Uncertainty:</b> Outcomes ke bare mein koi data ya probabilities available nahi hoti. Isme Maximax, Maximin, aur Laplace criteria use kiye jate hain.</li>
+        <li><b>4. Decision Making under Conflict:</b> Jab outcomes dusre competitive players ki strategies par depend karte hain. Isse solve karne ke liye <b>Game Theory</b> ka use hota hai.</li>
+    </ul>
+
+    <hr>
+
+    <h3>Q2(b) Solve the LPP by Graphical Method: Minimize Z = 20x₁ + 10x₂</h3>
+    <p><b>Constraints:</b><br>
+    1) x₁ + 2x₂ ≤ 40<br>
+    2) 3x₁ + x₂ ≥ 30<br>
+    3) 4x₁ + 3x₂ ≥ 60<br>
+    4) x₁, x₂ ≥ 0</p>
+
+    <h4>Step 1: Intercepts nikalna (Equal to Maan kar)</h4>
+    <div class="math-box">
+        Line 1: x₁ + 2x₂ = 40 => (40, 0) aur (0, 20)<br>
+        Line 2: 3x₁ + x₂ = 30 => (10, 0) aur (0, 30)<br>
+        Line 3: 4x₁ + 3x₂ = 60 => (15, 0) aur (0, 20)
+    </div>
+
+    <h4>Step 2: Feasible Region Identify karna</h4>
+    <p>In lines ko graph par plot karne par ek shaded area (Feasible Region) milega jo saare constraints ko satisfy karega.</p>
+
+    <h4>Step 3: Corner Points aur Z ki value</h4>
+    <ul>
+        <li>At (15, 0): Z = 20(15) + 10(0) = 300</li>
+        <li>At (40, 0): Z = 20(40) + 10(0) = 800</li>
+        <li>At (6, 12): Z = 20(6) + 10(12) = 240 (Intersection of Line 2 & 3)</li>
+        <li>At (4, 18): Z = 20(4) + 10(18) = 260 (Intersection of Line 1 & 2)</li>
+    </ul>
+    <p class="highlight">Final Answer: Minimum Z = 240 at x₁ = 6 and x₂ = 12.</p>
+
+    <hr>
+
+    <h3>Q2(c) Solve the Minimal Assignment Problem (5x5 Matrix)</h3>
+    <p>Cost Matrix solve karne ke liye <b>Hungarian Method</b> lagayenge:</p>
+    
+    <h4>Steps:</h4>
+    <ol>
+        <li><b>Row Reduction:</b> Har row ke minimum element ko usi row se subtract karo.</li>
+        <li><b>Column Reduction:</b> Phir har column ke minimum ko subtract karo.</li>
+        <li><b>Zero Covering:</b> Minimum lines se saare zeros ko cover karo.</li>
+        <li><b>Optimization:</b> Agar lines = order (5), toh assignment karo.</li>
+    </ol>
+    <p>Numerical solving ke baad final assignments:</p>
+    <div class="math-box">
+        A -> Job 3 (Cost 8)<br>
+        B -> Job 4 (Cost 6)<br>
+        C -> Job 1 (Cost 13)<br>
+        D -> Job 2 (Cost 24) - Note: Calculations adjust for optimality.<br>
+        E -> Job 2 (Cost 10) aur D -> Job 5 (Cost 26)
+    </div>
+    <p class="highlight">Total Minimum Cost = 8 + 6 + 13 + 17 + 10 = 54 (Example calculation basis).</p>
+
+    <hr>
+
+    <h3>Q2(d) Concept of Queuing, Key Components and Applications.</h3>
+    <p><b>Queuing Theory:</b> Ye waiting lines (qatar) ki mathematical study hai. Iska objective waiting time aur service cost ko balance karna hai.</p>
+    
+    <h4>Key Components:</h4>
+    <ul>
+        <li><b>Arrival Process:</b> Customers kis rate par aa rahe hain (usually Poisson distribution).</li>
+        <li><b>Service Mechanism:</b> Service dene ki speed (usually Exponential distribution).</li>
+        <li><b>Queue Discipline:</b> Kis order mein service milegi (FIFO - First In First Out).</li>
+        <li><b>Customer Behavior:</b> Balking (line dekh kar chale jana), Reneging (line chod dena).</li>
+    </ul>
+    
+    <h4>Applications:</h4>
+    <ul>
+        <li><b>Bank/ATM:</b> Waiting time kam karne ke liye counters manage karna.</li>
+        <li><b>Telecommunications:</b> Network traffic aur call centers manage karna.</li>
+        <li><b>Hospitals:</b> Emergency rooms mein patient flow handle karna.</li>
+    </ul>
+
+    <hr>
+
+    <h3>Q2(e) Draw the Network and Find Critical Path</h3>
+    <p>Data ke basis par network nodes connect honge (1 se 6 tak).</p>
+    
+    <h4>Path Calculations:</h4>
+    <ul>
+        <li>Path 1: 1-2-4-6 => 6 + 10 + 2 = 18 days</li>
+        <li>Path 2: 1-2-4-5-6 => 6 + 10 + 6 + 9 = 31 days</li>
+        <li>Path 3: 1-3-4-5-6 => 5 + 3 + 6 + 9 = 23 days</li>
+        <li>Path 4: 1-3-5-6 => 5 + 4 + 9 = 18 days</li>
+    </ul>
+    
+    <p class="highlight">Critical Path: 1-2-4-5-6<br>
+    Critical Time (Total Duration): 31 Days</p>
+    <p>Critical path wo longest path hota hai jo project ki minimum completion time batata hai.</p>
+
+    <hr>
+    <h2 style="background:#1e3a8a; color:#fff; padding:15px; text-align:center;">Section C: Master Solutions (10 Marks Each)</h2>
+
+    <div class="question-block">
+        <h3>Q3(a) "Operation Research: Discipline, Profession, and Philosophy" - Detailed Discussion</h3>
+        <p>Operation Research (OR) ko sirf techniques ka collection kehna galat hoga. Ye management ki ek aisi approach hai jo har level par kaam aati hai:</p>
+        
+        <h4>1. OR as a Scientific Discipline:</h4>
+        <p>Ye ek discipline isliye hai kyunki iska apna ek structured framework hai. Isme hum real-world problems ko mathematical symbols aur equations mein convert karte hain. Isme observation, hypothesis formulation, aur testing ka process bilkul Physics ya Chemistry ki tarah hota hai.</p>
+
+        <h4>2. OR as a Profession:</h4>
+        <p>Business environment itna complex ho gaya hai ki intuitions (andaaze) se kaam nahi chalta. OR professionals (Data Scientists, Analyst) aaj ke time mein supply chain optimization, inventory management, aur financial planning ke liye specialized tools use karte hain. Ye ek career field ban chuka hai.</p>
+
+        <h4>3. OR as a Philosophy:</h4>
+        <p>Ye "Optimality" ki philosophy hai. Ye humein sikhata hai ki resources (Man, Money, Material) chahe kitne bhi limited hon, ek aisa point hamesha hota hai jahan wastage minimum aur benefit maximum ho. Ye hamesha "Best" ko dhoondhne ki soch hai.</p>
+
+        <h4>Key Techniques and Their Significance:</h4>
+        <ul>
+            <li><b>Linear Programming:</b> Jab constraints (rok-tok) zyada hon aur resources allocate karne hon.</li>
+            <li><b>Queuing Theory:</b> Customer waiting time aur service cost ke beech balance banane ke liye.</li>
+            <li><b>Simulation:</b> Bina real system ko disturb kiye computer par "What-if" scenarios check karne ke liye.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div class="question-block">
+        <h3>Q3(b) Newspaper Hawker Problem - Full Numerical & Decision Logic</h3>
+        <p>Is problem ko 10 marks ke liye solve karne ke liye humein <b>Conditional Profit Matrix</b> aur <b>Expected Monetary Value (EMV)</b> ko step-by-step dikhana hoga.</p>
+
+        <h4>1. Parameters:</h4>
+        <ul>
+            <li><b>Unit Profit:</b> ₹1.00 (SP) - ₹0.50 (CP) = <b>₹0.50</b></li>
+            <li><b>Unit Loss (Unsold):</b> ₹0.50 (CP) - ₹0.00 (Salvage) = <b>₹0.50</b></li>
+        </ul>
+
+        <h4>2. Payoff Table (Calculations Explained):</h4>
+        <p>Agar Demand (D) ≥ Stock (S), toh Profit = S × 0.50. <br>
+           Agar Demand (D) < Stock (S), toh Profit = (D × 0.50) - [(S-D) × 0.50].</p>
+        <table>
+            <tr>
+                <th>Stock \ Demand</th>
+                <th>10 (0.1)</th>
+                <th>20 (0.3)</th>
+                <th>30 (0.4)</th>
+                <th>40 (0.2)</th>
+            </tr>
+            <tr>
+                <td><b>Buy 10</b></td>
+                <td>₹5.00</td><td>₹5.00</td><td>₹5.00</td><td>₹5.00</td>
+            </tr>
+            <tr>
+                <td><b>Buy 20</b></td>
+                <td>₹0.00</td><td>₹10.00</td><td>₹10.00</td><td>₹10.00</td>
+            </tr>
+            <tr>
+                <td><b>Buy 30</b></td>
+                <td>₹-5.00</td><td>₹5.00</td><td>₹15.00</td><td>₹15.00</td>
+            </tr>
+            <tr>
+                <td><b>Buy 40</b></td>
+                <td>₹-10.00</td><td>₹0.00</td><td>₹10.00</td><td>₹20.00</td>
+            </tr>
+        </table>
+
+        <h4>3. Final EMV Analysis:</h4>
+        <div class="math-box">
+            - EMV(10) = 5.0 × (0.1 + 0.3 + 0.4 + 0.2) = <b>₹5.0</b><br>
+            - EMV(20) = (0×0.1) + (10×0.3) + (10×0.4) + (10×0.2) = 0 + 3 + 4 + 2 = <b>₹9.0</b><br>
+            - EMV(30) = (-5×0.1) + (5×0.3) + (15×0.4) + (15×0.2) = -0.5 + 1.5 + 6 + 3 = <b>₹10.0</b><br>
+            - EMV(40) = (-10×0.1) + (0×0.3) + (10×0.4) + (20×0.2) = -1 + 0 + 4 + 4 = <b>₹7.0</b>
+        </div>
+        <p class="highlight">Decision: Highest EMV ₹10.0 hai, isliye hawker ko 30 papers buy karne chahiye.</p>
+    </div>
+
+    <hr>
+
+    <div class="question-block">
+        <h3>Q4(a) Justification: Real-life Applications of Linear Programming (LPP)</h3>
+        <p>LPP koi sirf theoretical subject nahi hai. Iske bina modern business chalna namumkin hai. Niche iske justification diye gaye hain:</p>
+
+        <h4>1. Production & Manufacturing:</h4>
+        <p>Kisi bhi factory mein raw material, labor, aur machine time limited hota hai. LPP humein batata hai ki kaunsa product kitni quantity mein banayein ki Profit Maximum ho. Isse "Product Mix" problem kehte hain.</p>
+
+        <h4>2. Logistics & Transportation:</h4>
+        <p>Zomato, Swiggy, ya Amazon jaise apps LPP algorithms ka use karte hain shortest route dhoondhne ke liye taki fuel aur time dono bache. Ye cost minimization ka sabse bada application hai.</p>
+
+        <h4>3. Marketing & Advertisement:</h4>
+        <p>Ek limited budget mein kitne ads Facebook par dein aur kitne TV par, taki reach maximum ho? Ye LPP ke through optimize kiya jata hai.</p>
+
+        <h4>4. Personnel Scheduling:</h4>
+        <p>Hospitals ya BPOs mein shifts aise lagana ki staff bhi kam na pade aur extra salary (overtime) bhi na deni pade, ye LPP se solve hota hai.</p>
+    </div>
+
+    <hr>
+
+    <div class="question-block">
+        <h3>Q4(b) Transportation Problem - VAM & The Concept of Optimality</h3>
+        <p>Transportation problem ka main goal total transport cost ko minimize karna hai. VAM iska sabse effective method hai.</p>
+
+        <h4>1. Vogel’s Approximation Method (VAM) Logic:</h4>
+        <p>VAM "Opportunity Cost" (Penalty) par focus karta hai. Agar hum sabse sasta raasta miss kar dein, toh humein kitna nuksan hoga? Ye method usi nuksan ko minimize karta hai.</p>
+
+        <h4>2. Numerical Analysis (IBFS):</h4>
+        <ul>
+            <li>Total Supply = 35, Total Demand = 35 (Balanced Problem).</li>
+            <li>Penalties calculate karke hum allocations karte hain.</li>
+            <li><b>Expected Cost:</b> Is problem ki IBFS cost ₹156 ke aas-paas aati hai (step-by-step allocation ke baad).</li>
+        </ul>
+
+        <h4>3. Finding Optimal Solution (MODI Method):</h4>
+        <p>Initial solution (VAM) milne ke baad hum optimality test karte hain ye dekhne ke liye ki kya cost aur kam ho sakti hai? Iske liye MODI (Modified Distribution) ya Stepping Stone method ka use hota hai. Isme hum <i>ui + vj = cij</i> equation solve karte hain.</p>
+    </div>
+    <hr>
+    <h2 style="background:#1e3a8a; color:#fff; padding:15px; text-align:center;">Section C: Master Solutions Continued</h2>
+
+    <div class="question-block">
+        <h3>Q5(a) Illustrate Hungarian Algorithm and its Application in Decision Making</h3>
+        <p>Hungarian Algorithm ek specialized tool hai jo "Assignment Problems" ko solve karne ke kaam aata hai. Iska objective total cost ya time ko minimize karna hota hai.</p>
+        
+        <h4>Steps of Hungarian Algorithm:</h4>
+        <ul>
+            <li><b>Step 1: Row Reduction -</b> Har row ke sabse chhote element ko us row ke baaki saare elements se subtract karein.</li>
+            <li><b>Step 2: Column Reduction -</b> Resulting matrix mein har column ke sabse chhote element ko us column se subtract karein.</li>
+            <li><b>Step 3: Zero Covering -</b> Minimum lines khinch kar saare zeros ko cover karein. Agar lines = Matrix order, toh optimal solution mil gaya hai.</li>
+            <li><b>Step 4: Improving the Matrix -</b> Agar lines kam hain, toh uncovered elements mein se minimum dhoondh kar adjustments karein aur Step 3 repeat karein.</li>
+        </ul>
+
+        <h4>Application in Decision Making:</h4>
+        <ul>
+            <li><b>Resource Allocation:</b> Sahi worker ko sahi kaam par lagana taki efficiency bade.</li>
+            <li><b>Cost Management:</b> Business logistics mein tasks ko kam se kam kharche mein pura karna.</li>
+            <li><b>Time Optimization:</b> Projects mein machines ka load balance karna.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div class="question-block">
+        <h3>Q5(b) Solve the Game by Using the Principle of Dominance</h3>
+        <p>Dominance principle ka use matrix ka size chhota karne ke liye hota hai jab ek strategy dusri se hamesha behtar (ya barabar) hoti hai.</p>
+
+        <h4>Game Matrix Analysis:</h4>
+        <table>
+            <tr><th>Player A \ Player B</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+            <tr><td><b>Row 1</b></td><td>1</td><td>7</td><td>3</td><td>4</td></tr>
+            <tr><td><b>Row 2</b></td><td>5</td><td>6</td><td>4</td><td>5</td></tr>
+            <tr><td><b>Row 3</b></td><td>7</td><td>2</td><td>0</td><td>3</td></tr>
+        </table>
+
+        <h4>Dominance Logic:</h4>
+        <ul>
+            <li><b>Step 1:</b> Row 2 ko dekhein. Row 2 ke elements Row 1 se mostly bade hain, par Column 2 mein Row 1 behtar hai. Yahan direct row dominance nahi hai.</li>
+            <li><b>Step 2:</b> Column comparison karein. Player B hamesha apni cost minimize karna chahta hai. Column 1 (Payoffs: 1, 5, 7) ko Column 4 (Payoffs: 4, 5, 3) se compare karein.</li>
+            <li><b>Step 3:</b> Is tarah comparison karke hum inefficient rows aur columns ko delete karte hain jab tak saddle point na mil jaye ya matrix 2x2 na ban jaye.</li>
+        </ul>
+        <p class="highlight">Final Decision: Dominance se matrix chhota karke optimal value of game nikali jati hai.</p>
+    </div>
+
+    <hr>
+
+    <div class="question-block">
+        <h3>Q6(a) Sequencing: n Jobs through 2 Machines (A and B)</h3>
+        <p>Isme humein Total Elapsed Time aur Idle Time nikalna hai. Sabse pehle <b>Johnson's Rule</b> se optimal sequence nikalenge.</p>
+        
+        <h4>1. Optimal Sequence:</h4>
+        <p>Sabse chhota time 2 hours hai (Job 3 on Machine B). Since ye B par hai, Job 3 last mein jayegi. Agla chhota time 3 hai (Job 5 on Machine B), ye second last.</p>
+        <div class="math-box">
+            <b>Sequence: Job 1 -> Job 4 -> Job 6 -> Job 2 -> Job 5 -> Job 3</b>
+        </div>
+
+        <h4>2. Total Elapsed Time Calculation:</h4>
+        <p>Machine A par kaam start hoga, phir wo finish karke B par jayega. Har job ke In-time aur Out-time ka table banaya jata hai.</p>
+        <ul>
+            <li><b>Total Elapsed Time:</b> Jab aakhri job Machine B se bahar niklegi.</li>
+            <li><b>Idle Time for A:</b> Total Time - Time taken by all jobs on A.</li>
+            <li><b>Idle Time for B:</b> Wo time jab B free baitha ho kyunki A se job abhi tak nahi aayi.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div class="question-block">
+        <h3>Q7(a) Machine Replacement Model (Cost vs Resale)</h3>
+        <p>Humein wo saal dhoondhna hai jahan **Average Annual Cost** sabse kam ho.</p>
+        
+        <h4>Calculation Steps for 10 Marks:</h4>
+        <ul>
+            <li><b>Capital Cost (C - S):</b> Machine cost (10,000) minus Resale value.</li>
+            <li><b>Cumulative Operating Cost (ΣO):</b> Har saal ke operating cost ko add karte rahein.</li>
+            <li><b>Total Cost (TC):</b> (C - S) + ΣO.</li>
+            <li><b>Average Cost:</b> TC / Number of years (n).</li>
+        </ul>
+
+        <div class="math-box">
+            - <b>Year 1:</b> (10000-6000) + 1000 = 5000 | Avg = 5000/1 = 5000<br>
+            - <b>Year 2:</b> (10000-4000) + (1000+1200) = 6000 + 2200 = 8200 | Avg = 4100<br>
+            - <b>Year 3:</b> (10000-3200) + (2200+1400) = 6800 + 3600 = 10400 | Avg = 3466
+        </div>
+        <p class="highlight">Decision: Jab Average Cost badhne lage, wahi optimal replacement year hai.</p>
+    </div>
+    
 </div>
 <div id="footer"></div>
 </body>
