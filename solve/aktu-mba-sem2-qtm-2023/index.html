@@ -535,6 +535,66 @@ hr {
             - <b>Year 3:</b> (10000-3200) + (2200+1400) = 6800 + 3600 = 10400 | Avg = 3466
         </div>
         <p class="highlight">Decision: Jab Average Cost badhne lage, wahi optimal replacement year hai.</p>
+    <hr>
+    <div class="question-block">
+        <h3>Q7(b) Distinguish between CPM and PERT & Calculation of Total Float</h3>
+        <p>Project Management mein CPM aur PERT dono hi network techniques hain, lekin inka use alag-alag situations mein hota hai.</p>
+
+        <h4>1. Difference between CPM and PERT (10 Marks Detail)</h4>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>CPM (Critical Path Method)</th>
+                <th>PERT (Program Evaluation Review Technique)</th>
+            </tr>
+            <tr>
+                <td><b>Focus</b></td>
+                <td>Activity-oriented technique hai.</td>
+                <td>Event-oriented technique hai.</td>
+            </tr>
+            <tr>
+                <td><b>Nature</b></td>
+                <td>Deterministic (Fixed time) hota hai.</td>
+                <td>Probabilistic (Uncertain time) hota hai.</td>
+            </tr>
+            <tr>
+                <td><b>Time Estimates</b></td>
+                <td>Sirf ek time estimate use hota hai.</td>
+                <td>Teen time estimates (Optimistic, Pessimistic, Most Likely) use hote hain.</td>
+            </tr>
+            <tr>
+                <td><b>Application</b></td>
+                <td>Repeatative projects jaise construction mein use hota hai.</td>
+                <td>Non-repeatative projects jaise R&D ya space research mein use hota.</td>
+            </tr>
+            <tr>
+                <td><b>Crashing</b></td>
+                <td>Isme cost aur time ke beech trade-off (crashing) possible hai.</td>
+                <td>Isme crashing ka concept primary nahi hota.</td>
+            </tr>
+        </table>
+
+        <h4>2. Calculation of Total Float from Network Diagram</h4>
+        <p><b>Total Float:</b> Ye wo maximum time hai jisse hum kisi activity ko delay kar sakte hain bina poore project ki finish date ko disturb kiye.</p>
+        
+        
+        
+        <p><b>Formula for Total Float:</b></p>
+        <div class="math-box">
+            Total Float = LFT - EFT <br>
+            <i>OR</i> <br>
+            Total Float = LST - EST
+        </div>
+        
+        <p><b>Steps to Calculate:</b></p>
+        <ul>
+            <li><b>Forward Pass:</b> Har node ke liye Earliest Start Time (EST) aur Earliest Finish Time (EFT) nikalte hain.</li>
+            <li><b>Backward Pass:</b> Network ke end se start karke Latest Finish Time (LFT) aur Latest Start Time (LST) nikalte hain.</li>
+            <li><b>Subtraction:</b> Activity ke LFT mein se EFT ko subtract karke humein float mil jata hai.</li>
+        </ul>
+        <p class="highlight">Note: Critical Path par jitni bhi activities hoti hain, unka Total Float hamesha <b>Zero</b> hota hai.</p>
+    </div>
+    
     </div>
     
 </div>
