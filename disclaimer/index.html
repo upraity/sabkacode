@@ -1,134 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disclaimer - SabkaCode</title>
-    <meta name="description" content="Disclaimer page of SabkaCode. Educational content and study material usage terms.">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SabkaCode Disclaimer – Hamare content aur information ke baare mein important notice.">
+  <meta name="author" content="SabkaCode">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Disclaimer | SabkaCode">
+  <meta property="og:description" content="SabkaCode ka disclaimer aur important notices padhein.">
+  <meta property="og:image" content="https://sabkacode.vercel.app/logo.png">
+  <meta property="og:url" content="https://sabkacode.vercel.app/disclaimer.html">
+  <meta name="theme-color" content="#3498db">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Disclaimer | SabkaCode</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "otqed8ed9r");
+  </script>
 
+  <script language="JavaScript" type="text/javascript">
+    var message = "Sorry, Right Click have been disabled.";
+    function click(e) {
+      if (document.all) {
+        if (event.button == 2 || event.button == 3) { alert(message); return false; }
+      } else {
+        if (e.button == 2 || e.button == 3) { e.preventDefault(); e.stopPropagation(); alert(message); return false; }
+      }
+    }
+    if (document.all) { document.onmousedown = click; } else { document.onclick = click; }
+    document.oncontextmenu = function () { return false; };
+  </script>
 
+  <style>
+    * { box-sizing: border-box; }
 
-<meta name="description" content="SabkaCode provides programming notes, AKTU MBA previous year question papers with solutions, JEE papers, study resources, and educational materials for students.">
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f8;
+      color: #2c3e50;
+    }
 
-<meta name="keywords" content="SabkaCode, programming notes, aktu mba previous papers, aktu mba solved papers, jee previous year papers, coding notes, study materials, aktu mba hrm mis qtm be papers">
+    main {
+      padding: 30px 20px 120px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-<meta name="author" content="SabkaCode">
+    /* ── Page Hero ── */
+    .page-hero {
+      background: linear-gradient(135deg, #e67e22, #2c3e50);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px 30px;
+      margin-bottom: 30px;
+      border-radius: 0 0 20px 20px;
+    }
+    .page-hero .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 20px;
+      padding: 4px 16px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+    .page-hero h1 {
+      margin: 0 0 8px;
+      font-size: 2em;
+    }
+    .page-hero p {
+      margin: 0;
+      opacity: 0.85;
+      font-size: 15px;
+    }
 
-<meta name="robots" content="index, follow">
+    /* ── Last Updated Badge ── */
+    .last-updated {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 13px;
+      color: #7f8c8d;
+    }
+    .last-updated span {
+      background: #ecf0f1;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid #bdc3c7;
+    }
 
-<link rel="canonical" href="https://sabkacode.vercel.app/">
+    /* ── Warning Banner ── */
+    .warning-banner {
+      background: #fef9e7;
+      border: 1px solid #f39c12;
+      border-left: 5px solid #f39c12;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 14.5px;
+      color: #7d6608;
+    }
+    .warning-banner i { font-size: 22px; color: #f39c12; margin-top: 2px; flex-shrink: 0; }
 
+    /* ── Section Card ── */
+    .section-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px 30px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      transition: box-shadow 0.3s ease;
+    }
+    .section-card:hover {
+      box-shadow: 0 4px 16px rgba(52,152,219,0.15);
+    }
+    .section-card h2 {
+      color: #3498db;
+      font-size: 1.15em;
+      margin: 0 0 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid #ecf0f1;
+      padding-bottom: 10px;
+    }
+    .section-card h2 i { color: #3498db; }
+    .section-card p {
+      line-height: 1.75;
+      margin: 0 0 12px;
+      color: #555;
+      font-size: 14.5px;
+    }
+    .section-card p:last-child { margin-bottom: 0; }
 
+    /* ── Icon Grid for key points ── */
+    .points-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .point-item {
+      background: #f8f9fa;
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+      border: 1px solid #ecf0f1;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .point-item:hover {
+      background: #eaf4fd;
+      border-color: #3498db;
+    }
+    .point-item i {
+      font-size: 28px;
+      color: #3498db;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .point-item span {
+      font-size: 13.5px;
+      color: #2c3e50;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .point-item p {
+      font-size: 12.5px;
+      color: #7f8c8d;
+      margin: 0;
+      line-height: 1.5;
+    }
 
-<!-- Open Graph (Facebook / WhatsApp preview) -->
-<meta property="og:title" content="SabkaCode – Programming Notes & Previous Year Papers">
-<meta property="og:description" content="Programming notes, AKTU MBA previous papers, JEE papers and study resources for students.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://sabkacode.vercel.app/">
-<meta property="og:image" content="https://sabkacode.vercel.app/logo.png">
+    /* ── Info Box ── */
+    .info-box {
+      background: #eaf4fd;
+      border-left: 4px solid #3498db;
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 14px;
+      color: #2c3e50;
+      margin-top: 12px;
+    }
+    .info-box i { color: #3498db; margin-right: 6px; }
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SabkaCode – Programming Notes & Previous Papers">
-<meta name="twitter:description" content="Free programming notes and AKTU MBA previous papers with solutions.">
-<meta name="twitter:image" content="https://sabkacode.vercel.app/logo.png">
+    /* ── Notice Box (orange) ── */
+    .notice-box {
+      background: #fef5e7;
+      border-left: 4px solid #e67e22;
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 14px;
+      color: #7d6608;
+      margin-top: 12px;
+    }
+    .notice-box i { color: #e67e22; margin-right: 6px; }
 
-<!-- Theme Color -->
-<meta name="theme-color" content="#3498db">
+    /* ── Contact CTA ── */
+    .contact-cta {
+      background: linear-gradient(135deg, #3498db, #2c3e50);
+      color: #fff;
+      border-radius: 14px;
+      padding: 28px 24px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .contact-cta h3 { margin: 0 0 10px; font-size: 1.2em; }
+    .contact-cta p  { margin: 0 0 18px; opacity: 0.9; font-size: 14px; }
+    .cta-btn {
+      display: inline-block;
+      background: #fff;
+      color: #3498db;
+      padding: 10px 28px;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+    .cta-btn:hover {
+      background: #ecf0f1;
+      color: #2c3e50;
+    }
 
-<!-- Favicon -->
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
+    /* ── Back to Top ── */
+    #backToTop {
+      display: none;
+      position: fixed;
+      bottom: 70px;
+      right: 20px;
+      background: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 999;
+      transition: background 0.3s;
+    }
+    #backToTop:hover { background: #2c3e50; }
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    @media (max-width: 600px) {
+      .page-hero h1 { font-size: 1.5em; }
+      .section-card { padding: 18px 16px; }
+      .points-grid { grid-template-columns: repeat(2, 1fr); }
+    }
 
-<!-- Structured Data for Google -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "EducationalOrganization",
- "name": "SabkaCode",
- "url": "https://sabkacode.vercel.app",
- "logo": "https://sabkacode.vercel.app/logo.png",
- "description": "SabkaCode provides programming notes, AKTU MBA previous year papers, and educational resources.",
- "sameAs": [
-  "https://t.me/sabkacode",
-  "https://whatsapp.com/channel/0029VaElLRrAYlUMk0qIHX1G"
- ]
-}
-</script>
-
+    #pageCount { color: transparent; }
+  </style>
 </head>
-
 <body>
 
+<!-- NAV PLACEHOLDER -->
 <div id="nav"></div>
 
-<main style="padding:20px; max-width:900px; margin:auto;">
+<!-- HERO -->
+<div class="page-hero">
+  <div class="badge">⚠ Notice</div>
+  <h1><i class="fa-solid fa-triangle-exclamation"></i> Disclaimer</h1>
+  <p>SabkaCode use karne se pehle ye important notice padh lo.</p>
+</div>
 
-<h1>Disclaimer</h1>
+<main>
 
-<p>
-All the information provided on this website (SabkaCode) is published in good faith 
-and for general educational purposes only. We do not make any warranties about the 
-completeness, reliability, and accuracy of this information.
-</p>
+  <!-- Last Updated -->
+  <div class="last-updated">
+    <span><i class="fa-regular fa-clock"></i> Last Updated: January 2025</span>
+  </div>
 
-<h2>Educational Purpose</h2>
+  <!-- Warning Banner -->
+  <div class="warning-banner">
+    <i class="fa-solid fa-circle-exclamation"></i>
+    <div>
+      <strong>Zaroori Baat:</strong> SabkaCode pe diya gaya sab information good faith mein
+      aur sirf general educational purpose ke liye publish kiya gaya hai. Hum information ki
+      completeness, reliability, ya accuracy ki koi warranty nahi dete.
+    </div>
+  </div>
 
-<p>
-This website provides notes, syllabus details, study materials, and previous year 
-question papers for educational use only. The content is intended to help students 
-in their academic preparation.
-</p>
+  <!-- Key Points Grid -->
+  <div class="section-card">
+    <h2><i class="fa-solid fa-star"></i> Mukhya Baatein (Key Points)</h2>
+    <div class="points-grid">
+      <div class="point-item">
+        <i class="fa-solid fa-book-open"></i>
+        <span>Educational Only</span>
+        <p>Sab content sirf padhai ke liye hai</p>
+      </div>
+      <div class="point-item">
+        <i class="fa-solid fa-building-columns"></i>
+        <span>No Affiliation</span>
+        <p>Kisi university se officially affiliated nahi</p>
+      </div>
+      <div class="point-item">
+        <i class="fa-solid fa-link-slash"></i>
+        <span>External Links</span>
+        <p>Bahari links pe hum control nahi rakhte</p>
+      </div>
+      <div class="point-item">
+        <i class="fa-solid fa-rotate"></i>
+        <span>May Change</span>
+        <p>Disclaimer kabhi bhi update ho sakta hai</p>
+      </div>
+    </div>
+  </div>
 
-<h2>No Official Affiliation</h2>
+  <!-- Educational Purpose -->
+  <div class="section-card">
+    <h2><i class="fa-solid fa-graduation-cap"></i> Educational Purpose</h2>
+    <p>
+      Ye website notes, syllabus details, study materials, aur previous year question papers
+      provide karti hai — sirf students ki academic preparation ke liye.
+    </p>
+    <p>
+      SabkaCode ka goal hai ki students ko free mein quality resources milein. Hum chahte hain
+      ki aapki padhai aasaan ho — lekin yahan di gayi information ko professional advice ke roop
+      mein mat lo.
+    </p>
+    <div class="info-box">
+      <i class="fa-solid fa-circle-info"></i>
+      Exams ke liye official university sources aur professors se bhi confirm karte raho.
+    </div>
+  </div>
 
-<p>
-SabkaCode is not officially affiliated with any university any institution. All university names are used only for reference purposes.
-</p>
+  <!-- No Official Affiliation -->
+  <div class="section-card">
+    <h2><i class="fa-solid fa-building-columns"></i> No Official Affiliation</h2>
+    <p>
+      SabkaCode kisi bhi university ya institution se officially affiliated nahi hai.
+      AKTU, CSJMU, DBRAU ya kisi bhi aur university ka naam sirf reference purpose ke
+      liye use kiya gaya hai.
+    </p>
+    <p>
+      Hum kisi bhi university ke official representative nahi hain. Official information
+      ke liye apni university ki official website check karo.
+    </p>
+    <div class="notice-box">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      University ke official notices, results, ya circulars ke liye university portal hi dekhna.
+    </div>
+  </div>
 
-<h2>External Links Disclaimer</h2>
+  <!-- External Links -->
+  <div class="section-card">
+    <h2><i class="fa-solid fa-arrow-up-right-from-square"></i> External Links Disclaimer</h2>
+    <p>
+      Hamare website pe Google Drive ya doosre resources ke external links ho sakte hain.
+      Hum un sites ki content aur availability pe koi control nahi rakhte.
+    </p>
+    <p>
+      In links pe click karne se aap ek alag website pe jaoge. Hum strongly advise karte hain
+      ki aap un sites ki privacy policies bhi padho. Unki content ke liye hum responsible nahi hain.
+    </p>
+  </div>
 
-<p>
-Our website may contain links to external websites such as Google Drive or other resources. 
-We do not have control over the content and availability of those sites.
-</p>
+  <!-- Content Accuracy -->
+  <div class="section-card">
+    <h2><i class="fa-solid fa-check-double"></i> Content Accuracy</h2>
+    <p>
+      Hum koshish karte hain ki information updated aur correct rahe — lekin hum guarantee
+      nahi de sakte ki sab information completely accurate ya up to date hai.
+    </p>
+    <p>
+      Notes ya papers mein koi error mile to hume zaroor batao — hum turant fix karenge.
+      Students se request hai ki important information ko official sources se verify karein.
+    </p>
+    <div class="info-box">
+      <i class="fa-solid fa-bug"></i>
+      Error mile? Hume WhatsApp ya email pe batao — sabkacode@gmail.com
+    </div>
+  </div>
 
-<h2>Content Accuracy</h2>
+  <!-- Copyright Notice -->
+  <div class="section-card">
+    <h2><i class="fa-solid fa-copyright"></i> Copyright Notice</h2>
+    <p>
+      Agar SabkaCode pe koi content aapka hai aur aap chahte ho ki use hataya jaye,
+      to hume contact karo. Hum appropriate action lenge.
+    </p>
+    <p>
+      Copyright claim ke liye email subject mein <strong>"Copyright / Content Removal"</strong>
+      likhna na bhoolo. Hum 24–48 ghante mein action lenge.
+    </p>
+    <div class="notice-box">
+      <i class="fa-solid fa-envelope"></i>
+      <strong>Email:</strong> sabkacode@gmail.com — subject: "Copyright / Content Removal"
+    </div>
+  </div>
 
-<p>
-While we try to keep the information updated and correct, we do not guarantee 
-that all information is completely accurate or up to date.
-</p>
+  <!-- Consent -->
+  <div class="section-card">
+    <h2><i class="fa-solid fa-handshake"></i> Consent</h2>
+    <p>
+      SabkaCode website use karke aap is disclaimer se agree karte ho aur iske terms
+      ko accept karte ho.
+    </p>
+    <p>
+      Agar aap agree nahi karte, to please website use karna band karo.
+    </p>
+  </div>
 
-<h2>Copyright Notice</h2>
+  <!-- Updates -->
+  <div class="section-card">
+    <h2><i class="fa-solid fa-arrows-rotate"></i> Updates to Disclaimer</h2>
+    <p>
+      Ye disclaimer kabhi bhi, bina prior notice ke update ya modify kiya ja sakta hai.
+      Regularly check karte raho.
+    </p>
+    <p>
+      Last updated version hamesha is page pe available rahega.
+    </p>
+  </div>
 
-<p>
-If any content on this website belongs to you and you want it to be removed, 
-please contact us and we will take appropriate action.
-</p>
-
-<h2>Consent</h2>
-
-<p>
-By using our website, you hereby consent to our disclaimer and agree to its terms.
-</p>
-
-<h2>Update</h2>
-
-<p>
-This disclaimer may be updated or modified at any time without prior notice.
-</p>
+  <!-- Contact CTA -->
+  <div class="contact-cta">
+    <h3><i class="fa-solid fa-envelope"></i> Koi Sawaal Hai?</h3>
+    <p>Disclaimer ke baare mein kuch samajh nahi aaya? Hum help karenge!</p>
+    <a href="https://sabkacode.vercel.app/contactus" class="cta-btn">
+      <i class="fa-solid fa-paper-plane"></i> Contact Us
+    </a>
+  </div>
 
 </main>
-<BR><BR><BR><BR>
 <div id="footer"></div>
+    <script src="/script"></script>
+<!-- Back to Top -->
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to Top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script>
+  window.addEventListener('scroll', function() {
+    document.getElementById('backToTop').style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+</script>
+
+<!-- NAV INCLUDE SCRIPT -->
+<script>
+  fetch("nav.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("nav").innerHTML = data;
+    })
+    .catch(error => console.error("Nav load error:", error));
+</script>
+
 </body>
 </html>
-
- <script src="/script.js"></script>
