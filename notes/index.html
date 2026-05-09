@@ -25,37 +25,7 @@
     html{scroll-behavior:smooth}
     body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
 
-    /* ── NAV ── */
-    nav{
-      background:var(--dark);
-      padding:14px 5%;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      position:sticky;
-      top:0;
-      z-index:100;
-      box-shadow:0 2px 12px rgba(0,0,0,.3);
-    }
-    .nav-logo{
-      font-family:'Sora',sans-serif;
-      font-size:1.25rem;
-      font-weight:800;
-      color:#fff;
-      text-decoration:none;
-      letter-spacing:-.5px;
-    }
-    .nav-logo span{color:#74c0fc}
-    .nav-links{display:flex;gap:24px;list-style:none}
-    .nav-links a{
-      color:rgba(255,255,255,.75);
-      text-decoration:none;
-      font-size:.88rem;
-      font-weight:500;
-      transition:color .2s;
-    }
-    .nav-links a:hover,.nav-links a.active{color:#74c0fc}
-    @media(max-width:600px){.nav-links{gap:14px}.nav-links a{font-size:.78rem}}
+   
 
     /* ── HERO ── */
     .hero{background:linear-gradient(135deg,var(--dark) 0%,var(--mid) 55%,var(--blue) 100%);padding:90px 5% 80px;text-align:center;position:relative;overflow:hidden}
@@ -145,16 +115,7 @@
 </head>
 <body>
 
-<!-- ══ NAV ══ -->
-<!--<nav>
-  <a href="https://sabkacode.vercel.app" class="nav-logo">Sabka<span>Code</span></a>
-  <ul class="nav-links">
-    <li><a href="https://sabkacode.vercel.app">Home</a></li>
-    <li><a href="https://sabkacode.vercel.app/notes" class="active">Notes</a></li>
-    <li><a href="https://sabkacode.vercel.app/pyq">PYQ</a></li>
-    <li><a href="https://sabkacode.vercel.app/syllabus">Syllabus</a></li>
-  </ul>
-</nav>-->
+
 	<div id="nav"></div>
 	<script src="/script"></script>
 
@@ -320,24 +281,6 @@
   </div>
 </section>
 
-<!-- ══ FOOTER ══ -->
-<!--<footer>
-  <p>© 2024 <a href="https://sabkacode.vercel.app">SabkaCode</a> — Free Notes for AKTU, DBRAU &amp; CSJMU Students</p>
-  <p style="margin-top:6px">Made with ❤️ for students of India</p>
-</footer>-->
-
-<!-- ══ TRANSLATE FAB ══ -->
-<!-- FIX: Added missing FAB HTML structure that was referenced in CSS & JS but never existed -->
-<!--<div class="t-fab">
-  <div class="t-drawer" id="tDrawer">
-    <div class="t-title">🌐 Language / भाषा</div>
-    <div class="t-grid" id="tGrid"></div>
-  </div>
-  <button class="t-btn" onclick="toggleT()" aria-label="Translate page">
-    <i class="fas fa-language"></i>
-    <small>LANG</small>
-  </button>
-</div>-->
 	<div id="footer"></div>
 
 <script>
