@@ -284,76 +284,45 @@
 	<div id="footer"></div>
 
 <script>
-  /* ── Translate FAB ── */
-  const PAGE = 'https://sabkacode.vercel.app/notes';
-  const LANGS = [
-    {c:'en',  f:'🇮🇳', n:'English'},
-    {c:'hi',  f:'🇮🇳', n:'हिन्दी'},
-    {c:'mr',  f:'🇮🇳', n:'मराठी'},
-    {c:'bn',  f:'🇮🇳', n:'বাংলা'},
-    {c:'ta',  f:'🇮🇳', n:'தமிழ்'},
-    {c:'te',  f:'🇮🇳', n:'తెలుగు'},
-    {c:'gu',  f:'🇮🇳', n:'ગુજરાતી'},
-    {c:'kn',  f:'🇮🇳', n:'ಕನ್ನಡ'},
-    {c:'ml',  f:'🇮🇳', n:'മലയാളം'},
-    {c:'pa',  f:'🇮🇳', n:'ਪੰਜਾਬੀ'},
-    {c:'ur',  f:'🇵🇰', n:'اردو'},
-    {c:'ar',  f:'🇸🇦', n:'العربية'},
-    {c:'fr',  f:'🇫🇷', n:'Français'},
-    {c:'de',  f:'🇩🇪', n:'Deutsch'},
-    {c:'es',  f:'🇪🇸', n:'Español'},
-    {c:'zh-CN',f:'🇨🇳',n:'中文'},
-    {c:'ja',  f:'🇯🇵', n:'日本語'},
-    {c:'ru',  f:'🇷🇺', n:'Русский'}
-  ];
-
-  /* FIX: tGrid is now a valid DOM element, so no more null error */
-  const tGrid = document.getElementById('tGrid');
-  LANGS.forEach(function(l) {
-    const b = document.createElement('button');
-    b.className = 't-opt' + (l.c === 'en' ? ' active' : '');
-    b.innerHTML = '<span>' + l.f + '</span><span>' + l.n + '</span>';
-    b.onclick = function() {
-      if (l.c === 'en') {
-        location.href = PAGE;
-      } else {
-        location.href = 'https://translate.google.com/translate?sl=en&tl=' + l.c + '&u=' + encodeURIComponent(PAGE);
-      }
-    };
-    tGrid.appendChild(b);
-  });
-
-  /* FIX: toggleT now properly references existing #tDrawer element */
-  function toggleT() {
-    document.getElementById('tDrawer').classList.toggle('open');
-  }
-
-  /* Close drawer on outside click */
-  document.addEventListener('click', function(e) {
-    const fab = document.querySelector('.t-fab');
-    if (fab && !fab.contains(e.target)) {
-      document.getElementById('tDrawer').classList.remove('open');
-    }
-  });
 
   /* ── Subject Tabs ── */
   function showTab(id, btn) {
-    document.querySelectorAll('.sub-panel').forEach(function(p) { p.classList.remove('active'); });
-    document.querySelectorAll('.sub-tab').forEach(function(b) { b.classList.remove('active'); });
+
+    document.querySelectorAll('.sub-panel').forEach(function(panel) {
+      panel.classList.remove('active');
+    });
+
+    document.querySelectorAll('.sub-tab').forEach(function(tab) {
+      tab.classList.remove('active');
+    });
+
     document.getElementById('tab-' + id).classList.add('active');
+
     btn.classList.add('active');
   }
 
-  /* ── Scroll Reveal ── */
-  var obs = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) {
-      if (e.isIntersecting) {
-        e.target.classList.add('on');
-        obs.unobserve(e.target);
+  /* ── Scroll Reveal Animation ── */
+  const observer = new IntersectionObserver(function(entries) {
+
+    entries.forEach(function(entry) {
+
+      if (entry.isIntersecting) {
+
+        entry.target.classList.add('on');
+
+        observer.unobserve(entry.target);
       }
+
     });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
+
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.reveal').forEach(function(el) {
+    observer.observe(el);
+  });
+
 </script>
 </body>
 </html>
