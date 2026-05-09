@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | SabkaCode</title>
+  <meta name="description" content="Learn about SabkaCode — a free educational platform for students providing programming notes, AKTU MBA/MCA previous papers, JEE papers, and exam solutions."/>
+  <meta name="author" content="SabkaCode"/>
+  <meta property="og:title" content="About Us | SabkaCode"/>
+  <meta property="og:description" content="SabkaCode is a free student platform for notes, previous papers, and coding resources."/>
+  <meta property="og:url" content="https://sabkacode.vercel.app/aboutus.html"/>
+  <meta property="og:image" content="https://sabkacode.vercel.app/logo.png"/>
+  <link rel="canonical" href="https://sabkacode.vercel.app/aboutus.html"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue:       #3498db;
+      --blue-dark:  #1f6fa8;
+      --blue-light: #e8f4fd;
+      --dark:       #0f1c2e;
+      --mid:        #2c4a6e;
+      --text:       #2d3748;
+      --muted:      #718096;
+      --white:      #ffffff;
+      --bg:         #f7faff;
+      --card-bg:    #ffffff;
+      --radius:     14px;
+      --shadow:     0 4px 24px rgba(52,152,219,0.10);
+      --shadow-lg:  0 12px 40px rgba(52,152,219,0.18);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(52,152,219,0.12);
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none;
+    }
+    .nav-logo img { height: 36px; }
+    .nav-logo span {
+      font-family: 'Sora', sans-serif;
+      font-weight: 800; font-size: 1.2rem;
+      color: var(--blue);
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a {
+      text-decoration: none; font-size: 0.9rem; font-weight: 500;
+      color: var(--mid); transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-cta {
+      background: var(--blue); color: #fff !important;
+      padding: 6px 18px; border-radius: 50px;
+    }
+    .nav-cta:hover { background: var(--blue-dark) !important; color: #fff !important; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--dark) 0%, var(--mid) 60%, var(--blue) 100%);
+      padding: 100px 5% 90px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #fff; font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 2px; text-transform: uppercase;
+      padding: 6px 18px; border-radius: 50px;
+      margin-bottom: 22px;
+    }
+    .hero h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 800; color: #fff;
+      line-height: 1.15; margin-bottom: 18px;
+    }
+    .hero h1 span { color: #74c0fc; }
+    .hero p {
+      max-width: 580px; margin: 0 auto 36px;
+      font-size: 1.1rem; color: rgba(255,255,255,0.80);
+    }
+    .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      padding: 12px 28px; border-radius: 50px;
+      font-size: 0.95rem; font-weight: 600;
+      text-decoration: none; transition: all .25s;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-white { background: #fff; color: var(--blue); }
+    .btn-white:hover { background: var(--blue-light); transform: translateY(-2px); }
+    .btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.4); }
+    .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      background: #fff;
+      border-bottom: 1px solid rgba(52,152,219,0.1);
+      padding: 32px 5%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 24px;
+      text-align: center;
+    }
+    .stat-item {}
+    .stat-num {
+      font-family: 'Sora', sans-serif;
+      font-size: 2rem; font-weight: 800;
+      color: var(--blue);
+    }
+    .stat-label { font-size: 0.82rem; color: var(--muted); font-weight: 500; margin-top: 2px; }
+
+    /* ── SECTION SHELL ── */
+    section { padding: 72px 5%; }
+    .section-tag {
+      display: inline-block;
+      background: var(--blue-light); color: var(--blue);
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; padding: 5px 14px; border-radius: 50px;
+      margin-bottom: 14px;
+    }
+    h2 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800; color: var(--dark);
+      line-height: 1.2; margin-bottom: 14px;
+    }
+    .lead { font-size: 1.05rem; color: var(--muted); max-width: 620px; }
+
+    /* ── STORY ── */
+    .story { background: #fff; }
+    .story-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px; align-items: center;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .story-text h2 { margin-bottom: 18px; }
+    .story-text p { color: var(--muted); margin-bottom: 14px; }
+    .story-visual {
+      background: linear-gradient(135deg, var(--blue-light), #dbeeff);
+      border-radius: 20px;
+      padding: 40px;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .timeline-item {
+      display: flex; gap: 16px; align-items: flex-start;
+    }
+    .tl-dot {
+      width: 38px; height: 38px; flex-shrink: 0;
+      background: var(--blue); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 0.8rem; font-weight: 700;
+    }
+    .tl-content h4 {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.95rem; font-weight: 700;
+      color: var(--dark); margin-bottom: 2px;
+    }
+    .tl-content p { font-size: 0.85rem; color: var(--muted); }
+
+    /* ── MISSION ── */
+    .mission { background: var(--bg); }
+    .mission-inner { max-width: 1100px; margin: 0 auto; }
+    .mission-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px; margin-top: 36px;
+    }
+    .m-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--blue);
+      transition: transform .25s, box-shadow .25s;
+    }
+    .m-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .m-icon {
+      width: 48px; height: 48px;
+      background: var(--blue-light); border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; color: var(--blue);
+      margin-bottom: 16px;
+    }
+    .m-card h3 {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.05rem; font-weight: 700;
+      color: var(--dark); margin-bottom: 8px;
+    }
+    .m-card p { font-size: 0.9rem; color: var(--muted); }
+
+    /* ── WHAT WE OFFER ── */
+    .offer { background: #fff; }
+    .offer-inner { max-width: 1100px; margin: 0 auto; }
+    .offer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 18px; margin-top: 36px;
+    }
+    .o-card {
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 26px 20px;
+      text-align: center;
+      text-decoration: none;
+      border: 1.5px solid transparent;
+      transition: all .25s;
+    }
+    .o-card:hover {
+      border-color: var(--blue);
+      background: var(--blue-light);
+      transform: translateY(-3px);
+    }
+    .o-card i {
+      font-size: 1.8rem; color: var(--blue);
+      margin-bottom: 12px; display: block;
+    }
+    .o-card h4 {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.9rem; font-weight: 700;
+      color: var(--dark); margin-bottom: 4px;
+    }
+    .o-card p { font-size: 0.78rem; color: var(--muted); }
+
+    /* ── FOUNDER ── */
+    .founder { background: linear-gradient(135deg, var(--dark) 0%, var(--mid) 100%); }
+    .founder-inner {
+      max-width: 860px; margin: 0 auto;
+      display: grid; grid-template-columns: auto 1fr;
+      gap: 48px; align-items: center;
+    }
+    .founder-avatar {
+      width: 140px; height: 140px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), #74c0fc);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Sora', sans-serif;
+      font-size: 3rem; font-weight: 800; color: #fff;
+      flex-shrink: 0;
+      border: 4px solid rgba(255,255,255,0.2);
+    }
+    .founder-info .section-tag { background: rgba(255,255,255,0.12); color: #74c0fc; }
+    .founder-info h2 { color: #fff; }
+    .founder-info .founder-name {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.5rem; font-weight: 800;
+      color: #74c0fc; margin-bottom: 10px;
+    }
+    .founder-info p { color: rgba(255,255,255,0.75); margin-bottom: 10px; }
+
+    /* ── CONNECT / SOCIAL ── */
+    .connect { background: var(--bg); }
+    .connect-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+    .connect h2 { margin-bottom: 10px; }
+    .connect .lead { margin: 0 auto 40px; }
+    .social-grid {
+      display: flex; flex-wrap: wrap;
+      justify-content: center; gap: 16px;
+    }
+    .social-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 12px 24px; border-radius: 50px;
+      font-size: 0.9rem; font-weight: 600;
+      text-decoration: none;
+      border: 2px solid transparent;
+      transition: all .25s;
+    }
+    .social-btn i { font-size: 1.1rem; }
+    .s-whatsapp { background: #25D366; color: #fff; }
+    .s-whatsapp:hover { background: #1ebe5d; transform: translateY(-2px); }
+    .s-telegram { background: #0088cc; color: #fff; }
+    .s-telegram:hover { background: #006fa8; transform: translateY(-2px); }
+    .s-instagram { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color: #fff; }
+    .s-instagram:hover { opacity: .88; transform: translateY(-2px); }
+    .s-twitter { background: #000; color: #fff; }
+    .s-twitter:hover { background: #222; transform: translateY(-2px); }
+    .s-facebook { background: #1877f2; color: #fff; }
+    .s-facebook:hover { background: #1460c5; transform: translateY(-2px); }
+    .s-email { background: #fff; color: var(--blue); border-color: var(--blue); }
+    .s-email:hover { background: var(--blue-light); transform: translateY(-2px); }
+
+    /* ── FOOTER CTA ── */
+    .footer-cta {
+      background: var(--blue);
+      padding: 60px 5%; text-align: center;
+    }
+    .footer-cta h2 { color: #fff; margin-bottom: 12px; }
+    .footer-cta p { color: rgba(255,255,255,0.8); margin-bottom: 28px; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      padding: 24px 5%;
+      text-align: center;
+      color: rgba(255,255,255,0.45);
+      font-size: 0.82rem;
+    }
+    footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    footer a:hover { color: var(--blue); }
+
+    /* ── TRANSLATOR ── */
+    .translate-fab {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      z-index: 9999;
+      display: flex; flex-direction: column; align-items: flex-end; gap: 10px;
+    }
+    .translate-toggle {
+      width: 54px; height: 54px;
+      background: var(--blue);
+      border-radius: 50%; border: none; cursor: pointer;
+      box-shadow: 0 4px 22px rgba(52,152,219,0.50);
+      color: #fff; font-size: 1.4rem;
+      display: flex; align-items: center; justify-content: center;
+      transition: all .25s;
+    }
+    .translate-toggle:hover { background: var(--blue-dark); transform: scale(1.08); }
+    .translate-toggle .t-label {
+      font-size: 0.55rem; font-weight: 700; letter-spacing: .5px;
+      position: absolute; bottom: 7px; font-family: 'Sora', sans-serif;
+    }
+    .lang-drawer {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.16);
+      padding: 16px 14px;
+      width: 220px;
+      max-height: 0; overflow: hidden;
+      transition: max-height .35s ease, opacity .3s ease, padding .3s ease;
+      opacity: 0;
+    }
+    .lang-drawer.open {
+      max-height: 420px;
+      opacity: 1;
+    }
+    .lang-drawer-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.75rem; font-weight: 700;
+      color: var(--muted); letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 10px; padding: 0 4px;
+    }
+    .lang-grid {
+      display: flex; flex-direction: column; gap: 4px;
+      max-height: 340px; overflow-y: auto;
+    }
+    .lang-opt {
+      display: flex; align-items: center; gap: 10px;
+      padding: 9px 12px; border-radius: 10px;
+      cursor: pointer; border: none; background: transparent;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem; color: var(--text);
+      transition: background .15s, color .15s;
+      text-align: left; width: 100%;
+    }
+    .lang-opt:hover { background: var(--blue-light); color: var(--blue); }
+    .lang-opt.active { background: var(--blue); color: #fff; }
+    .lang-opt .lang-flag { font-size: 1.1rem; }
+    .lang-opt .lang-name { font-weight: 500; }
+
+    /* ── ANIMATIONS ── */
+    .reveal {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 0 4%; }
+      .nav-links { display: none; }
+      .story-inner { grid-template-columns: 1fr; gap: 32px; }
+      .founder-inner { grid-template-columns: 1fr; text-align: center; }
+      .founder-avatar { margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV --
+<nav>
+  <a href="https://sabkacode.vercel.app/" class="nav-logo">
+    <img src="https://sabkacode.vercel.app/logo.png" alt="SabkaCode Logo"/>
+    <span>SabkaCode</span>
+  </a>
+  <div class="nav-links">
+    <a href="https://sabkacode.vercel.app/notes">Notes</a>
+    <a href="https://sabkacode.vercel.app/p">Papers</a>
+    <a href="https://sabkacode.vercel.app/solve">Solutions</a>
+    <a href="https://sabkacode.vercel.app/blog">Blog</a>
+    <a href="https://sabkacode.vercel.app/jee">JEE</a>
+    <a href="https://sabkacode.vercel.app/" class="nav-cta">Home</a>
+  </div>
+</nav>-->
+<div id="nav"></div>
+    <script src="/script.js"></script>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">✦ About SabkaCode</div>
+  <h1>Har Student Ka<br/><span>Study Partner</span></h1>
+  <p>Free notes, previous year papers aur coding resources — sab ek jagah, sab ke liye, bilkul free.</p>
+  <div class="hero-btns">
+    <a href="https://sabkacode.vercel.app/notes" class="btn btn-white"><i class="fas fa-book-open"></i> Explore Notes</a>
+    <a href="https://sabkacode.vercel.app/p" class="btn btn-outline"><i class="fas fa-file-alt"></i> Previous Papers</a>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-item reveal">
+    <div class="stat-num">3+</div>
+    <div class="stat-label">Universities Covered</div>
+  </div>
+  <div class="stat-item reveal">
+    <div class="stat-num">20+</div>
+    <div class="stat-label">Subjects Available</div>
+  </div>
+  <div class="stat-item reveal">
+    <div class="stat-num">100+</div>
+    <div class="stat-label">Previous Papers</div>
+  </div>
+  <div class="stat-item reveal">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">Free for Students</div>
+  </div>
+</div>
+
+<!-- STORY -->
+<section class="story">
+  <div class="story-inner">
+    <div class="story-text reveal">
+      <span class="section-tag">Our Story</span>
+      <h2>2022–23 mein ek idea se shuru hua safar</h2>
+      <p>SabkaCode ki neev tab rakhi gayi jab ek student ne mahsoos kiya ki notes scattered hain, previous papers dhundne mein ghante lagte hain, aur solutions milte hi nahi.</p>
+      <p>Isi problem ko solve karne ke liye SabkaCode banaya gaya — ek aisi jagah jahan BCA, MCA, MBA aur engineering ke students ko sab kuch organized mile, bilkul free.</p>
+      <p>Aaj yeh platform AKTU, CSJMU, aur DBRAU ke hazaron students ki pehli pasand ban chuka hai.</p>
+    </div>
+    <div class="story-visual reveal">
+      <div class="timeline-item">
+        <div class="tl-dot">22</div>
+        <div class="tl-content">
+          <h4>SabkaCode Launch — 2022</h4>
+          <p>Pehle notes aur syllabus ke saath shuruat ki gayi.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-dot">23</div>
+        <div class="tl-content">
+          <h4>Previous Papers Add — 2023</h4>
+          <p>AKTU MBA/MCA ke solved papers platform par aaye.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-dot">24</div>
+        <div class="tl-content">
+          <h4>JEE & Blog — 2024</h4>
+          <p>JEE papers aur study blog ke saath platform grow kiya.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-dot">25</div>
+        <div class="tl-content">
+          <h4>Growing Strong — 2025</h4>
+          <p>Aur zyada universities aur solutions add ho rahe hain.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section class="mission">
+  <div class="mission-inner">
+    <div class="reveal">
+      <span class="section-tag">Mission & Vision</span>
+      <h2>Kyun Banaya SabkaCode?</h2>
+      <p class="lead">Hamara ek hi maksad hai — koi bhi student resources ki kami ki wajah se peeche na rahe.</p>
+    </div>
+    <div class="mission-grid">
+      <div class="m-card reveal">
+        <div class="m-icon"><i class="fas fa-bullseye"></i></div>
+        <h3>Hamara Mission</h3>
+        <p>Har student ko free, structured aur reliable study material provide karna — chahe wo kisi bhi university mein ho.</p>
+      </div>
+      <div class="m-card reveal">
+        <div class="m-icon"><i class="fas fa-eye"></i></div>
+        <h3>Hamara Vision</h3>
+        <p>India ka sabse trusted free educational resource hub banana — jahan notes se lekar solutions tak sab mile.</p>
+      </div>
+      <div class="m-card reveal">
+        <div class="m-icon"><i class="fas fa-heart"></i></div>
+        <h3>Hamari Values</h3>
+        <p>Free access, clear content, aur students-first approach — yahi hamare core values hain.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE OFFER -->
+<section class="offer">
+  <div class="offer-inner">
+    <div class="reveal">
+      <span class="section-tag">What We Offer</span>
+      <h2>Sab Kuch Ek Jagah</h2>
+      <p class="lead">Programming se lekar management tak — SabkaCode har subject ke liye taiyar hai.</p>
+    </div>
+    <div class="offer-grid">
+      <a href="https://sabkacode.vercel.app/notes" class="o-card reveal">
+        <i class="fas fa-book"></i>
+        <h4>Notes</h4>
+        <p>C, C++, Java, Python, DBMS, DSA aur 20+ subjects</p>
+      </a>
+      <a href="https://sabkacode.vercel.app/p#aktu" class="o-card reveal">
+        <i class="fas fa-university"></i>
+        <h4>AKTU Papers</h4>
+        <p>MBA & MCA semester-wise previous papers</p>
+      </a>
+      <a href="https://sabkacode.vercel.app/jee" class="o-card reveal">
+        <i class="fas fa-graduation-cap"></i>
+        <h4>JEE Papers</h4>
+        <p>Shift-wise JEE Main papers with download</p>
+      </a>
+      <a href="https://sabkacode.vercel.app/solve" class="o-card reveal">
+        <i class="fas fa-check-circle"></i>
+        <h4>Solutions</h4>
+        <p>AKTU MBA sem 2 solved question papers</p>
+      </a>
+      <a href="https://sabkacode.vercel.app/blog" class="o-card reveal">
+        <i class="fas fa-pen-nib"></i>
+        <h4>Blog</h4>
+        <p>Study tips, coding guides aur exam strategies</p>
+      </a>
+      <a href="https://sabkacode.vercel.app/p" class="o-card reveal">
+        <i class="fas fa-file-download"></i>
+        <h4>All Papers</h4>
+        <p>DBRAU, CSJMU aur more universities</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="founder">
+  <div class="founder-inner">
+    <div class="founder-avatar reveal">DJ</div>
+    <div class="founder-info reveal">
+      <span class="section-tag">Meet the Founder</span>
+      <div class="founder-name">Dj Upraity</div>
+      <h2 style="color:#fff; margin-bottom:12px;">Ek Student, Ek Idea, Ek Platform</h2>
+      <p>Dj Upraity ne SabkaCode 2022-23 mein students ki real problems ko samajh kar banaya. Khud ek student hone ki wajah se unhe pata tha ki notes dhundna, papers milna aur solutions samajhna kitna mushkil hota hai.</p>
+      <p>Isliye unhone ek aisa platform create kiya jo genuinely students ki madad kare — bina kisi paisa liye.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONNECT -->
+<section class="connect">
+  <div class="connect-inner">
+    <div class="reveal">
+      <span class="section-tag">Connect With Us</span>
+      <h2>Hamare Saath Jude Raho</h2>
+      <p class="lead">Updates, new papers aur study tips pane ke liye humein follow karo apne favorite platform par!</p>
+    </div>
+    <div class="social-grid reveal">
+      <a href="https://chat.whatsapp.com/JUE7O4DHVC2DnqYj6hLfug" target="_blank" class="social-btn s-whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://t.me/sabkacode" target="_blank" class="social-btn s-telegram">
+        <i class="fab fa-telegram"></i> Telegram
+      </a>
+      <a href="https://instagram.com/sabkacode" target="_blank" class="social-btn s-instagram">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://x.com/sabkacode" target="_blank" class="social-btn s-twitter">
+        <i class="fab fa-x-twitter"></i> X (Twitter)
+      </a>
+      <a href="https://facebook.com/YOUR_FACEBOOK" target="_blank" class="social-btn s-facebook">
+        <i class="fab fa-facebook-f"></i> Facebook
+      </a>
+      <a href="mailto:sabkacode@gmail.com" class="social-btn s-email">
+        <i class="fas fa-envelope"></i> Email Us
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<div class="footer-cta">
+  <h2>Ready to Start Studying?</h2>
+  <p>Hazaron students pehle se SabkaCode use kar rahe hain — ab tumhari bari hai!</p>
+  <a href="https://sabkacode.vercel.app/notes" class="btn btn-white">
+    <i class="fas fa-arrow-right"></i> Explore SabkaCode
+  </a>
+</div>
+
+<!-- FOOTER 
+<footer>
+  <p>
+    &copy; 2022–2025 SabkaCode. All rights reserved. &nbsp;|&nbsp;
+    <a href="https://sabkacode.vercel.app/">Home</a> &nbsp;|&nbsp;
+    <a href="https://sabkacode.vercel.app/aboutus.html">About</a> &nbsp;|&nbsp;
+    <a href="#">Contact</a> &nbsp;|&nbsp;
+    <a href="#">Privacy Policy</a>
+  </p>
+</footer>-->
+
+<!-- FLOATING TRANSLATE BUTTON -->
+<div class="translate-fab">
+  <div class="lang-drawer" id="langDrawer">
+    <div class="lang-drawer-title">🌐 Choose Language</div>
+    <div class="lang-grid" id="langGrid">
+      <!-- filled by JS -->
+    </div>
+  </div>
+  <button class="translate-toggle" onclick="toggleDrawer()" title="Translate page" style="position:relative;">
+    🌐<span class="t-label">LANG</span>
+  </button>
+</div>
+<div id="footer"></div>
+<script>
+  // ── Page URL to translate
+  const PAGE_URL = 'https://sabkacode.vercel.app/aboutus';
+
+  // ── Language list
+  const LANGS = [
+    { code:'en',    flag:'🇮🇳', name:'English'    },
+    { code:'hi',    flag:'🇮🇳', name:'हिन्दी'      },
+    { code:'mr',    flag:'🇮🇳', name:'मराठी'       },
+    { code:'bn',    flag:'🇮🇳', name:'বাংলা'       },
+    { code:'ta',    flag:'🇮🇳', name:'தமிழ்'       },
+    { code:'te',    flag:'🇮🇳', name:'తెలుగు'      },
+    { code:'gu',    flag:'🇮🇳', name:'ગુજરાતી'     },
+    { code:'kn',    flag:'🇮🇳', name:'ಕನ್ನಡ'       },
+    { code:'ml',    flag:'🇮🇳', name:'മലയാളം'      },
+    { code:'pa',    flag:'🇮🇳', name:'ਪੰਜਾਬੀ'      },
+    { code:'ur',    flag:'🇵🇰', name:'اردو'        },
+    { code:'ar',    flag:'🇸🇦', name:'العربية'     },
+    { code:'fr',    flag:'🇫🇷', name:'Français'    },
+    { code:'de',    flag:'🇩🇪', name:'Deutsch'     },
+    { code:'es',    flag:'🇪🇸', name:'Español'     },
+    { code:'zh-CN', flag:'🇨🇳', name:'中文'         },
+    { code:'ja',    flag:'🇯🇵', name:'日本語'        },
+    { code:'ru',    flag:'🇷🇺', name:'Русский'     },
+  ];
+
+  // ── Build lang buttons
+  const grid = document.getElementById('langGrid');
+  LANGS.forEach(l => {
+    const btn = document.createElement('button');
+    btn.className = 'lang-opt' + (l.code === 'en' ? ' active' : '');
+    btn.dataset.code = l.code;
+    btn.innerHTML = `<span class="lang-flag">${l.flag}</span><span class="lang-name">${l.name}</span>`;
+    btn.onclick = () => goTranslate(l.code);
+    grid.appendChild(btn);
+  });
+
+  // ── Translate: redirect to Google Translate proxy (100% reliable)
+  function goTranslate(code) {
+    if (code === 'en') {
+      // Go back to original English page
+      window.location.href = PAGE_URL;
+    } else {
+      // Open page inside Google Translate — guaranteed to work
+      const url = `https://translate.google.com/translate?sl=en&tl=${code}&hl=en&u=${encodeURIComponent(PAGE_URL)}`;
+      window.location.href = url;
+    }
+  }
+
+  // ── Drawer open/close
+  function toggleDrawer() {
+    document.getElementById('langDrawer').classList.toggle('open');
+  }
+  document.addEventListener('click', function(e) {
+    if (!document.querySelector('.translate-fab').contains(e.target)) {
+      document.getElementById('langDrawer').classList.remove('open');
+    }
+  });
+
+  // ── Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
