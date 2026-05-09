@@ -1,63 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-	
-        <meta charset="UTF-8">
-        <meta name="google-site-verification" content="UpCtnERv_OdHBR4c5vAHfn8VcnpYshlSEutWzbxSKwY" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-		<link rel="stylesheet" href="https://sabkacode.vercel.app/style.css">
-        <title>Choose University</title>
-        <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "otqed8ed9r");
-</script>
-        <style>
-            .pp{
-                color:blue;
-            }
-            .pp:hover{
-                text-decoration:underline;
-            }
-        </style>
-    </head>
-    <script language="JavaScript" type="text/javascript">
-        //Message to display whenever right click on website
-        var message = "Sorry, Right Click have been disabled.";
-        function click(e) {
-            if (document.all) {
-                if (event.button == 2 || event.button == 3) {
-                    alert(message);
-                    return false;
-                }
-            }
-            else{
-                if (e.button == 2 || e.button == 3) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    alert(message);
-                    return false;
-                }
-            }
-        }
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Notes – AKTU, DBRAU, CSJMU | SabkaCode</title>
+  <meta name="description" content="Free study notes for AKTU, DBRAU and CSJMU students. MCA, MBA, BCA notes for all subjects and semesters — 100% free."/>
+  <link rel="canonical" href="https://sabkacode.vercel.app/notes"/>
+  <meta property="og:title" content="Free Notes – AKTU, DBRAU, CSJMU | SabkaCode"/>
+  <meta property="og:description" content="Free notes for all semesters and subjects — AKTU MCA/MBA, DBRAU BCA, CSJMU BCA."/>
+  <meta property="og:url" content="https://sabkacode.vercel.app/notes"/>
+  <meta property="og:image" content="https://sabkacode.vercel.app/logo.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --blue:#3498db;--blue-d:#1f6fa8;--blue-l:#e8f4fd;
+      --dark:#0f1c2e;--mid:#2c4a6e;--text:#2d3748;--muted:#718096;
+      --bg:#f7faff;--white:#fff;--radius:14px;
+      --shadow:0 4px 24px rgba(52,152,219,.10);
+      --shadow-lg:0 12px 40px rgba(52,152,219,.18);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
 
-        if (document.all) {
-            document.onmousedown = click;
-        }
-        else {
-            document.onclick = click;
-        }
-        document.oncontextmenu = function () {
-            return false;
-        };
-    </script>
-    <body>
-        <div id="nav"></div>
-        <main>
-            <!-- Card grid for different sections -->
+   
+    /* HERO */
+    .hero{background:linear-gradient(135deg,var(--dark) 0%,var(--mid) 55%,var(--blue) 100%);padding:90px 5% 80px;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E")}
+    .badge{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 18px;border-radius:50px;margin-bottom:18px}
+    .hero h1{font-family:'Sora',sans-serif;font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;color:#fff;margin-bottom:14px;line-height:1.15}
+    .hero h1 span{color:#74c0fc}
+    .hero p{color:rgba(255,255,255,.78);font-size:1.05rem;max-width:520px;margin:0 auto 32px}
+    .hero-stats{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+    .hs{text-align:center}
+    .hs-num{font-family:'Sora',sans-serif;font-size:1.6rem;font-weight:800;color:#74c0fc}
+    .hs-label{font-size:.75rem;color:rgba(255,255,255,.65);letter-spacing:.5px}
+
+    /* SECTION */
+    .section{padding:64px 5%}
+    .section-inner{max-width:1100px;margin:0 auto}
+    .sec-tag{display:inline-block;background:var(--blue-l);color:var(--blue);font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 14px;border-radius:50px;margin-bottom:12px}
+    h2{font-family:'Sora',sans-serif;font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;color:var(--dark);margin-bottom:10px;line-height:1.2}
+    .lead{color:var(--muted);font-size:1rem;max-width:580px;margin-bottom:36px}
+
+    /* UNIVERSITY CARDS */
+    .uni-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:36px}
+    .uni-card{background:var(--white);border-radius:20px;padding:36px 30px;box-shadow:var(--shadow);border:2px solid transparent;text-decoration:none;display:block;transition:all .25s;position:relative;overflow:hidden}
+    .uni-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--blue)}
+    .uni-card:hover{border-color:var(--blue);transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+    .uni-icon{width:56px;height:56px;background:var(--blue-l);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:18px}
+    .uni-card h3{font-family:'Sora',sans-serif;font-size:1.15rem;font-weight:800;color:var(--dark);margin-bottom:4px}
+    .uni-card .uni-full{font-size:.82rem;color:var(--muted);margin-bottom:14px}
+    .uni-courses{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+    .uni-courses span{background:var(--blue-l);color:var(--blue);font-size:.75rem;font-weight:600;padding:4px 10px;border-radius:50px}
+    .uni-arrow{display:inline-flex;align-items:center;gap:6px;color:var(--blue);font-size:.88rem;font-weight:600}
+    .uni-arrow i{transition:transform .2s}
+    .uni-card:hover .uni-arrow i{transform:translateX(4px)}
+
+    /* SUBJECTS PREVIEW */
+    .subjects-bg{background:var(--white)}
+    .sub-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+    .sub-tab{padding:8px 20px;border-radius:50px;border:1.5px solid #e2e8f0;background:transparent;font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:600;color:var(--muted);cursor:pointer;transition:all .2s}
+    .sub-tab.active,.sub-tab:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+    .sub-panel{display:none;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+    .sub-panel.active{display:grid}
+    .sub-chip{background:var(--bg);border-radius:10px;padding:14px 16px;font-size:.85rem;font-weight:500;color:var(--text);border:1.5px solid #e8edf5;transition:all .2s;display:flex;align-items:center;gap:8px}
+    .sub-chip i{color:var(--blue);font-size:.9rem}
+    .sub-chip:hover{border-color:var(--blue);background:var(--blue-l);color:var(--blue)}
+
+    /* WHY */
+    .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:32px}
+    .why-card{background:var(--white);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);text-align:center}
+    .why-icon{font-size:2rem;margin-bottom:12px}
+    .why-card h4{font-family:'Sora',sans-serif;font-size:.95rem;font-weight:700;color:var(--dark);margin-bottom:6px}
+    .why-card p{font-size:.83rem;color:var(--muted)}
+
+    /* TRANSLATE FAB */
+    .t-fab{position:fixed;bottom:26px;right:26px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+    .t-btn{width:52px;height:52px;background:var(--blue);border-radius:50%;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(52,152,219,.5);color:#fff;font-size:1.3rem;display:flex;align-items:center;justify-content:center;transition:all .25s;flex-direction:column;gap:1px}
+    .t-btn small{font-size:.45rem;font-weight:700;letter-spacing:.5px}
+    .t-btn:hover{background:var(--blue-d);transform:scale(1.08)}
+    .t-drawer{background:#fff;border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,.15);padding:14px 12px;width:210px;max-height:0;overflow:hidden;opacity:0;transition:max-height .35s ease,opacity .3s ease}
+    .t-drawer.open{max-height:420px;opacity:1}
+    .t-title{font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;padding:0 4px}
+    .t-grid{display:flex;flex-direction:column;gap:3px;max-height:340px;overflow-y:auto}
+    .t-opt{display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:8px;border:none;background:transparent;font-family:'DM Sans',sans-serif;font-size:.85rem;color:var(--text);cursor:pointer;text-align:left;width:100%;transition:background .15s}
+    .t-opt:hover{background:var(--blue-l);color:var(--blue)}
+    .t-opt.active{background:var(--blue);color:#fff}
+
+   
+
+    /* REVEAL */
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+    .reveal.on{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+
+<div id="nav"></div>
+	<script src="/script.js"></script>
+
+<section class="hero">
+  <div class="badge">✦ Free Study Notes</div>
+  <h1>Apni University ke<br/><span>Notes Yahan Milenge</span></h1>
+  <p>AKTU, DBRAU aur CSJMU ke sabhi subjects ke notes — bilkul free, bilkul organized.</p>
+  <div class="hero-stats">
+    <div class="hs"><div class="hs-num">3+</div><div class="hs-label">Universities</div></div>
+    <div class="hs"><div class="hs-num">5+</div><div class="hs-label">Courses</div></div>
+    <div class="hs"><div class="hs-num">40+</div><div class="hs-label">Subjects</div></div>
+    <div class="hs"><div class="hs-num">100%</div><div class="hs-label">Free</div></div>
+  </div>
+</section>
 			<h1>Free Notes, Syllabus, Books & Previous Year Question Papers</h1>
 
 <p>
@@ -88,157 +143,126 @@ prepare efficiently for university examinations and competitive academic assessm
 <li>University syllabus coverage</li>
 <li>Formula sheets and short revision material</li>
 </ul>
+<!-- UNIVERSITY SELECT -->
+<section class="section">
+  <div class="section-inner">
+    <div class="reveal">
+      <span class="sec-tag">Step 1 — University Chuno</span>
+      <h2>Apni University Select Karo</h2>
+      <p class="lead">Neeche apni university pe click karo — courses aur subjects khul jayenge.</p>
+    </div>
+    <div class="uni-grid">
 
-<hr>
-	  
-        <div class="container">
-            <center><h2>Choose University</h2></center>
-            <form id="universityForm" action="#" method='POST'>
-                <table>
-                    <tr>
-                        <th>University Name</th>
-                        <th>Choose</th>
-		    </tr>
-		    <tr>
-                        <td>Dr. A. P. J. Abdul Kalam Technical University (Aktu)</td>
-		        <td><input type="radio" name="file" value="aktu" required></td>
-                    </tr>
-                    <tr>
-                        <td>Chhatrapati Shahu Ji Maharaj University (CSJMU)</td>
-                        <td><input type="radio" name="file" value="csjmu" required></td>
-                    </tr>
-                    <tr>
-                        <td>Dr. Bhim Rao Ambedkar University (DBRAU):</td>
-                        <td><input type="radio" name="file" value="dbrau" required></td>
-                    </tr>
-                </table><br>
-                <center><input class='btn' type='submit' name='submit'></center>
-            </form>
-        </div> <br><BR><BR>
-                <h2>Notes are available of that subjects...</h2><br>
-            <div class="card-container">
-                <div class="card" onclick="window.location.href='https://sabkacode.vercel.app/notes/aktu/bc'">
-                    <h3>Business Communication</h3>
-                    <P>Syllabus, Notes, Books, Practical File, & Programs are available!</p>
-                    <p><a class="pp" href="http://sabkacode.vercel.app/p/aktu/#7">Previous Paper of BC</a></p>
-                </div>
-            </div>
-            <div class="card-container">
-                <div class="card" onclick="window.location.href='https://sabkacode.vercel.app/notes/dbrau/c'">
-                    <h3>C Language</h3>
-                    <P>Syllabus, Notes, Books, Practical File, & Programs are available!</p>
-                    <p><a class="pp" href="http://sabkacode.vercel.app/p/dbrau#1">Previous Paper of C</a></p>
-                </div>
-                <div class="card" onclick="window.location.href='https://sabkacode.vercel.app/notes/dbrau/html'">
-                    <h3>HTML</h3>
-                    <P>Syllabus, Notes, Books, & Practical File are available!</p>
-                    <p><a class="pp" href="https://sabkacode.vercel.app/p/dbrau#2">Previous Paper of Html</a></p>
-                </div>
-                <div class="card"onclick="window.location.href='https://sabkacode.vercel.app/notes/dbrau/maths'">
-                    <h3>Maths</h3>
-                    <P>Syllabus & Book are available!</p>
-                    <p><a class="pp" href="https://sabkacode.vercel.app/p/dbrau#3">Previous Paper of Maths</a></p>
-                </div>
-                <div class="card"onclick="window.location.href='https://sabkacode.vercel.app/notes/dbrau/de'">
-                    <h3>Digital Electronics</h3>
-                    <P>Syllabus Books are available!</p>
-                    <p><a class="pp" href="https://sabkacode.vercel.app/p/dbrau#7">Previous Paper of DE</a></p>
-                </div>
-                 <div class="card"onclick="window.location.href='https://sabkacode.vercel.app/notes/dbrau/cpp'">
-                    <h3>C++ Language</h3>
-                    <P>Syllabus, Notes, Books, Practical File, & Programs are available!</p>
-                    <p><a class="pp" href="https://sabkacode.vercel.app/p/dbrau#4">Previous Paper of CPP</a></p>
-                </div>
-                <div class="card"onclick="window.location.href='https://sabkacode.vercel.app/notes/dbrau/dsa'">
-                    <h3>Data Structure and Algorithm</h3>
-                    <P>Syllabus, Notes, Books, Practical File are available!</p>
-                    <p><a class="pp" href="https://sabkacode.vercel.app/p/dbrau#5">Previous Paper of DSA</a></p>
-                </div>
-                <div class="card"onclick="window.location.href='https://sabkacode.vercel.app/notes/dbrau/nm'">
-                    <h3>Numerical Method</h3>
-                    <P>Syllabus, Books & Formulae are available!</p>
-                    <p><a class="pp" href="https://sabkacode.vercel.app/p/dbrau/#6">Previous Paper of NM</a></p>
-                </div>
-                <div class="card"onclick="window.location.href='https://sabkacode.vercel.app/notes/dbrau/ec'">
-                    <h3>E-Commerce</h3>
-                    <P>Syllabus & Questions Bank are available!</p>
-                    <p><a class="pp" href="https://sabkacode.vercel.app/p/dbrau/#9">Previous Paper of Ecommerce</a></p>
-                </div>
-                <div class="card"onclick="window.location.href='https://sabkacode.vercel.app/notes/dbrau/os'">
-                    <h3>Operating System</h3>
-                    <P>Syllabus, Books, Questions Bank & Imp Question are available!</p>
-                    <p><a class="pp" href="https://sabkacode.vercel.app/p/dbrau#10">Previous Paper of OS</a></p>
-                </div>
-                 <div class="card"onclick="window.location.href='https://sabkacode.vercel.app/notes/dbrau/coa'">
-                    <h3>Computer Organization and Architecture</h3>
-                    <P>Syllabus, Notes, Books & Questions Bank are available!</p>
-                    <p><a class="pp" href="https://sabkacode.vercel.app/p/dbrau#11">Previous Paper of COA</a></p>
-                </div>
-                <div class="card"onclick="window.location.href='https://sabkacode.vercel.app/notes/dbrau/dbms'">
-                    <h3>DataBase Management System</h3>
-                    <P>Syllabus, Notes, Books & Questions Bank are available!</p>
-                    <p><a class="pp" href="https://sabkacode.vercel.app/p/dbrau#8">Previous Paper of DBMS</a></p>
-                </div>
-                <div class="card"onclick="window.location.href='https://sabkacode.vercel.app/notes/dbrau/stats'">
-                    <h3>Statistics</h3>
-                    <P>Syllabus, Books, Formulae & Questions Bank are available!</p>
-                    <p><a class="pp" href="https://sabkacode.vercel.app/p/dbrau#12">Previous Paper of Statistics</a></p>
-                </div>
-                <div class="card"onclick="window.location.href='https://sabkacode.vercel.app/notes/dbrau/php'">
-                    <h3>PHP</h3>
-                     <P>Syllabus, Books, Questions Bank & Programs are available!</p>
-                    <p><a class="pp" href="https://sabkacode.vercel.app/p/dbrau#13">Previous Paper of PHP</a></p>
-                </div>
-                 <div class="card"onclick="window.location.href='https://sabkacode.vercel.app/notes/dbrau/java'">
-                    <h3>JAVA</h3>
-                    <P>Syllabus, Books & Questions Bank are available!</p>
-                    <p><a class="pp" href="https://sabkacode.vercel.app/p/dbrau#15">Previous Paper of JAVA</a></p>
-                </div>
-                <div class="card"onclick="window.location.href='https://sabkacode.vercel.app/notes/dbrau/ai'">
-                    <h3>Artificial Intelligence</h3>
-                    <P>Syllabus & Questions Bank are available!</p>
-                    <p><a class="pp" href="https://sabkacode.vercel.app/p/dbrau#16">Previous Paper of AI</a></p>
-                </div>
-                <div class="card"onclick="window.location.href='https://sabkacode.vercel.app/notes/dbrau/ot'">
-                    <h3>Optimization Techniques</h3>
-                    <P>Syllabus, Books & Questions Bank are available!</p>
-                    <p><a class="pp" href="https://sabkacode.vercel.app/p/dbrau#14">Previous Paper of OT</a></p>
-                </div>
-                <div class="card"onclick="window.location.href='https://sabkacode.vercel.app/notes/dbrau/cn'">
-                    <h3>Computer Network</h3>
-                    <P>Syllabus, Books & Questions Bank are available!</p>
-                    <p><a class="pp" href="https://sabkacode.vercel.app/p/dbrau#17">Previous Paper of CN</a></p>
-                </div>
-                 <div class="card"onclick="window.location.href='https://sabkacode.vercel.app/notes/dbrau/cg'">
-                    <h3>Computer Graphics</h3>
-                    <P>Syllabus, Books & Questions Bank are available!</p>
-                    <p><a class="pp" href="https://sabkacode.vercel.app/p/dbrau#18">Previous Paper of CG</a></p>
-                </div>
-                <div class="card"onclick="window.location.href='https://sabkacode.vercel.app/notes/dbrau/sad'">
-                    <h3>Security Analysis and Design</h3>
-                    <P>Syllabus, Books & Questions Bank are available!</p>
-                    <p><a class="pp" href="https://sabkacode.vercel.app/p/dbrau#19">Previous Paper of SAD</a></p>
-                </div>
-                <div class="card"onclick="window.location.href='https://sabkacode.vercel.app/notes/dbrau/ns'">
-                    <h3>Network Security</h3>
-                    <P>Syllabus, Books & Questions Bank are available!</p>
-                    <p><a class="pp" href="https://sabkacode.vercel.app/p/dbrau#20">Previous Paper of NS</a></p>
-                </div>
-                <div class="card"onclick="window.location.href='https://sabkacode.vercel.app/notes/dbrau/vb'">
-                    <h3>Visual Basic .NET</h3>
-                    <P>Syllabus, Books & Questions Bank are available!</p>
-                    <p><a class="pp" href="https://sabkacode.vercel.app/p/dbrau#21">Previous Paper of VB .NE</a></p>
-                </div>
-                <div class="card"onclick="window.location.href='https://sabkacode.vercel.app/notes/dbrau/daa'">
-                    <h3>Design and Analysis of Algorithm</h3>
-                    <P>Syllabus, Books & Questions Bank are available!</p>
-                    <p><a class="pp" href="https://sabkacode.vercel.app/p/dbrau#22">Previous Paper of DAA</a></p>
-                </div>
-                
-            </div>
-			<hr>
+      <a href="https://sabkacode.vercel.app/notes/aktu" class="uni-card reveal">
+        <div class="uni-icon">🎓</div>
+        <h3>AKTU</h3>
+        <div class="uni-full">Dr. A.P.J. Abdul Kalam Technical University</div>
+        <div class="uni-courses">
+          <span>MCA</span><span>MBA</span>
+        </div>
+        <span class="uni-arrow">Notes Dekho <i class="fas fa-arrow-right"></i></span>
+      </a>
 
-<h2>Comprehensive Study Material Platform</h2>
+      <a href="https://sabkacode.vercel.app/notes/dbrau" class="uni-card reveal">
+        <div class="uni-icon">📘</div>
+        <h3>DBRAU</h3>
+        <div class="uni-full">Dr. Bhim Rao Ambedkar University, Agra</div>
+        <div class="uni-courses">
+          <span>BCA</span>
+        </div>
+        <span class="uni-arrow">Notes Dekho <i class="fas fa-arrow-right"></i></span>
+      </a>
+
+      <a href="https://sabkacode.vercel.app/notes/csjmu" class="uni-card reveal">
+        <div class="uni-icon">🏫</div>
+        <h3>CSJMU</h3>
+        <div class="uni-full">Chhatrapati Shahu Ji Maharaj University, Kanpur</div>
+        <div class="uni-courses">
+          <span>BCA</span>
+        </div>
+        <span class="uni-arrow">Notes Dekho <i class="fas fa-arrow-right"></i></span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- SUBJECTS PREVIEW -->
+<section class="section subjects-bg">
+  <div class="section-inner">
+    <div class="reveal">
+      <span class="sec-tag">Available Subjects</span>
+      <h2>Kaun Kaun Se Subjects Hain?</h2>
+      <p class="lead">Filter karo university ke hisaab se — sab subjects free mein available hain.</p>
+    </div>
+    <div class="sub-tabs reveal">
+      <button class="sub-tab active" onclick="showTab('aktu',this)">AKTU</button>
+      <button class="sub-tab" onclick="showTab('dbrau',this)">DBRAU</button>
+      <button class="sub-tab" onclick="showTab('csjmu',this)">CSJMU</button>
+    </div>
+    <div id="tab-aktu" class="sub-panel active">
+      <div class="sub-chip"><i class="fas fa-code"></i>C Language</div>
+      <div class="sub-chip"><i class="fas fa-code"></i>OOP (C++)</div>
+      <div class="sub-chip"><i class="fas fa-database"></i>DBMS</div>
+      <div class="sub-chip"><i class="fas fa-sitemap"></i>DSA</div>
+      <div class="sub-chip"><i class="fas fa-desktop"></i>Operating System</div>
+      <div class="sub-chip"><i class="fas fa-microchip"></i>COA</div>
+      <div class="sub-chip"><i class="fas fa-calculator"></i>Discrete Mathematics</div>
+      <div class="sub-chip"><i class="fas fa-chart-bar"></i>Business Statistics</div>
+      <div class="sub-chip"><i class="fas fa-users"></i>HRM</div>
+      <div class="sub-chip"><i class="fas fa-briefcase"></i>Marketing Management</div>
+      <div class="sub-chip"><i class="fas fa-money-bill"></i>Financial Management</div>
+      <div class="sub-chip"><i class="fas fa-cogs"></i>Operation Management</div>
+    </div>
+    <div id="tab-dbrau" class="sub-panel">
+      <div class="sub-chip"><i class="fas fa-code"></i>C Language</div>
+      <div class="sub-chip"><i class="fas fa-globe"></i>HTML</div>
+      <div class="sub-chip"><i class="fas fa-code"></i>C++</div>
+      <div class="sub-chip"><i class="fas fa-sitemap"></i>DSA</div>
+      <div class="sub-chip"><i class="fas fa-database"></i>DBMS</div>
+      <div class="sub-chip"><i class="fas fa-shopping-cart"></i>E-Commerce</div>
+      <div class="sub-chip"><i class="fas fa-desktop"></i>Operating System</div>
+      <div class="sub-chip"><i class="fas fa-microchip"></i>COA</div>
+      <div class="sub-chip"><i class="fab fa-php"></i>PHP</div>
+      <div class="sub-chip"><i class="fab fa-java"></i>Java</div>
+      <div class="sub-chip"><i class="fas fa-robot"></i>Artificial Intelligence</div>
+      <div class="sub-chip"><i class="fas fa-network-wired"></i>Computer Network</div>
+    </div>
+    <div id="tab-csjmu" class="sub-panel">
+      <div class="sub-chip"><i class="fas fa-code"></i>C Programming</div>
+      <div class="sub-chip"><i class="fas fa-code"></i>C++</div>
+      <div class="sub-chip"><i class="fab fa-python"></i>Python</div>
+      <div class="sub-chip"><i class="fab fa-java"></i>Java</div>
+      <div class="sub-chip"><i class="fas fa-database"></i>DBMS</div>
+      <div class="sub-chip"><i class="fas fa-sitemap"></i>Data Structures</div>
+      <div class="sub-chip"><i class="fas fa-desktop"></i>Operating System</div>
+      <div class="sub-chip"><i class="fas fa-network-wired"></i>Computer Network</div>
+      <div class="sub-chip"><i class="fas fa-globe"></i>Internet Technology</div>
+      <div class="sub-chip"><i class="fas fa-cogs"></i>Software Engineering</div>
+      <div class="sub-chip"><i class="fas fa-robot"></i>AI & Knowledge Mgmt</div>
+      <div class="sub-chip"><i class="fas fa-shopping-cart"></i>E-Commerce</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="section">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <span class="sec-tag">Why SabkaCode Notes?</span>
+      <h2>Kyun Yahan Padhna Best Hai?</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="why-icon">📂</div><h4>Organized Hai</h4><p>Semester-wise, subject-wise — dhundhna aasaan hai.</p></div>
+      <div class="why-card reveal"><div class="why-icon">💰</div><h4>Bilkul Free</h4><p>Koi charge nahi, koi registration nahi — seedha notes lo.</p></div>
+      <div class="why-card reveal"><div class="why-icon">📱</div><h4>Mobile Friendly</h4><p>Phone pe bhi comfortable padh sakte ho.</p></div>
+      <div class="why-card reveal"><div class="why-icon">🔄</div><h4>Update Hota Hai</h4><p>Naye subjects aur notes regularly add hote hain.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+	<h2>Comprehensive Study Material Platform</h2>
 
 <p>
 Our goal is to provide high-quality and structured academic content
@@ -269,40 +293,43 @@ If you are preparing for semester exams,
 this platform will help you improve conceptual clarity,
 exam performance, and academic confidence.
 </p>
-        </main><br><br>
-        <BR><BR>
-    </body><br><BR><BR><BR><BR>
-</html>
+</section>
 
-<!-- NAV INCLUDE SCRIPT -->
-<script src="/script.js"></script>
+
 
 <script>
-    document.getElementById("universityForm").addEventListener("submit", function(e){
-    e.preventDefault(); // stop POST
+const PAGE = 'https://sabkacode.vercel.app/notes';
+const LANGS=[
+  {c:'en',f:'🇮🇳',n:'English'},{c:'hi',f:'🇮🇳',n:'हिन्दी'},{c:'mr',f:'🇮🇳',n:'मराठी'},
+  {c:'bn',f:'🇮🇳',n:'বাংলা'},{c:'ta',f:'🇮🇳',n:'தமிழ்'},{c:'te',f:'🇮🇳',n:'తెలుగు'},
+  {c:'gu',f:'🇮🇳',n:'ગુજરાતી'},{c:'kn',f:'🇮🇳',n:'ಕನ್ನಡ'},{c:'ml',f:'🇮🇳',n:'മലയാളം'},
+  {c:'pa',f:'🇮🇳',n:'ਪੰਜਾਬੀ'},{c:'ur',f:'🇵🇰',n:'اردو'},{c:'ar',f:'🇸🇦',n:'العربية'},
+  {c:'fr',f:'🇫🇷',n:'Français'},{c:'de',f:'🇩🇪',n:'Deutsch'},{c:'es',f:'🇪🇸',n:'Español'},
+  {c:'zh-CN',f:'🇨🇳',n:'中文'},{c:'ja',f:'🇯🇵',n:'日本語'},{c:'ru',f:'🇷🇺',n:'Русский'}
+];
+const tg=document.getElementById('tGrid');
+LANGS.forEach(l=>{
+  const b=document.createElement('button');
+  b.className='t-opt'+(l.c==='en'?' active':'');
+  b.innerHTML=`<span>${l.f}</span><span>${l.n}</span>`;
+  b.onclick=()=>l.c==='en'?location.href=PAGE:location.href=`https://translate.google.com/translate?sl=en&tl=${l.c}&u=${encodeURIComponent(PAGE)}`;
+  tg.appendChild(b);
+});
+function toggleT(){document.getElementById('tDrawer').classList.toggle('open')}
+document.addEventListener('click',e=>{if(!document.querySelector('.t-fab').contains(e.target))document.getElementById('tDrawer').classList.remove('open')});
 
-    const selected = document.querySelector('input[name="file"]:checked');
+// Tabs
+function showTab(id,btn){
+  document.querySelectorAll('.sub-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.sub-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+}
 
-    if(!selected){
-        alert("Kyo, maje lene he!!");
-        window.location.href = "https://sabkacode.vercel.app/notes";
-        return;
-    }
-
-    const map = {
-        csjmu: "https://sabkacode.vercel.app/notes/csjmu",
-        dbrau: "https://sabkacode.vercel.app/notes/dbrau",
-        ccsu:  "https://sabkacode.vercel.app/notes/ccsu",
-        aktu:  "https://sabkacode.vercel.app/notes/aktu"
-    };
-
-    const target = map[selected.value];
-
-    if(target){
-        window.location.href = target;
-    }else{
-        alert("Kyo, maje lene he!!");
-        window.location.href = "https://sabkacode.vercel.app/notes";
-    }
-    });
+// Reveal
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
+	<div id="footer"></div>
+</body>
+</html>
