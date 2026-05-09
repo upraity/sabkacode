@@ -1,203 +1,487 @@
-<html>
-    <head>
-        <title>Terms & Conditions</title>
-        
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SabkaCode Terms and Conditions – Website use karne ke niyam aur sharten padhein.">
+  <meta name="author" content="SabkaCode">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Terms & Conditions | SabkaCode">
+  <meta property="og:description" content="SabkaCode ke terms and conditions padhein.">
+  <meta property="og:image" content="https://sabkacode.vercel.app/logo.png">
+  <meta property="og:url" content="https://sabkacode.vercel.app/termscondition.html">
+  <meta name="theme-color" content="#3498db">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Terms &amp; Conditions | SabkaCode</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "otqed8ed9r");
+  </script>
 
+  <script language="JavaScript" type="text/javascript">
+    var message = "Sorry, Right Click have been disabled.";
+    function click(e) {
+      if (document.all) {
+        if (event.button == 2 || event.button == 3) { alert(message); return false; }
+      } else {
+        if (e.button == 2 || e.button == 3) { e.preventDefault(); e.stopPropagation(); alert(message); return false; }
+      }
+    }
+    if (document.all) { document.onmousedown = click; } else { document.onclick = click; }
+    document.oncontextmenu = function () { return false; };
+  </script>
 
+  <style>
+    * { box-sizing: border-box; }
 
-<meta name="description" content="SabkaCode provides programming notes, AKTU MBA previous year question papers with solutions, JEE papers, study resources, and educational materials for students.">
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f8;
+      color: #2c3e50;
+    }
 
-<meta name="keywords" content="SabkaCode, programming notes, aktu mba previous papers, aktu mba solved papers, jee previous year papers, coding notes, study materials, aktu mba hrm mis qtm be papers">
+    main {
+      padding: 30px 20px 120px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-<meta name="author" content="SabkaCode">
+    /* ── Page Hero ── */
+    .page-hero {
+      background: linear-gradient(135deg, #3498db, #2c3e50);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px 30px;
+      margin-bottom: 30px;
+      border-radius: 0 0 20px 20px;
+    }
+    .page-hero .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 20px;
+      padding: 4px 16px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+    .page-hero h1 {
+      margin: 0 0 8px;
+      font-size: 2em;
+    }
+    .page-hero p {
+      margin: 0;
+      opacity: 0.85;
+      font-size: 15px;
+    }
 
-<meta name="robots" content="index, follow">
+    /* ── Last Updated Badge ── */
+    .last-updated {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 13px;
+      color: #7f8c8d;
+    }
+    .last-updated span {
+      background: #ecf0f1;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid #bdc3c7;
+    }
 
-<link rel="canonical" href="https://sabkacode.vercel.app/">
+    /* ── TOC Card ── */
+    .toc-card {
+      background: #fff;
+      border-left: 4px solid #3498db;
+      border-radius: 10px;
+      padding: 20px 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    .toc-card h3 {
+      color: #3498db;
+      margin: 0 0 12px;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .toc-card ol {
+      margin: 0;
+      padding-left: 20px;
+      columns: 2;
+    }
+    .toc-card ol li {
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+    .toc-card ol li a {
+      color: #3498db;
+      text-decoration: none;
+    }
+    .toc-card ol li a:hover {
+      text-decoration: underline;
+    }
 
+    /* ── Section Card ── */
+    .section-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px 30px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      transition: box-shadow 0.3s ease;
+    }
+    .section-card:hover {
+      box-shadow: 0 4px 16px rgba(52,152,219,0.15);
+    }
+    .section-card h2 {
+      color: #3498db;
+      font-size: 1.2em;
+      margin: 0 0 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid #ecf0f1;
+      padding-bottom: 10px;
+    }
+    .section-card h2 i {
+      font-size: 1em;
+      color: #3498db;
+    }
+    .section-card p {
+      line-height: 1.75;
+      margin: 0 0 12px;
+      color: #555;
+      font-size: 14.5px;
+    }
+    .section-card p:last-child { margin-bottom: 0; }
 
+    /* ── Restriction List ── */
+    .restrict-list {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0;
+    }
+    .restrict-list li {
+      padding: 8px 12px 8px 36px;
+      position: relative;
+      font-size: 14.5px;
+      color: #555;
+      background: #fafafa;
+      margin-bottom: 6px;
+      border-radius: 8px;
+      border-left: 3px solid #e74c3c;
+    }
+    .restrict-list li::before {
+      content: "\f00d";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 12px;
+      color: #e74c3c;
+    }
 
-<!-- Open Graph (Facebook / WhatsApp preview) -->
-<meta property="og:title" content="SabkaCode – Programming Notes & Previous Year Papers">
-<meta property="og:description" content="Programming notes, AKTU MBA previous papers, JEE papers and study resources for students.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://sabkacode.vercel.app/">
-<meta property="og:image" content="https://sabkacode.vercel.app/logo.png">
+    .allow-list {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0;
+    }
+    .allow-list li {
+      padding: 8px 12px 8px 36px;
+      position: relative;
+      font-size: 14.5px;
+      color: #555;
+      background: #fafafa;
+      margin-bottom: 6px;
+      border-radius: 8px;
+      border-left: 3px solid #2ecc71;
+    }
+    .allow-list li::before {
+      content: "\f00c";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 12px;
+      color: #2ecc71;
+    }
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SabkaCode – Programming Notes & Previous Papers">
-<meta name="twitter:description" content="Free programming notes and AKTU MBA previous papers with solutions.">
-<meta name="twitter:image" content="https://sabkacode.vercel.app/logo.png">
+    /* ── Info box ── */
+    .info-box {
+      background: #eaf4fd;
+      border-left: 4px solid #3498db;
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 14px;
+      color: #2c3e50;
+      margin-top: 12px;
+    }
+    .info-box i { color: #3498db; margin-right: 6px; }
 
-<!-- Theme Color -->
-<meta name="theme-color" content="#3498db">
+    /* ── Contact CTA ── */
+    .contact-cta {
+      background: linear-gradient(135deg, #3498db, #2c3e50);
+      color: #fff;
+      border-radius: 14px;
+      padding: 28px 24px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .contact-cta h3 { margin: 0 0 10px; font-size: 1.2em; }
+    .contact-cta p  { margin: 0 0 18px; opacity: 0.9; font-size: 14px; }
+    .cta-btn {
+      display: inline-block;
+      background: #fff;
+      color: #3498db;
+      padding: 10px 28px;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+    .cta-btn:hover {
+      background: #ecf0f1;
+      color: #2c3e50;
+    }
 
-<!-- Favicon -->
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
+    /* ── Back to top ── */
+    #backToTop {
+      display: none;
+      position: fixed;
+      bottom: 70px;
+      right: 20px;
+      background: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 999;
+      transition: background 0.3s;
+    }
+    #backToTop:hover { background: #2c3e50; }
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://sabkacode.vercel.app/style.css">
-<!-- Structured Data for Google -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "EducationalOrganization",
- "name": "SabkaCode",
- "url": "https://sabkacode.vercel.app",
- "logo": "https://sabkacode.vercel.app/logo.png",
- "description": "SabkaCode provides programming notes, AKTU MBA previous year papers, and educational resources.",
- "sameAs": [
-  "https://t.me/sabkacode",
-  "https://whatsapp.com/channel/0029VaElLRrAYlUMk0qIHX1G"
- ]
-}
+    @media (max-width: 600px) {
+      .toc-card ol { columns: 1; }
+      .page-hero h1 { font-size: 1.5em; }
+      .section-card { padding: 18px 16px; }
+    }
+
+    #pageCount { color: transparent; }
+  </style>
+</head>
+<body>
+
+<!-- NAV PLACEHOLDER -->
+<div id="nav"></div>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="badge">✦ Legal</div>
+  <h1><i class="fa-solid fa-file-contract"></i> Terms &amp; Conditions</h1>
+  <p>SabkaCode use karne se pehle ye terms padh lo — yahi hamara agreement hai!</p>
+</div>
+
+<main>
+
+  <!-- Last Updated -->
+  <div class="last-updated">
+    <span><i class="fa-regular fa-clock"></i> Last Updated: January 2025</span>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc-card">
+    <h3><i class="fa-solid fa-list"></i> Table of Contents</h3>
+    <ol>
+      <li><a href="#welcome">Welcome</a></li>
+      <li><a href="#cookies">Cookies</a></li>
+      <li><a href="#license">License</a></li>
+      <li><a href="#comments">Comments</a></li>
+      <li><a href="#hyperlinking">Hyperlinking</a></li>
+      <li><a href="#iframes">iFrames</a></li>
+      <li><a href="#content-liability">Content Liability</a></li>
+      <li><a href="#reservation">Reservation of Rights</a></li>
+      <li><a href="#removal">Removal of Links</a></li>
+      <li><a href="#disclaimer">Disclaimer</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. Welcome -->
+  <div class="section-card" id="welcome">
+    <h2><i class="fa-solid fa-hand-wave"></i> 1. Welcome to SabkaCode</h2>
+    <p>
+      <strong>!! Radhe Radhe !!</strong> — Welcome to SabkaCode! Ye terms and conditions
+      SabkaCode ki website (<a href="https://sabkacode.vercel.app" style="color:#3498db;">sabkacode.vercel.app</a>)
+      ke use ke niyam batate hain.
+    </p>
+    <p>
+      Is website ko access karke aap in terms ko accept karte ho. Agar aap agree nahi karte,
+      to please site use mat karo.
+    </p>
+    <div class="info-box">
+      <i class="fa-solid fa-circle-info"></i>
+      <strong>"Client", "You", "Your"</strong> = aap (user) &nbsp;|&nbsp;
+      <strong>"We", "Us", "Our"</strong> = SabkaCode team.
+    </div>
+  </div>
+
+  <!-- 2. Cookies -->
+  <div class="section-card" id="cookies">
+    <h2><i class="fa-solid fa-cookie-bite"></i> 2. Cookies</h2>
+    <p>
+      Hum cookies use karte hain. SabkaCode access karke aap humari
+      Privacy Policy ke according cookies use karne se agree karte ho.
+    </p>
+    <p>
+      Cookies se hum user experience better banate hain. Kuch affiliate/advertising
+      partners bhi cookies use kar sakte hain.
+    </p>
+  </div>
+
+  <!-- 3. License -->
+  <div class="section-card" id="license">
+    <h2><i class="fa-solid fa-scale-balanced"></i> 3. License</h2>
+    <p>
+      Jab tak alag se na bola jaye, SabkaCode ya uske licensors ke paas site pe maujood
+      sab intellectual property rights hain. Personal use ke liye access kar sakte ho —
+      neeche diye restrictions ke saath.
+    </p>
+    <p><strong>Aap ye NAHI kar sakte:</strong></p>
+    <ul class="restrict-list">
+      <li>SabkaCode ka material republish karna</li>
+      <li>Material bechna, rent ya sub-license karna</li>
+      <li>Content reproduce, duplicate ya copy karna</li>
+      <li>Content redistribute karna</li>
+    </ul>
+  </div>
+
+  <!-- 4. Comments -->
+  <div class="section-card" id="comments">
+    <h2><i class="fa-solid fa-comments"></i> 4. Comments</h2>
+    <p>
+      Kuch jagah users opinions post kar sakte hain. SabkaCode comments ko pehle
+      filter ya edit nahi karta. Comments sirf us user ki views hain.
+    </p>
+    <p>SabkaCode comments ke liye liable nahi hai. Hum inappropriate ya offensive
+    comments hatane ka right rakhte hain.</p>
+    <p><strong>Comment karte waqt aap warrant karte ho ki:</strong></p>
+    <ul class="allow-list">
+      <li>Aapke paas comment post karne ka adhikar hai</li>
+      <li>Comment kisi ki intellectual property infringe nahi karta</li>
+      <li>Comment defamatory ya unlawful nahi hai</li>
+      <li>Comment commercial promotion ke liye nahi hai</li>
+    </ul>
+  </div>
+
+  <!-- 5. Hyperlinking -->
+  <div class="section-card" id="hyperlinking">
+    <h2><i class="fa-solid fa-link"></i> 5. Hyperlinking to Our Content</h2>
+    <p>Ye organizations bina permission ke link kar sakte hain:</p>
+    <ul class="allow-list">
+      <li>Government agencies</li>
+      <li>Search engines (Google, Bing, etc.)</li>
+      <li>News organizations</li>
+      <li>Online directory distributors</li>
+      <li>Accredited businesses (non-profit nahi)</li>
+    </ul>
+    <p style="margin-top:14px;">
+      Link deceptive nahi hona chahiye aur falsely sponsorship imply nahi karni chahiye.
+      Hum other link requests bhi consider karte hain — email karo.
+    </p>
+  </div>
+
+  <!-- 6. iFrames -->
+  <div class="section-card" id="iframes">
+    <h2><i class="fa-solid fa-window-restore"></i> 6. iFrames</h2>
+    <p>
+      Bina prior written permission ke aap hamari webpages ke around frames nahi bana
+      sakte jo site ki visual presentation alter kare.
+    </p>
+  </div>
+
+  <!-- 7. Content Liability -->
+  <div class="section-card" id="content-liability">
+    <h2><i class="fa-solid fa-shield-halved"></i> 7. Content Liability</h2>
+    <p>
+      Aapki website pe jo content appear ho, uske liye hum responsible nahi hain.
+      Aapko agree karna hoga ki aap hume claims se protect karoge.
+    </p>
+    <p>
+      Koi bhi link jo libelous, obscene ya criminal ho — ya jo third-party rights infringe
+      kare — aapki site pe nahi hona chahiye.
+    </p>
+  </div>
+
+  <!-- 8. Reservation -->
+  <div class="section-card" id="reservation">
+    <h2><i class="fa-solid fa-gavel"></i> 8. Reservation of Rights</h2>
+    <p>
+      Hum right rakhte hain ki aapko kisi bhi ya sab links hatane ko bol sakein. Request
+      milne pe aapko turant comply karna hoga.
+    </p>
+    <p>
+      Hum in terms aur linking policy ko anytime amend kar sakte hain. Linking jaari
+      rakhne ka matlab hai aap updated terms se bound hain.
+    </p>
+  </div>
+
+  <!-- 9. Removal -->
+  <div class="section-card" id="removal">
+    <h2><i class="fa-solid fa-trash-can"></i> 9. Removal of Links</h2>
+    <p>
+      Agar koi link offensive lage, humse contact karo. Hum request consider karenge
+      lekin directly respond karne ke obligated nahi hain.
+    </p>
+    <p>
+      Hum website pe information ki accuracy guarantee nahi dete; completeness ya
+      up-to-date hone ka warrant nahi karte.
+    </p>
+  </div>
+
+  <!-- 10. Disclaimer -->
+  <div class="section-card" id="disclaimer">
+    <h2><i class="fa-solid fa-triangle-exclamation"></i> 10. Disclaimer</h2>
+    <p>
+      Maximum extent permitted by law — hum sab representations, warranties aur
+      conditions exclude karte hain jo website use se related hain.
+    </p>
+    <p>Is disclaimer mein kuch bhi nahi:</p>
+    <ul class="restrict-list">
+      <li>Death ya personal injury ke liye liability limit karta ho</li>
+      <li>Fraud ya fraudulent misrepresentation ke liye limit karta ho</li>
+      <li>Applicable law ke under liabilities limit karta ho</li>
+    </ul>
+    <p style="margin-top:14px;">
+      Jab tak website aur services free hain, hum kisi bhi nature ke loss ya damage
+      ke liye liable nahi honge.
+    </p>
+  </div>
+
+  <!-- Contact CTA -->
+  <div class="contact-cta">
+    <h3><i class="fa-solid fa-envelope"></i> Koi Sawaal Hai?</h3>
+    <p>Agar in terms ke baare mein koi confusion ho, hume directly contact karo.</p>
+    <a href="https://sabkacode.vercel.app/contactus" class="cta-btn">
+      <i class="fa-solid fa-paper-plane"></i> Contact Us
+    </a>
+  </div>
+
+</main>
+
+<div id="footer"></div>
+
+<!-- NAV INCLUDE SCRIPT -->
+<script src="/script.js">
 </script>
 
-        <style>
-        .home{
-margin:15px;
-/* border:2px solid black; */
-padding: 15px 15px 15px 15px;
-
-
-}
-/*
-            .page{
-                border:3px solid red;
-                margin:10px;
-                padding:20px;
-            }
-  */          .page p{
-                font-size:17px;
-            }
-            .page h2{
-                font-size:30px;
-            }
-            .page ul li{
-                font-size:15px;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="nav"></div>
-    <center><h4>!!Radhe Radhe!!</h4></center>
-    <div class="home">
-        
-        <div class="page">
-            <h2><strong>Terms and Conditions</strong></h2>
-            <p>Welcome to SabkaCode!</p>
-            <p>These terms and conditions outline the rules and regulations for the use of SabkaCode's Website, located at <a href="https://SabkaCode.vercel.app">https://SabkaCode.vercel.app</a></p>
-            <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use SabkaCode if you do not agree to take all of the terms and conditions stated on this page.</p>
-            <p>The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company's terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client's needs in respect of provision of the Company's stated services, in accordance with and subject to, prevailing law of in. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>
-            <h3><strong>Cookies</strong></h3>
-            <p>We employ the use of cookies. By accessing SabkaCode, you agreed to use cookies in agreement with the SabkaCode's Privacy Policy. </p>
-            <p>Most interactive websites use cookies to let us retrieve the user's details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.</p>
-            <h3><strong>License</strong></h3>
-            <p>Unless otherwise stated, SabkaCode and/or its licensors own the intellectual property rights for all material on SabkaCode. All intellectual property rights are reserved. You may access this from SabkaCode for your own personal use subjected to restrictions set in these terms and conditions.</p>
-            <p>You must not:</p>
-            <ul>
-                <li>Republish material from SabkaCode</li>
-                <li>Sell, rent or sub-license material from SabkaCode</li>
-                <li>Reproduce, duplicate or copy material from SabkaCode</li>
-                <li>Redistribute content from SabkaCode</li>
-            </ul>
-            <p>Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. SabkaCode does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of SabkaCode,its agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the extent permitted by applicable laws, SabkaCode shall not be liable for the Comments or for any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.</p>
-
-             <p>SabkaCode reserves the right to monitor all Comments and to remove any Comments which can be considered inappropriate, offensive or causes breach of these Terms and Conditions.</p>
-
-            <p>You warrant and represent that:</p>
-            <ul>
-                <li>You are entitled to post the Comments on our website and have all necessary licenses and consents to do so;</li>
-                <li>The Comments do not invade any intellectual property right, including without limitation copyright, patent or trademark of any third party;</li>
-                <li>The Comments do not contain any defamatory, libelous, offensive, indecent or otherwise unlawful material which is an invasion of privacy</li>
-                <li>The Comments will not be used to solicit or promote business or custom or present commercial activities or unlawful activity.</li>
-            </ul>
-
-            <p>You hereby grant SabkaCode a non-exclusive license to use, reproduce, edit and authorize others to use, reproduce and edit any of your Comments in any and all forms, formats or media.</p>
-
-            <h3><strong>Hyperlinking to our Content</strong></h3>
-
-            <p>The following organizations may link to our Website without prior written approval:</p>
-
-            <ul>
-                <li>Government agencies;</li>
-                <li>Search engines;</li>
-                <li>News organizations;</li>
-                <li>Online directory distributors may link to our Website in the same manner as they hyperlink to the Websites of other listed businesses; and</li>
-                <li>System wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.</li>
-            </ul>
-
-            <p>These organizations may link to our home page, to publications or to other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products and/or services; and (c) fits within the context of the linking party's site.</p>
-
-            <p>We may consider and approve other link requests from the following types of organizations:</p>
-
-            <ul>
-                <li>commonly-known consumer and/or business information sources;</li>
-                <li>dot.com community sites;</li>
-                <li>associations or other groups representing charities;</li>
-                <li>online directory distributors;</li>
-                <li>internet portals;</li>
-                <li>accounting, law and consulting firms; and</li>
-                <li>educational institutions and trade associations.</li>
-            </ul>
-
-            <p>We will approve link requests from these organizations if we decide that: (a) the link would not make us look unfavorably to ourselves or to our accredited businesses; (b) the organization does not have any negative records with us; (c) the benefit to us from the visibility of the hyperlink compensates the absence of SabkaCode; and (d) the link is in the context of general resource information.</p>
-
-            <p>These organizations may link to our home page so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products or services; and (c) fits within the context of the linking party's site.</p>
-
-            <p>If you are one of the organizations listed in paragraph 2 above and are interested in linking to our website, you must inform us by sending an e-mail to SabkaCode. Please include your name, your organization name, contact information as well as the URL of your site, a list of any URLs from which you intend to link to our Website, and a list of the URLs on our site to which you would like to link. Wait 2-3 weeks for a response.</p>
-
-            <p>Approved organizations may hyperlink to our Website as follows:</p>
-
-            <ul>
-                <li>By use of our corporate name; or</li>
-                <li>By use of the uniform resource locator being linked to; or</li>
-                <li>By use of any other description of our Website being linked to that makes sense within the context and format of content on the linking party's site.</li>
-            </ul>
-
-            <p>No use of SabkaCode's logo or other artwork will be allowed for linking absent a trademark license agreement.</p>
-
-            <h3><strong>iFrames</strong></h3>
-
-            <p>Without prior approval and written permission, you may not create frames around our Webpages that alter in any way the visual presentation or appearance of our Website.</p>
-
-            <h3><strong>Content Liability</strong></h3>
-
-            <p>We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.</p>
-
-            <h3><strong>Reservation of Rights</strong></h3>
-
-            <p>We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it's linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.</p>
-
-            <h3><strong>Removal of links from our website</strong></h3>
-
-            <p>If you find any link on our Website that is offensive for any reason, you are free to contact and inform us any moment. We will consider requests to remove links but we are not obligated to or so or to respond to you directly.</p>
-
-            <p>We do not ensure that the information on this website is correct, we do not warrant its completeness or accuracy; nor do we promise to ensure that the website remains available or that the material on the website is kept up to date.</p>
-
-            <h3><strong>Disclaimer</strong></h3>
-
-            <p>To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will:</p>
-
-            <ul>
-                <li>limit or exclude our or your liability for death or personal injury;</li>
-                <li>limit or exclude our or your liability for fraud or fraudulent misrepresentation;</li>
-                <li>limit any of our or your liabilities in any way that is not permitted under applicable law; or</li>
-                <li>exclude any of our or your liabilities that may not be excluded under applicable law.</li>
-            </ul>
-
-            <p>The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty.</p>
-
-            <p>As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</p>
-        </div>
-        </div>
-        <div id="footer"></div>
-    </body>
+</body>
 </html>
-<!-- NAV INCLUDE SCRIPT -->
- <script src="/script.js"></script>
