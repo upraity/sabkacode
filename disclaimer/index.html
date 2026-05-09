@@ -439,23 +439,15 @@
 <!-- Back to Top --
 <button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to Top">
   <i class="fa-solid fa-arrow-up"></i>
-</button>-->
+</button>-
 
 <script>
   window.addEventListener('scroll', function() {
     document.getElementById('backToTop').style.display = window.scrollY > 300 ? 'block' : 'none';
   });
-</script>
+</script>-->
 
-<!-- NAV INCLUDE SCRIPT -->
-<script>
-  fetch("nav.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("nav").innerHTML = data;
-    })
-    .catch(error => console.error("Nav load error:", error));
-</script>
+
 
 </body>
 </html>
