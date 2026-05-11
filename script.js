@@ -368,3 +368,93 @@ document.addEventListener("DOMContentLoaded", initSite);
     document.getElementById('contactForm').style.display = 'none';
     document.getElementById('successMsg').style.display = 'block';
   }
+
+(function(){
+    var menuToggle     = document.getElementById('menuToggle');
+    var navLinks       = document.getElementById('navLinks');
+    var floatingToggle = document.getElementById('floatingToggle');
+    var socialStack    = document.getElementById('socialStack');
+    var mainNav        = document.getElementById('mainNav');
+    var navGhost       = document.getElementById('navGhost');
+    var navSentinel    = document.getElementById('navSentinel');
+    var backToTop      = document.getElementById('backToTop');
+    var dropButtons    = document.querySelectorAll('.drop-btn');
+
+    /* Mobile menu */
+    menuToggle.addEventListener('click', function(){
+        var open = navLinks.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', open);
+        menuToggle.innerHTML = open
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+    });
+
+    /* Social stack */
+    floatingToggle.addEventListener('click', function(){
+        socialStack.classList.toggle('open');
+    });
+
+    /* Mobile dropdowns */
+    dropButtons.forEach(function(btn){
+        btn.addEventListener('click', function(){
+            if (window.innerWidth > 860) return;
+            var open = btn.parentElement.classList.toggle('open');
+            btn.setAttribute('aria-expanded', open);
+        });
+    });
+
+    /* Resize cleanup */
+    window.addEventListener('resize', function(){
+        if (window.innerWidth > 860) {
+            navLinks.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded','false');
+            menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            document.querySelectorAll('.drop').forEach(function(d){ d.classList.remove('open'); });
+        }
+    });
+
+    /* ── STICKY NAV using IntersectionObserver ──
+       navSentinel is an invisible 1px div placed right above the nav.
+       When it scrolls OUT of view → nav becomes fixed at top.
+       When it scrolls back IN → nav returns to normal flow.          */
+
+    function goSticky(){
+        navGhost.style.height = mainNav.offsetHeight + 'px';
+        navGhost.classList.add('is-sticky');
+        mainNav.classList.add('is-sticky');
+    }
+    function goNormal(){
+        mainNav.classList.remove('is-sticky');
+        navGhost.classList.remove('is-sticky');
+    }
+
+    if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function(entries){
+            entries[0].isIntersecting ? goNormal() : goSticky();
+        }, { rootMargin: '0px', threshold: 0 });
+        io.observe(navSentinel);
+    } else {
+        /* Fallback for old browsers */
+        var triggerY = 0;
+        function calcTrigger(){
+            triggerY = navSentinel.getBoundingClientRect().top + window.pageYOffset;
+        }
+        calcTrigger();
+        window.addEventListener('resize', calcTrigger);
+        window.addEventListener('scroll', function(){
+            window.pageYOffset > triggerY ? goSticky() : goNormal();
+        }, {passive:true});
+    }
+
+    /* ── BACK TO TOP ── */
+    window.addEventListener('scroll', function(){
+        window.pageYOffset > 300
+            ? backToTop.classList.add('show')
+            : backToTop.classList.remove('show');
+    }, {passive:true});
+
+    backToTop.addEventListener('click', function(){
+        window.scrollTo({top:0, behavior:'smooth'});
+    });
+
+})();
