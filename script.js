@@ -246,7 +246,7 @@ function initBlogFilters() {
 
 function initSite() {
   Promise.all([
-    loadPartial("nav", ["/newnav.html", "/nav.html", "newnav.html", "navn.html"]),
+    loadPartial("nav", ["/navn.html", "navn.html"]),
     loadPartial("footer", ["/footer.html", "footer.html"]),
   ]).then(() => {
     initResponsiveNav();
