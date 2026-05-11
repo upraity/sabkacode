@@ -342,3 +342,29 @@ document.addEventListener("DOMContentLoaded", initSite);
         backToTop.addEventListener("click", () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
+
+  // Reveal
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }});
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  // Form submit — opens mailto (no backend needed)
+  function submitForm() {
+    const name    = document.getElementById('fname').value.trim();
+    const email   = document.getElementById('femail').value.trim();
+    const subject = document.getElementById('fsubject').value || 'General Contact';
+    const message = document.getElementById('fmessage').value.trim();
+
+    if (!name || !email || !message) {
+      alert('Kripya naam, email aur message zaroor bharen!');
+      return;
+    }
+
+    const to = 'sabkacode@gmail.com';
+    const body = `Naam: ${name}%0AEmail: ${email}%0A%0AMessage:%0A${encodeURIComponent(message)}`;
+    window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('successMsg').style.display = 'block';
+  }
