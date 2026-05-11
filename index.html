@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SabkaCode – Free programming notes, AKTU MBA/MCA previous year papers, JEE papers, exam solutions aur study resources for students.">
+  <meta name="keywords" content="SabkaCode, programming notes, aktu mba previous papers, aktu mba solved papers, jee previous year papers, coding notes, study materials">
+  <meta name="author" content="SabkaCode">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#3498db">
+  <meta property="og:title" content="SabkaCode – Programming Notes & Previous Year Papers">
+  <meta property="og:description" content="Free programming notes, AKTU MBA previous papers, JEE papers aur study resources for students.">
+  <meta property="og:image" content="https://sabkacode.vercel.app/logo.png">
+  <meta property="og:url" content="https://sabkacode.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://sabkacode.vercel.app/logo.png">
+  <meta name="google-adsense-account" content="ca-pub-6002960092511168">
+  <link rel="canonical" href="https://sabkacode.vercel.app/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>SabkaCode – Programming Notes & Previous Year Papers</title>
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","otqed8ed9r");
+  </script>
+  <script language="JavaScript" type="text/javascript">
+    var message="Sorry, Right Click have been disabled.";
+    function click(e){if(document.all){if(event.button==2||event.button==3){alert(message);return false;}}else{if(e.button==2||e.button==3){e.preventDefault();e.stopPropagation();alert(message);return false;}}}
+    if(document.all){document.onmousedown=click;}else{document.onclick=click;}
+    document.oncontextmenu=function(){return false;};
+  </script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:Arial,sans-serif;background:#f4f6f8;color:#2c3e50;overflow-x:hidden;}
+    a{text-decoration:none;color:inherit;}
+    #pageCount{color:transparent;font-size:0;}
+
+    /* HERO */
+    .hero{background:linear-gradient(135deg,#1a252f 0%,#2c3e50 45%,#3498db 100%);color:#fff;padding:64px 20px 56px;text-align:center;position:relative;overflow:hidden;}
+    .hero-c1{position:absolute;top:-80px;left:-80px;width:360px;height:360px;background:rgba(52,152,219,.12);border-radius:50%;}
+    .hero-c2{position:absolute;bottom:-100px;right:-60px;width:420px;height:420px;background:rgba(255,255,255,.04);border-radius:50%;}
+    .hero-inner{position:relative;z-index:1;}
+    .hero-badge{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.32);border-radius:20px;padding:6px 20px;font-size:12px;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:22px;}
+    .hero h1{font-size:clamp(1.9em,6vw,3.2em);font-weight:700;line-height:1.18;margin-bottom:18px;}
+    .hero h1 .accent{color:#74d0f5;}
+    .hero-sub{font-size:clamp(14px,2.8vw,17px);opacity:.87;max-width:600px;margin:0 auto 14px;line-height:1.7;}
+    .hero-tags{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:32px;}
+    .hero-tag{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:5px 14px;font-size:13px;display:inline-flex;align-items:center;gap:6px;}
+    .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+    .btn-white{background:#fff;color:#2c3e50;padding:13px 30px;border-radius:28px;font-weight:bold;font-size:15px;display:inline-flex;align-items:center;gap:9px;transition:all .3s;box-shadow:0 4px 16px rgba(0,0,0,.15);}
+    .btn-white:hover{background:#ecf0f1;transform:translateY(-2px);}
+    .btn-outline-w{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55);padding:13px 30px;border-radius:28px;font-weight:bold;font-size:15px;display:inline-flex;align-items:center;gap:9px;transition:all .3s;}
+    .btn-outline-w:hover{background:rgba(255,255,255,.1);transform:translateY(-2px);}
+
+    /* ANNOUNCE */
+    .announce{background:linear-gradient(90deg,#2980b9,#3498db);color:#fff;text-align:center;padding:10px 20px;font-size:13.5px;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;}
+    .announce a{color:#fff;font-weight:bold;text-decoration:underline;}
+
+    /* STATS */
+    .stats-strip{background:#fff;display:grid;grid-template-columns:repeat(4,1fr);box-shadow:0 4px 18px rgba(0,0,0,.09);}
+    .stat-item{text-align:center;padding:22px 12px;border-right:1px solid #ecf0f1;transition:background .3s;}
+    .stat-item:last-child{border-right:none;}
+    .stat-item:hover{background:#eaf4fd;}
+    .stat-num{font-size:clamp(1.6em,4.5vw,2.3em);font-weight:700;color:#3498db;display:block;}
+    .stat-label{font-size:11.5px;color:#7f8c8d;margin-top:4px;text-transform:uppercase;letter-spacing:.6px;}
+
+    /* LAYOUT */
+    main{padding-bottom:120px;}
+    .section{padding:52px 20px;max-width:1000px;margin:0 auto;}
+    .bg-white{background:#fff;}
+    .section-header{text-align:center;margin-bottom:36px;}
+    .sec-badge{display:inline-block;background:#eaf4fd;color:#3498db;border:1px solid #bee3f8;border-radius:20px;padding:4px 16px;font-size:12px;letter-spacing:1px;text-transform:uppercase;font-weight:bold;margin-bottom:12px;}
+    .section-header h2{font-size:clamp(1.3em,3.5vw,1.95em);color:#2c3e50;margin-bottom:10px;}
+    .section-header h2 .hi{color:#3498db;}
+    .section-header p{color:#7f8c8d;font-size:15px;max-width:540px;margin:0 auto;line-height:1.65;}
+    .divider{width:50px;height:4px;background:linear-gradient(90deg,#3498db,#74d0f5);border-radius:2px;margin:14px auto 0;}
+
+    /* QUICK ACCESS */
+    .quick-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:16px;}
+    .quick-card{background:#fff;border-radius:14px;padding:26px 18px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.07);border:2px solid transparent;transition:all .3s;display:block;color:#2c3e50;}
+    .quick-card:hover{border-color:#3498db;transform:translateY(-5px);box-shadow:0 10px 28px rgba(52,152,219,.18);}
+    .qc-icon{width:58px;height:58px;border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.6em;}
+    .ic-blue{background:#eaf4fd;color:#3498db;} .ic-green{background:#eafaf1;color:#2ecc71;}
+    .ic-orange{background:#fef5e7;color:#e67e22;} .ic-red{background:#fdf2f0;color:#e74c3c;}
+    .ic-purple{background:#f4f0fb;color:#9b59b6;} .ic-teal{background:#e8f8f5;color:#1abc9c;}
+    .quick-card h3{font-size:15px;font-weight:700;margin-bottom:6px;}
+    .quick-card p{font-size:12.5px;color:#7f8c8d;line-height:1.55;}
+    .qc-tag{display:inline-block;margin-top:10px;background:#eaf4fd;color:#3498db;font-size:11px;padding:2px 10px;border-radius:10px;font-weight:bold;}
+
+    /* UNIVERSITIES */
+    .step-label{display:flex;align-items:center;gap:12px;margin-bottom:22px;}
+    .step-num{background:#3498db;color:#fff;font-size:13px;font-weight:bold;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+    .step-text{font-size:14px;font-weight:bold;color:#7f8c8d;text-transform:uppercase;letter-spacing:1px;}
+    .uni-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px;}
+    .uni-card{background:#fff;border-radius:14px;padding:28px 24px;box-shadow:0 2px 10px rgba(0,0,0,.07);border-left:5px solid #3498db;transition:all .3s;display:block;color:#2c3e50;}
+    .uni-card.red{border-left-color:#e74c3c;} .uni-card.green{border-left-color:#2ecc71;}
+    .uni-card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(0,0,0,.12);}
+    .uni-emoji{font-size:2.5em;margin-bottom:12px;display:block;}
+    .uni-card h3{font-size:17px;font-weight:700;margin-bottom:3px;}
+    .uni-full{font-size:12px;color:#95a5a6;margin-bottom:12px;}
+    .uni-card p{font-size:13.5px;color:#555;line-height:1.65;margin-bottom:16px;}
+    .uni-courses{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;}
+    .uni-course-tag{background:#ecf0f1;color:#555;font-size:11.5px;padding:3px 10px;border-radius:10px;font-weight:bold;}
+    .uni-btn{display:inline-flex;align-items:center;gap:7px;background:#3498db;color:#fff;padding:9px 20px;border-radius:22px;font-size:13px;font-weight:bold;}
+    .uni-card.red .uni-btn{background:#e74c3c;} .uni-card.green .uni-btn{background:#2ecc71;}
+
+    /* SUBJECTS */
+    .subject-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;}
+    .sub-tab{background:#fff;border:2px solid #ecf0f1;border-radius:22px;padding:8px 18px;font-size:13.5px;font-weight:bold;color:#7f8c8d;cursor:pointer;transition:all .3s;font-family:Arial,sans-serif;}
+    .sub-tab.active{background:#3498db;border-color:#3498db;color:#fff;}
+    .sub-tab:hover:not(.active){border-color:#3498db;color:#3498db;}
+    .subjects-grid{display:none;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:10px;}
+    .subjects-grid.active-grid{display:grid;}
+    .subject-pill{background:#fff;border-radius:10px;padding:12px 14px;font-size:13px;color:#2c3e50;font-weight:bold;box-shadow:0 2px 8px rgba(0,0,0,.06);display:flex;align-items:center;gap:8px;transition:all .3s;}
+    .subject-pill:hover{background:#eaf4fd;color:#3498db;transform:translateY(-2px);}
+    .subject-pill i{color:#3498db;font-size:13px;}
+
+    /* RESOURCES */
+    .resources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:16px;}
+    .res-card{background:#fff;border-radius:14px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.07);transition:all .3s;display:block;color:#2c3e50;}
+    .res-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(52,152,219,.15);}
+    .res-icon{width:50px;height:50px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:1.5em;}
+    .res-card h3{font-size:14.5px;font-weight:700;margin-bottom:6px;}
+    .res-card p{font-size:12.5px;color:#7f8c8d;line-height:1.55;margin-bottom:12px;}
+    .res-arrow{color:#3498db;font-size:13px;font-weight:bold;display:flex;align-items:center;gap:5px;}
+
+    /* WHY */
+    .why-wrap{background:linear-gradient(135deg,#2c3e50,#34495e);padding:52px 20px;}
+    .why-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:16px;max-width:1000px;margin:0 auto;}
+    .why-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:26px 20px;text-align:center;transition:background .3s;}
+    .why-card:hover{background:rgba(255,255,255,.13);}
+    .why-card i{font-size:2em;color:#74d0f5;margin-bottom:12px;display:block;}
+    .why-card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px;}
+    .why-card p{font-size:13px;color:rgba(255,255,255,.65);line-height:1.6;}
+
+    /* TIMELINE */
+    .timeline-outer{background:#fff;padding:52px 20px;}
+    .timeline{display:flex;max-width:900px;margin:32px auto 0;position:relative;}
+    .timeline::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:3px;background:linear-gradient(90deg,#3498db,#74d0f5);border-radius:2px;}
+    .tl-item{flex:1;text-align:center;padding:0 10px;position:relative;}
+    .tl-year{width:56px;height:56px;background:linear-gradient(135deg,#3498db,#2980b9);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;margin:0 auto 16px;box-shadow:0 4px 14px rgba(52,152,219,.35);position:relative;z-index:1;}
+    .tl-item h4{font-size:13.5px;font-weight:700;color:#2c3e50;margin-bottom:5px;}
+    .tl-item p{font-size:12px;color:#7f8c8d;line-height:1.5;}
+
+    /* BLOG */
+    .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:20px;}
+    .blog-card{background:#fff;border-radius:14px;padding:24px;box-shadow:0 2px 8px rgba(0,0,0,.07);transition:all .3s;display:block;color:#2c3e50;border-top:4px solid #3498db;}
+    .blog-card:nth-child(2){border-top-color:#e74c3c;} .blog-card:nth-child(3){border-top-color:#2ecc71;}
+    .blog-card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(0,0,0,.11);}
+    .blog-tag{display:inline-block;background:#eaf4fd;color:#3498db;font-size:11px;padding:3px 10px;border-radius:10px;margin-bottom:12px;font-weight:bold;text-transform:uppercase;}
+    .blog-card:nth-child(2) .blog-tag{background:#fdf2f0;color:#e74c3c;}
+    .blog-card:nth-child(3) .blog-tag{background:#eafaf1;color:#2ecc71;}
+    .blog-card h3{font-size:15.5px;font-weight:700;margin-bottom:8px;line-height:1.4;}
+    .blog-card p{font-size:13px;color:#7f8c8d;line-height:1.6;margin-bottom:14px;}
+    .blog-read{color:#3498db;font-size:13px;font-weight:bold;display:flex;align-items:center;gap:6px;}
+    .blog-card:nth-child(2) .blog-read{color:#e74c3c;} .blog-card:nth-child(3) .blog-read{color:#2ecc71;}
+    .center-btn{text-align:center;margin-top:30px;}
+    .btn-blue{display:inline-flex;align-items:center;gap:8px;background:#3498db;color:#fff;padding:13px 32px;border-radius:28px;font-size:15px;font-weight:bold;transition:all .3s;box-shadow:0 4px 14px rgba(52,152,219,.3);}
+    .btn-blue:hover{background:#2980b9;transform:translateY(-2px);}
+
+    /* SOCIAL */
+    .social-wrap{background:#fff;padding:48px 20px;}
+    .social-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;max-width:800px;margin:28px auto 0;}
+    .soc-card{display:flex;align-items:center;gap:10px;background:#f4f6f8;border-radius:12px;padding:13px 22px;font-weight:bold;font-size:14px;border:2px solid transparent;transition:all .3s;color:#2c3e50;}
+    .soc-card:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(0,0,0,.1);}
+    .soc-wa{border-color:#25d366;} .soc-wa i{color:#25d366;} .soc-wa:hover{background:#25d366;color:#fff;} .soc-wa:hover i{color:#fff;}
+    .soc-tg{border-color:#229ed9;} .soc-tg i{color:#229ed9;} .soc-tg:hover{background:#229ed9;color:#fff;} .soc-tg:hover i{color:#fff;}
+    .soc-ig{border-color:#e1306c;} .soc-ig i{color:#e1306c;} .soc-ig:hover{background:#e1306c;color:#fff;} .soc-ig:hover i{color:#fff;}
+    .soc-x{border-color:#000;} .soc-x i{color:#000;} .soc-x:hover{background:#000;color:#fff;} .soc-x:hover i{color:#fff;}
+    .soc-fb{border-color:#1877f2;} .soc-fb i{color:#1877f2;} .soc-fb:hover{background:#1877f2;color:#fff;} .soc-fb:hover i{color:#fff;}
+    .soc-em{border-color:#3498db;} .soc-em i{color:#3498db;} .soc-em:hover{background:#3498db;color:#fff;} .soc-em:hover i{color:#fff;}
+
+    /* FAQ */
+    .faq-wrap{max-width:760px;margin:0 auto;}
+    .faq-item{background:#fff;border-radius:12px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);overflow:hidden;}
+    .faq-q{width:100%;background:none;border:none;padding:18px 22px;text-align:left;font-size:15px;font-weight:700;color:#2c3e50;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;transition:background .3s;font-family:Arial,sans-serif;}
+    .faq-q:hover{background:#f8f9fa;}
+    .faq-q .fq-ico{color:#3498db;font-size:13px;transition:transform .3s;flex-shrink:0;}
+    .faq-q.open .fq-ico{transform:rotate(180deg);}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;padding:0 22px;font-size:14.5px;color:#555;line-height:1.75;}
+    .faq-a.open{max-height:220px;padding:0 22px 18px;}
+
+    /* CTA */
+    .cta-outer{padding:44px 20px;max-width:1040px;margin:0 auto;}
+    .cta-banner{background:linear-gradient(135deg,#3498db,#2c3e50);border-radius:20px;padding:46px 28px;text-align:center;color:#fff;box-shadow:0 8px 32px rgba(52,152,219,.25);}
+    .cta-banner h2{font-size:clamp(1.3em,3.5vw,2em);margin-bottom:12px;}
+    .cta-banner p{opacity:.88;font-size:15px;margin-bottom:28px;line-height:1.65;}
+    .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+    #backToTop{display:none;position:fixed;bottom:70px;right:20px;background:#3498db;color:#fff;border:none;border-radius:50%;width:46px;height:46px;font-size:18px;cursor:pointer;z-index:998;box-shadow:0 4px 14px rgba(0,0,0,.22);transition:background .3s;}
+    #backToTop:hover{background:#2c3e50;}
+
+    @media(max-width:640px){
+      .stats-strip{grid-template-columns:repeat(2,1fr);}
+      .stats-strip .stat-item:nth-child(2){border-right:none;}
+      .stats-strip .stat-item:nth-child(1),.stats-strip .stat-item:nth-child(2){border-bottom:1px solid #ecf0f1;}
+      .timeline{flex-direction:column;align-items:center;}
+      .timeline::before{display:none;}
+      .tl-item{margin-bottom:20px;}
+      .hero{padding:44px 16px 40px;}
+      .section{padding:36px 16px;}
+    }
+  </style>
+</head>
+<body>
+<div id="nav"></div>
+  <script src="/script.js"></script>
+<main>
+  <center><span id="pageCount"></span></center>
+
+  <div class="announce">
+    <i class="fa-solid fa-bullhorn"></i>
+    <span>AKTU MBA 2025 Papers ab available hain! &nbsp;<a href="https://sabkacode.vercel.app/p">Check Karo &rarr;</a></span>
+  </div>
+
+  <section class="hero">
+    <div class="hero-c1"></div><div class="hero-c2"></div>
+    <div class="hero-inner">
+      <div class="hero-badge">Sabka Study Partner</div>
+      <h1>Padhai Ko Banao<br><span class="accent">Aasaan Aur Organized</span></h1>
+      <p class="hero-sub">Notes, Previous Papers, JEE Papers, Exam Solutions — sab ek jagah, sab ke liye, bilkul free. AKTU · CSJMU · DBRAU · CCSU</p>
+      <div class="hero-tags">
+        <span class="hero-tag"><i class="fa-solid fa-book-open"></i> Study Notes</span>
+        <span class="hero-tag"><i class="fa-solid fa-file-lines"></i> Previous Papers</span>
+        <span class="hero-tag"><i class="fa-solid fa-atom"></i> JEE Papers</span>
+        <span class="hero-tag"><i class="fa-solid fa-circle-check"></i> Exam Solutions</span>
+        <span class="hero-tag"><i class="fa-solid fa-indian-rupee-sign"></i> 100% Free</span>
+      </div>
+      <div class="hero-btns">
+        <a href="https://sabkacode.vercel.app/notes" class="btn-white"><i class="fa-solid fa-book-open"></i> Notes Explore Karo</a>
+        <a href="https://sabkacode.vercel.app/p" class="btn-outline-w"><i class="fa-solid fa-file-lines"></i> Previous Papers</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats-strip">
+    <div class="stat-item"><span class="stat-num" data-target="4">0</span><div class="stat-label">Universities</div></div>
+    <div class="stat-item"><span class="stat-num" data-target="40" data-suffix="+">0</span><div class="stat-label">Subjects</div></div>
+    <div class="stat-item"><span class="stat-num" data-target="100" data-suffix="+">0</span><div class="stat-label">Previous Papers</div></div>
+    <div class="stat-item"><span class="stat-num">100%</span><div class="stat-label">Free</div></div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="sec-badge">Quick Access</div>
+      <h2>Seedha Jao <span class="hi">Jo Chahiye</span></h2>
+      <p>Sab kuch ek jagah — notes se lekar JEE papers tak, bilkul organized.</p>
+      <div class="divider"></div>
+    </div>
+    <div class="quick-grid">
+      <a href="https://sabkacode.vercel.app/notes" class="quick-card"><div class="qc-icon ic-blue"><i class="fa-solid fa-book-open"></i></div><h3>Study Notes</h3><p>40+ subjects ke detailed exam-focused notes</p><span class="qc-tag">Free</span></a>
+      <a href="https://sabkacode.vercel.app/p" class="quick-card"><div class="qc-icon ic-green"><i class="fa-solid fa-file-lines"></i></div><h3>Previous Papers</h3><p>AKTU, CSJMU, DBRAU, CCSU ke papers</p><span class="qc-tag">Download</span></a>
+      <a href="https://sabkacode.vercel.app/jee" class="quick-card"><div class="qc-icon ic-orange"><i class="fa-solid fa-atom"></i></div><h3>JEE Papers</h3><p>Shift-wise JEE Main previous papers</p><span class="qc-tag">PDF</span></a>
+      <a href="https://sabkacode.vercel.app/solve" class="quick-card"><div class="qc-icon ic-red"><i class="fa-solid fa-circle-check"></i></div><h3>Exam Solutions</h3><p>AKTU MBA sem-wise solved papers</p><span class="qc-tag">Solved</span></a>
+      <a href="https://sabkacode.vercel.app/blog" class="quick-card"><div class="qc-icon ic-purple"><i class="fa-solid fa-pen-to-square"></i></div><h3>Study Blog</h3><p>Tips, guides, exam strategies Hinglish mein</p><span class="qc-tag">Read</span></a>
+      <a href="https://dj.is-best.net/frontpage" class="quick-card"><div class="qc-icon ic-teal"><i class="fa-solid fa-file-invoice"></i></div><h3>Front Page</h3><p>Assignment & practical file cover generator</p><span class="qc-tag">Tool</span></a>
+    </div>
+  </div>
+
+  <div class="bg-white">
+    <div class="section">
+      <div class="section-header">
+        <div class="sec-badge">Universities</div>
+        <h2>Apni <span class="hi">University Chuno</span></h2>
+        <p>4 universities ke notes aur papers — sab organized, sab free.</p>
+        <div class="divider"></div>
+      </div>
+      <div class="step-label">
+        <div class="step-num">1</div>
+        <div class="step-text">Apni University Select Karo</div>
+      </div>
+      <div class="uni-grid">
+        <a href="https://sabkacode.vercel.app/notes/aktu" class="uni-card">
+          <span class="uni-emoji">&#127891;</span>
+          <h3>AKTU</h3><div class="uni-full">Dr. A.P.J. Abdul Kalam Technical University</div>
+          <p>MCA aur MBA ke semester-wise notes, previous papers aur detailed exam solutions.</p>
+          <div class="uni-courses"><span class="uni-course-tag">MCA</span><span class="uni-course-tag">MBA</span></div>
+          <span class="uni-btn"><i class="fa-solid fa-arrow-right"></i> Notes Dekho</span>
+        </a>
+        <a href="https://sabkacode.vercel.app/notes/dbrau" class="uni-card red">
+          <span class="uni-emoji">&#128216;</span>
+          <h3>DBRAU</h3><div class="uni-full">Dr. Bhim Rao Ambedkar University, Agra</div>
+          <p>BCA ke saare subjects ke notes — C, C++, DBMS, Java, AI aur bahut kuch.</p>
+          <div class="uni-courses"><span class="uni-course-tag">BCA</span></div>
+          <span class="uni-btn"><i class="fa-solid fa-arrow-right"></i> Notes Dekho</span>
+        </a>
+        <a href="https://sabkacode.vercel.app/notes/csjmu" class="uni-card green">
+          <span class="uni-emoji">&#127979;</span>
+          <h3>CSJMU</h3><div class="uni-full">Chhatrapati Shahu Ji Maharaj University, Kanpur</div>
+          <p>BCA subjects ke organized notes — Python, Java, AI, DBMS aur aur bhi.</p>
+          <div class="uni-courses"><span class="uni-course-tag">BCA</span></div>
+          <span class="uni-btn"><i class="fa-solid fa-arrow-right"></i> Notes Dekho</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="sec-badge">Subjects</div>
+      <h2>Kaun Kaun Se <span class="hi">Subjects Hain?</span></h2>
+      <p>University filter karo — sab subjects organized milenge exam-ready content ke saath.</p>
+      <div class="divider"></div>
+    </div>
+    <div class="subject-tabs">
+      <button class="sub-tab active" onclick="showSubs('aktu',this)">AKTU</button>
+      <button class="sub-tab" onclick="showSubs('dbrau',this)">DBRAU</button>
+      <button class="sub-tab" onclick="showSubs('csjmu',this)">CSJMU</button>
+    </div>
+    <div id="subs-aktu" class="subjects-grid active-grid">
+      <div class="subject-pill"><i class="fa-solid fa-code"></i> C Language</div>
+      <div class="subject-pill"><i class="fa-solid fa-code"></i> OOP (C++)</div>
+      <div class="subject-pill"><i class="fa-solid fa-database"></i> DBMS</div>
+      <div class="subject-pill"><i class="fa-solid fa-diagram-project"></i> DSA</div>
+      <div class="subject-pill"><i class="fa-solid fa-server"></i> Operating System</div>
+      <div class="subject-pill"><i class="fa-solid fa-microchip"></i> COA</div>
+      <div class="subject-pill"><i class="fa-solid fa-calculator"></i> Discrete Maths</div>
+      <div class="subject-pill"><i class="fa-solid fa-chart-bar"></i> Business Statistics</div>
+      <div class="subject-pill"><i class="fa-solid fa-users"></i> HRM</div>
+      <div class="subject-pill"><i class="fa-solid fa-bullseye"></i> Marketing Mgmt</div>
+      <div class="subject-pill"><i class="fa-solid fa-coins"></i> Financial Mgmt</div>
+      <div class="subject-pill"><i class="fa-solid fa-gears"></i> Operation Mgmt</div>
+    </div>
+    <div id="subs-dbrau" class="subjects-grid">
+      <div class="subject-pill"><i class="fa-solid fa-code"></i> C Language</div>
+      <div class="subject-pill"><i class="fa-solid fa-globe"></i> HTML</div>
+      <div class="subject-pill"><i class="fa-solid fa-code"></i> C++</div>
+      <div class="subject-pill"><i class="fa-solid fa-diagram-project"></i> DSA</div>
+      <div class="subject-pill"><i class="fa-solid fa-database"></i> DBMS</div>
+      <div class="subject-pill"><i class="fa-solid fa-shop"></i> E-Commerce</div>
+      <div class="subject-pill"><i class="fa-solid fa-server"></i> Operating System</div>
+      <div class="subject-pill"><i class="fa-solid fa-microchip"></i> COA</div>
+      <div class="subject-pill"><i class="fa-brands fa-php"></i> PHP</div>
+      <div class="subject-pill"><i class="fa-brands fa-java"></i> Java</div>
+      <div class="subject-pill"><i class="fa-solid fa-robot"></i> Artificial Intelligence</div>
+      <div class="subject-pill"><i class="fa-solid fa-network-wired"></i> Computer Network</div>
+    </div>
+    <div id="subs-csjmu" class="subjects-grid">
+      <div class="subject-pill"><i class="fa-solid fa-code"></i> C Programming</div>
+      <div class="subject-pill"><i class="fa-solid fa-code"></i> C++</div>
+      <div class="subject-pill"><i class="fa-brands fa-python"></i> Python</div>
+      <div class="subject-pill"><i class="fa-brands fa-java"></i> Java</div>
+      <div class="subject-pill"><i class="fa-solid fa-database"></i> DBMS</div>
+      <div class="subject-pill"><i class="fa-solid fa-diagram-project"></i> Data Structures</div>
+      <div class="subject-pill"><i class="fa-solid fa-server"></i> Operating System</div>
+      <div class="subject-pill"><i class="fa-solid fa-network-wired"></i> Computer Network</div>
+      <div class="subject-pill"><i class="fa-solid fa-globe"></i> Internet Technology</div>
+      <div class="subject-pill"><i class="fa-solid fa-laptop-code"></i> Software Engineering</div>
+      <div class="subject-pill"><i class="fa-solid fa-robot"></i> AI &amp; Knowledge Mgmt</div>
+      <div class="subject-pill"><i class="fa-solid fa-shop"></i> E-Commerce</div>
+    </div>
+  </div>
+
+  <div class="bg-white">
+    <div class="section">
+      <div class="section-header">
+        <div class="sec-badge">Popular</div>
+        <h2>Students Ki <span class="hi">Favourite Resources</span></h2>
+        <p>Ye resources sabse zyada access ki jaati hain — exam ke time zaroor kaam aayengi!</p>
+        <div class="divider"></div>
+      </div>
+      <div class="resources-grid">
+        <a href="https://sabkacode.vercel.app/p#aktu" class="res-card"><div class="res-icon ic-blue"><i class="fa-solid fa-file-pdf"></i></div><h3>AKTU Papers</h3><p>MBA &amp; MCA semester-wise previous papers 2022–2025.</p><div class="res-arrow"><i class="fa-solid fa-arrow-right"></i> Explore</div></a>
+        <a href="https://sabkacode.vercel.app/notes" class="res-card"><div class="res-icon ic-green"><i class="fa-solid fa-book"></i></div><h3>Coding Notes</h3><p>C, C++, Java, Python ke clear aur detailed notes.</p><div class="res-arrow"><i class="fa-solid fa-arrow-right"></i> Explore</div></a>
+        <a href="https://sabkacode.vercel.app/solve" class="res-card"><div class="res-icon ic-orange"><i class="fa-solid fa-lightbulb"></i></div><h3>Exam Solutions</h3><p>AKTU MBA sem 2 ke step-by-step solved answers.</p><div class="res-arrow"><i class="fa-solid fa-arrow-right"></i> Explore</div></a>
+        <a href="https://sabkacode.vercel.app/jee" class="res-card"><div class="res-icon ic-red"><i class="fa-solid fa-atom"></i></div><h3>JEE Papers</h3><p>2021–2022 shift-wise papers PDF mein free download.</p><div class="res-arrow"><i class="fa-solid fa-arrow-right"></i> Explore</div></a>
+        <a href="https://sabkacode.vercel.app/blog" class="res-card"><div class="res-icon ic-purple"><i class="fa-solid fa-pen-nib"></i></div><h3>Study Blog</h3><p>Exam tips, coding guides aur smart study strategies.</p><div class="res-arrow"><i class="fa-solid fa-arrow-right"></i> Explore</div></a>
+        <a href="https://sabkacode.vercel.app/p" class="res-card"><div class="res-icon ic-teal"><i class="fa-solid fa-folder-open"></i></div><h3>All Papers</h3><p>DBRAU, CSJMU, CCSU aur aur universities ke papers.</p><div class="res-arrow"><i class="fa-solid fa-arrow-right"></i> Explore</div></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="why-wrap">
+    <div class="section-header" style="max-width:1000px;margin:0 auto 32px;">
+      <div class="sec-badge" style="background:rgba(255,255,255,.1);color:#74d0f5;border-color:rgba(255,255,255,.2);">Why Us</div>
+      <h2 style="color:#fff;">Kyun Padhna Best Hai <span style="color:#74d0f5;">SabkaCode Pe?</span></h2>
+      <p style="color:rgba(255,255,255,.7);">Hazaron students ke saath join karo — free, organized aur reliable study hub.</p>
+      <div class="divider" style="background:linear-gradient(90deg,#74d0f5,transparent);"></div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><i class="fa-solid fa-folder-tree"></i><h3>Organized Hai</h3><p>Semester-wise, subject-wise — dhundna aasaan.</p></div>
+      <div class="why-card"><i class="fa-solid fa-indian-rupee-sign"></i><h3>Bilkul Free</h3><p>Koi charge nahi, koi registration nahi.</p></div>
+      <div class="why-card"><i class="fa-solid fa-mobile-screen-button"></i><h3>Mobile Friendly</h3><p>Phone pe bhi comfortable — responsive design.</p></div>
+      <div class="why-card"><i class="fa-solid fa-rotate"></i><h3>Updated Rehta Hai</h3><p>Naye subjects aur papers regularly add hote hain.</p></div>
+      <div class="why-card"><i class="fa-solid fa-language"></i><h3>Hinglish Mein</h3><p>Easy language — concepts jaldi samajh aate hain.</p></div>
+      <div class="why-card"><i class="fa-solid fa-graduation-cap"></i><h3>Exam Focused</h3><p>Important questions, PYQ — exam ready raho.</p></div>
+    </div>
+  </div>
+
+  <div class="timeline-outer">
+    <div class="section-header">
+      <div class="sec-badge">Our Story</div>
+      <h2>2022 Mein Ek Idea Se <span class="hi">Shuru Hua Safar</span></h2>
+      <p>SabkaCode students ke liye, students ne banaya — free resources ki zaroorat ko samajh kar.</p>
+      <div class="divider"></div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-year">22</div><h4>Launch</h4><p>Notes aur syllabus ke saath shuruat</p></div>
+      <div class="tl-item"><div class="tl-year">23</div><h4>PYQ Papers</h4><p>JEE papers aur study blog launch</p></div>
+      <div class="tl-item"><div class="tl-year">24</div><h4>JEE &amp; Blog</h4><p>AKTU MBA/MCA solved papers aaye </p></div>
+      <div class="tl-item"><div class="tl-year">25</div><h4>Growing</h4><p>Aur universities add ho rahe hain</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="sec-badge">Blog</div>
+      <h2>Latest <span class="hi">Study Articles</span></h2>
+      <p>Helpful guides, study tips aur coding tutorials — padhte raho badhte raho.</p>
+      <div class="divider"></div>
+    </div>
+    <div class="blog-grid">
+      <a href="https://sabkacode.vercel.app/blog/how-to-prepare-for-exams" class="blog-card"><span class="blog-tag">Exam Tips</span><h3>Exams Ki Preparation Effectively Kaise Karein?</h3><p>Step-by-step guide jo students ko better score karne mein help karegi.</p><div class="blog-read">Read More <i class="fa-solid fa-arrow-right"></i></div></a>
+      <a href="https://sabkacode.vercel.app/blog/best-programming-languages" class="blog-card"><span class="blog-tag">Coding</span><h3>Beginners Ke Liye Best Programming Languages</h3><p>Coding journey sahi language se shuru karo — complete guide.</p><div class="blog-read">Read More <i class="fa-solid fa-arrow-right"></i></div></a>
+      <a href="https://sabkacode.vercel.app/blog/top-books-for-bca" class="blog-card"><span class="blog-tag">Resources</span><h3>BCA Students Ke Liye Top Recommended Books</h3><p>Programming aur exams ke liye best books ki list.</p><div class="blog-read">Read More <i class="fa-solid fa-arrow-right"></i></div></a>
+    </div>
+    <div class="center-btn"><a href="https://sabkacode.vercel.app/blog" class="btn-blue"><i class="fa-solid fa-newspaper"></i> Saare Articles Dekho</a></div>
+  </div>
+
+  <div class="social-wrap">
+    <div class="section-header">
+      <div class="sec-badge">Connect</div>
+      <h2>Hamare Saath <span class="hi">Jude Raho</span></h2>
+      <p>Updates, new papers aur study tips pane ke liye join karo apne favorite platform pe.</p>
+      <div class="divider"></div>
+    </div>
+    <div class="social-grid">
+      <a href="https://chat.whatsapp.com/JUE7O4DHVC2DnqYj6hLfug" target="_blank" class="soc-card soc-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp Channel</a>
+      <a href="https://t.me/sabkacode" target="_blank" class="soc-card soc-tg"><i class="fa-brands fa-telegram"></i> Telegram</a>
+      <a href="https://instagram.com/sabkacode" target="_blank" class="soc-card soc-ig"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      <a href="https://x.com/sabkacode" target="_blank" class="soc-card soc-x"><i class="fa-brands fa-x-twitter"></i> X (Twitter)</a>
+      <a href="https://facebook.com/share/18CZX8i4gd" target="_blank" class="soc-card soc-fb"><i class="fa-brands fa-facebook"></i> Facebook</a>
+      <a href="mailto:sabkacode@gmail.com" class="soc-card soc-em"><i class="fa-solid fa-envelope"></i> Email Us</a>
+    </div>
+  </div>
+
+  <div class="bg-white">
+    <div class="section">
+      <div class="section-header">
+        <div class="sec-badge">FAQ</div>
+        <h2>Aksar <span class="hi">Puche Jaane Wale Sawaal</span></h2>
+        <div class="divider"></div>
+      </div>
+      <div class="faq-wrap">
+        <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)"><span>Kya SabkaCode bilkul free hai?</span><i class="fa-solid fa-chevron-down fq-ico"></i></button><div class="faq-a">Haan! SabkaCode pe sab kuch — notes, papers, solutions — 100% free hai. Koi registration nahi, koi charge nahi.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)"><span>Konsi universities covered hain?</span><i class="fa-solid fa-chevron-down fq-ico"></i></button><div class="faq-a">AKTU (MCA/MBA), CSJMU (BCA), DBRAU (BCA) aur CCSU covered hain. Aur universities regularly add hoti rahengi.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)"><span>Kya official exam papers hain?</span><i class="fa-solid fa-chevron-down fq-ico"></i></button><div class="faq-a">SabkaCode previous year papers educational aur reference purpose ke liye share karta hai. Official info ke liye university website check karo.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)"><span>Content update hota rehta hai?</span><i class="fa-solid fa-chevron-down fq-ico"></i></button><div class="faq-a">Haan! Naye subjects, papers aur solutions regularly add kiye jaate hain. Updates ke liye WhatsApp ya Telegram join karo.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)"><span>Kya beginners bhi use kar sakte hain?</span><i class="fa-solid fa-chevron-down fq-ico"></i></button><div class="faq-a">Bilkul! Content simple Hinglish mein hai — beginners ke liye bhi easily samajh aata hai.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)"><span>Mera content site pe hai, kya karein?</span><i class="fa-solid fa-chevron-down fq-ico"></i></button><div class="faq-a">Email karo sabkacode@gmail.com — subject mein "Copyright / Content Removal" likhna. Hum 24-48 ghante mein action lenge.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-outer">
+    <div class="cta-banner">
+      <h2>Ready to Start Studying?</h2>
+      <p>Hazaron students pehle se SabkaCode use kar rahe hain.<br>Ab tumhari bari hai — bilkul free, bilkul organized!</p>
+      <div class="cta-btns">
+        <a href="https://sabkacode.vercel.app/notes" class="btn-white"><i class="fa-solid fa-book-open"></i> Notes Explore Karo</a>
+        <a href="https://chat.whatsapp.com/JUE7O4DHVC2DnqYj6hLfug" class="btn-outline-w" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp Join Karo</a>
+      </div>
+    </div>
+  </div>
+</main>
+<div id="footer"></div>
+
+<script>
+  function toggleFAQ(btn){const a=btn.nextElementSibling,o=a.classList.contains('open');document.querySelectorAll('.faq-a').forEach(x=>x.classList.remove('open'));document.querySelectorAll('.faq-q').forEach(x=>x.classList.remove('open'));if(!o){a.classList.add('open');btn.classList.add('open');}}
+  function showSubs(u,btn){document.querySelectorAll('.sub-tab').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.subjects-grid').forEach(g=>g.classList.remove('active-grid'));btn.classList.add('active');document.getElementById('subs-'+u).classList.add('active-grid');}
+  function animateCounters(){document.querySelectorAll('.stat-num[data-target]').forEach(el=>{const t=parseInt(el.dataset.target),s=el.dataset.suffix||'';let c=0;const st=Math.max(1,Math.ceil(t/60));const ti=setInterval(()=>{c=Math.min(c+st,t);el.textContent=c+s;if(c>=t)clearInterval(ti);},16);});}
+  const obs=new IntersectionObserver(e=>{if(e[0].isIntersecting){animateCounters();obs.disconnect();}},{threshold:.3});
+  const strip=document.querySelector('.stats-strip');if(strip)obs.observe(strip);
+</script>
+</body>
+</html>
