@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AKTU MBA Solved Papers | SabkaCode</title>
+<meta name="description" content="AKTU MBA Semester 2 previous year question papers with complete solutions — HRM, MIS, QTM, BE, CMA, BRM. Free access for all students.">
+<meta name="theme-color" content="#3498db">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #3498db;
+  --primary-dark: #1f7fc4;
+  --primary-light: #e8f4fd;
+  --primary-mid: #b3d9f5;
+  --dark: #0f1923;
+  --dark2: #1a2838;
+  --text: #1a2838;
+  --muted: #556a7d;
+  --light-text: #8fa3b2;
+  --bg: #eef4fb;
+  --surface: #ffffff;
+  --border: #d4e6f5;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --shadow-sm: 0 1px 6px rgba(30,80,130,0.07);
+  --shadow: 0 4px 18px rgba(30,80,130,0.10);
+  --shadow-lg: 0 10px 40px rgba(30,80,130,0.14);
+
+  /* Subject colors */
+  --be-color: #2ecc71; --be-bg: #e8faf2; --be-border: #a8e6c3;
+  --hrm-color: #e67e22; --hrm-bg: #fef5ec; --hrm-border: #fbd0a0;
+  --mis-color: #9b59b6; --mis-bg: #f5eefa; --mis-border: #d7b8ef;
+  --qtm-color: #e74c3c; --qtm-bg: #fef0ef; --qtm-border: #f5b7b1;
+  --cma-color: #1abc9c; --cma-bg: #e8faf6; --cma-border: #a2e6d4;
+  --brm-color: #3498db; --brm-bg: #e8f4fd; --brm-border: #b3d9f5;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(130deg, #0f1923 0%, #1a3c5e 45%, #2176ae 100%);
+  padding: 3.5rem 1.5rem 0;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: -60px; right: -60px;
+  width: 380px; height: 380px;
+  background: radial-gradient(circle, rgba(52,152,219,0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute; bottom: -40px; left: 5%;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(52,152,219,0.10) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-inner { max-width: 1140px; margin: 0 auto; position: relative; z-index: 1; }
+
+.breadcrumb {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 12.5px; color: rgba(255,255,255,0.5);
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.15s; }
+.breadcrumb a:hover { color: rgba(255,255,255,0.9); }
+.breadcrumb span.sep { opacity: 0.4; }
+.breadcrumb span.cur { color: rgba(255,255,255,0.85); font-weight: 500; }
+
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(52,152,219,0.2); border: 1px solid rgba(52,152,219,0.4);
+  color: #7ecef8; font-size: 12px; font-weight: 600; letter-spacing: 0.6px;
+  text-transform: uppercase; padding: 5px 14px; border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  font-weight: 800; color: white; line-height: 1.15;
+  letter-spacing: -0.5px; margin-bottom: 1rem;
+}
+.hero h1 em { font-style: normal; color: #7ecef8; }
+
+.hero-sub {
+  font-size: 15px; color: rgba(255,255,255,0.7);
+  max-width: 580px; margin-bottom: 1.75rem; line-height: 1.75;
+}
+
+.hero-stats {
+  display: flex; gap: 2.25rem; flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.stat { display: flex; flex-direction: column; gap: 1px; }
+.stat-num { font-size: 1.65rem; font-weight: 800; color: white; line-height: 1; }
+.stat-label { font-size: 11.5px; color: rgba(255,255,255,0.5); letter-spacing: 0.5px; text-transform: uppercase; }
+
+/* Wave divider */
+.hero-wave { display: block; margin-top: 1rem; }
+
+/* ===== MAIN ===== */
+.main { max-width: 1140px; margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
+
+/* ===== SECTION HEADER ===== */
+.sec-header { margin-bottom: 1.75rem; }
+.sec-tag {
+  display: inline-block;
+  background: var(--primary-light); color: var(--primary);
+  font-size: 11.5px; font-weight: 700; letter-spacing: 0.8px;
+  text-transform: uppercase; padding: 4px 12px;
+  border-radius: 20px; margin-bottom: 0.6rem;
+}
+.sec-header h2 { font-size: 1.5rem; font-weight: 800; color: var(--text); letter-spacing: -0.3px; }
+.sec-header p { font-size: 14px; color: var(--muted); margin-top: 0.4rem; }
+
+/* ===== FILTER BAR ===== */
+.filter-bar {
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: var(--radius); padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+  display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+  box-shadow: var(--shadow-sm);
+}
+.filter-label { font-size: 13px; font-weight: 600; color: var(--muted); flex-shrink: 0; }
+.filter-btn {
+  background: var(--bg); border: 1.5px solid var(--border);
+  color: var(--muted); font-size: 13px; font-weight: 600;
+  padding: 6px 16px; border-radius: 20px; cursor: pointer;
+  transition: all 0.15s; font-family: inherit; white-space: nowrap;
+}
+.filter-btn:hover { border-color: var(--primary); color: var(--primary); background: var(--primary-light); }
+.filter-btn.active { background: var(--primary); border-color: var(--primary); color: white; }
+
+/* ===== SUBJECT SECTION ===== */
+.subject-section { margin-bottom: 2.75rem; }
+.subject-head {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 1rem;
+}
+.subject-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.6px;
+  text-transform: uppercase; padding: 4px 12px; border-radius: 20px;
+}
+.subject-title-text {
+  font-size: 1.1rem; font-weight: 700; color: var(--text);
+}
+.subject-desc { font-size: 13px; color: var(--muted); }
+.subject-divider { height: 2px; border-radius: 1px; margin-bottom: 1.25rem; }
+
+/* ===== PAPER CARDS GRID ===== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.paper-card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  transition: all 0.2s;
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column; gap: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+.paper-card:hover {
+  border-color: var(--card-color, var(--primary));
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+.paper-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--card-color, var(--primary));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.2s;
+}
+.paper-card:hover::before { transform: scaleX(1); }
+
+.card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.card-subject-chip {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.5px;
+  text-transform: uppercase; padding: 3px 10px; border-radius: 20px;
+  flex-shrink: 0;
+}
+.year-pill {
+  font-size: 13px; font-weight: 700;
+  color: var(--muted);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.card-title { font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.3; }
+.card-subtitle { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+
+.card-footer { display: flex; align-items: center; gap: 8px; margin-top: auto; }
+
+.btn-solve {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--card-color, var(--primary)); color: white;
+  font-size: 13px; font-weight: 700; padding: 8px 18px;
+  border-radius: 8px; text-decoration: none; transition: all 0.18s;
+  flex: 1; justify-content: center;
+}
+.btn-solve:hover { filter: brightness(1.1); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+.btn-solve svg { width: 14px; height: 14px; }
+
+.btn-paper {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: var(--bg); color: var(--muted);
+  border: 1.5px solid var(--border);
+  font-size: 12.5px; font-weight: 600; padding: 8px 14px;
+  border-radius: 8px; text-decoration: none; transition: all 0.15s;
+  white-space: nowrap;
+}
+.btn-paper:hover { border-color: var(--primary); color: var(--primary); background: var(--primary-light); }
+
+/* ===== ABOUT SECTION ===== */
+.about-card {
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: var(--radius); padding: 2rem;
+  margin-bottom: 2.5rem; box-shadow: var(--shadow-sm);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+}
+.about-point {
+  display: flex; gap: 12px; align-items: flex-start; margin-bottom: 1rem;
+}
+.about-icon {
+  width: 36px; height: 36px; min-width: 36px;
+  border-radius: 9px; display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+}
+
+/* ===== SUBJECTS INFO ===== */
+.subjects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.75rem; }
+.subject-info-card {
+  padding: 1rem; border-radius: 10px; border: 1.5px solid;
+  transition: all 0.15s;
+}
+.subject-info-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.sic-abbr { font-size: 1.4rem; font-weight: 800; font-family: 'JetBrains Mono', monospace; margin-bottom: 2px; }
+.sic-name { font-size: 12px; font-weight: 600; line-height: 1.35; }
+.sic-count { font-size: 11px; margin-top: 4px; opacity: 0.7; }
+
+/* ===== TIPS STRIP ===== */
+.tips-strip {
+  background: linear-gradient(135deg, #1a3c5e, #2176ae);
+  border-radius: var(--radius); padding: 1.75rem 2rem;
+  margin-bottom: 2.5rem; color: white;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+.tip-item { display: flex; gap: 12px; align-items: flex-start; }
+.tip-num {
+  width: 28px; height: 28px; min-width: 28px;
+  background: rgba(255,255,255,0.15); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700;
+}
+.tip-item h4 { font-size: 13.5px; font-weight: 700; margin-bottom: 2px; }
+.tip-item p { font-size: 12px; color: rgba(255,255,255,0.7); }
+
+
+/* ===== HIDDEN ===== */
+.hidden { display: none !important; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+  .about-card { grid-template-columns: 1fr; gap: 1rem; }
+}
+@media (max-width: 680px) {
+  .nav-links { display: none; }
+  .hamburger { display: block; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: absolute; top: 64px; left: 0; right: 0;
+    background: var(--surface); border-bottom: 1px solid var(--border);
+    padding: 0.75rem; box-shadow: 0 8px 24px rgba(0,0,0,0.08); z-index: 200;
+  }
+  .hero-stats { gap: 1.5rem; }
+  .footer-top { grid-template-columns: 1fr; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .filter-bar { gap: 0.5rem; }
+  .tips-strip { grid-template-columns: 1fr; }
+  .subjects-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<div id="nav"></div>
+<script src="/script.js"></script>
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="https://sabkacode.vercel.app">Home</a>
+      <span class="sep">›</span>
+      <a href="https://sabkacode.vercel.app/p">Papers</a>
+      <span class="sep">›</span>
+      <span class="cur">Solutions</span>
+    </div>
+
+    <div class="hero-tag">
+      ✦ Solved Papers
+    </div>
+
+    <h1>AKTU MBA <em>Solved</em><br>Previous Year Papers</h1>
+    <p class="hero-sub">Semester 2 ke sabhi important subjects ke complete solved papers — HRM, MIS, QTM, BE, CMA aur BRM. Exam pattern samjho, important questions identify karo aur confident raho.</p>
+
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">6</span><span class="stat-label">Subjects</span></div>
+      <div class="stat"><span class="stat-num">16+</span><span class="stat-label">Solved Papers</span></div>
+      <div class="stat"><span class="stat-num">3</span><span class="stat-label">Years Covered</span></div>
+      <div class="stat"><span class="stat-num">Free</span><span class="stat-label">Always</span></div>
+    </div>
+  </div>
+  <svg class="hero-wave" viewBox="0 0 1440 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 28C240 56 480 0 720 28C960 56 1200 0 1440 28V56H0V28Z" fill="#eef4fb"/>
+  </svg>
+</header>
+
+<!-- ===== MAIN ===== -->
+<main class="main">
+
+  <!-- SUBJECTS OVERVIEW -->
+  <div class="sec-header">
+    <span class="sec-tag">Overview</span>
+    <h2>Available Subjects — MBA Sem 2</h2>
+    <p>In subjects ke solved papers available hain. Subject pe click karke seedha us section pe jao.</p>
+  </div>
+  <div class="subjects-grid" style="margin-bottom:2.5rem;">
+    <div class="subject-info-card" style="background:var(--hrm-bg);border-color:var(--hrm-border);cursor:pointer;" onclick="filterCards('HRM')">
+      <div class="sic-abbr" style="color:var(--hrm-color);">HRM</div>
+      <div class="sic-name" style="color:var(--hrm-color);">Human Resource Management</div>
+      <div class="sic-count" style="color:var(--hrm-color);">3 solved papers</div>
+    </div>
+    <div class="subject-info-card" style="background:var(--mis-bg);border-color:var(--mis-border);cursor:pointer;" onclick="filterCards('MIS')">
+      <div class="sic-abbr" style="color:var(--mis-color);">MIS</div>
+      <div class="sic-name" style="color:var(--mis-color);">Management Information System</div>
+      <div class="sic-count" style="color:var(--mis-color);">3 solved papers</div>
+    </div>
+    <div class="subject-info-card" style="background:var(--qtm-bg);border-color:var(--qtm-border);cursor:pointer;" onclick="filterCards('QTM')">
+      <div class="sic-abbr" style="color:var(--qtm-color);">QTM</div>
+      <div class="sic-name" style="color:var(--qtm-color);">Quantitative Techniques for Managers</div>
+      <div class="sic-count" style="color:var(--qtm-color);">3 solved papers</div>
+    </div>
+    <div class="subject-info-card" style="background:var(--be-bg);border-color:var(--be-border);cursor:pointer;" onclick="filterCards('BE')">
+      <div class="sic-abbr" style="color:var(--be-color);">BE</div>
+      <div class="sic-name" style="color:var(--be-color);">Business Environment & Legal Aspect</div>
+      <div class="sic-count" style="color:var(--be-color);">3 solved papers</div>
+    </div>
+    <div class="subject-info-card" style="background:var(--cma-bg);border-color:var(--cma-border);cursor:pointer;" onclick="filterCards('CMA')">
+      <div class="sic-abbr" style="color:var(--cma-color);">CMA</div>
+      <div class="sic-name" style="color:var(--cma-color);">Cost & Management Accounting</div>
+      <div class="sic-count" style="color:var(--cma-color);">1 solved paper</div>
+    </div>
+    <div class="subject-info-card" style="background:var(--brm-bg);border-color:var(--brm-border);cursor:pointer;" onclick="filterCards('BRM')">
+      <div class="sic-abbr" style="color:var(--brm-color);">BRM</div>
+      <div class="sic-name" style="color:var(--brm-color);">Business Research Method</div>
+      <div class="sic-count" style="color:var(--brm-color);">3 solved papers</div>
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <span class="filter-label">Filter:</span>
+    <button class="filter-btn active" onclick="filterCards('ALL', this)">All Papers</button>
+    <button class="filter-btn" onclick="filterCards('HRM', this)">HRM</button>
+    <button class="filter-btn" onclick="filterCards('MIS', this)">MIS</button>
+    <button class="filter-btn" onclick="filterCards('QTM', this)">QTM</button>
+    <button class="filter-btn" onclick="filterCards('BE', this)">BE</button>
+    <button class="filter-btn" onclick="filterCards('CMA', this)">CMA</button>
+    <button class="filter-btn" onclick="filterCards('BRM', this)">BRM</button>
+  </div>
+
+  <!-- ===== HRM SECTION ===== -->
+  <div class="subject-section" data-subject="HRM" id="sec-HRM">
+    <div class="subject-head">
+      <span class="subject-badge" style="background:var(--hrm-bg);color:var(--hrm-color);border:1.5px solid var(--hrm-border);">HRM</span>
+      <div>
+        <div class="subject-title-text">Human Resource Management</div>
+        <div class="subject-desc">AKTU MBA Semester 2 · 3 Years Available</div>
+      </div>
+    </div>
+    <div class="subject-divider" style="background:var(--hrm-color);opacity:0.25;"></div>
+    <div class="cards-grid">
+
+      <div class="paper-card" data-subject="HRM" style="--card-color: var(--hrm-color);">
+        <div class="card-top">
+          <span class="card-subject-chip" style="background:var(--hrm-bg);color:var(--hrm-color);border:1px solid var(--hrm-border);">HRM</span>
+          <span class="year-pill">2024</span>
+        </div>
+        <div>
+          <div class="card-title">HRM — 2024</div>
+          <div class="card-subtitle">Human Resource Management · AKTU MBA Sem 2</div>
+        </div>
+        <div class="card-footer">
+          <a class="btn-solve" href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-hrm-2024" target="_blank" style="background:var(--hrm-color);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><polyline points="9,12 11,14 15,10"/></svg>
+            View Solution
+          </a>
+        </div>
+      </div>
+
+      <div class="paper-card" data-subject="HRM" style="--card-color: var(--hrm-color);">
+        <div class="card-top">
+          <span class="card-subject-chip" style="background:var(--hrm-bg);color:var(--hrm-color);border:1px solid var(--hrm-border);">HRM</span>
+          <span class="year-pill">2023</span>
+        </div>
+        <div>
+          <div class="card-title">HRM — 2023</div>
+          <div class="card-subtitle">Human Resource Management · AKTU MBA Sem 2</div>
+        </div>
+        <div class="card-footer">
+          <a class="btn-solve" href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-hrm-2023" target="_blank" style="background:var(--hrm-color);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><polyline points="9,12 11,14 15,10"/></svg>
+            View Solution
+          </a>
+        </div>
+      </div>
+
+      <div class="paper-card" data-subject="HRM" style="--card-color: var(--hrm-color);">
+        <div class="card-top">
+          <span class="card-subject-chip" style="background:var(--hrm-bg);color:var(--hrm-color);border:1px solid var(--hrm-border);">HRM</span>
+          <span class="year-pill">2022</span>
+        </div>
+        <div>
+          <div class="card-title">HRM — 2022</div>
+          <div class="card-subtitle">Human Resource Management · AKTU MBA Sem 2</div>
+        </div>
+        <div class="card-footer">
+          <a class="btn-solve" href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-hrm-2022" target="_blank" style="background:var(--hrm-color);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><polyline points="9,12 11,14 15,10"/></svg>
+            View Solution
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== MIS SECTION ===== -->
+  <div class="subject-section" data-subject="MIS" id="sec-MIS">
+    <div class="subject-head">
+      <span class="subject-badge" style="background:var(--mis-bg);color:var(--mis-color);border:1.5px solid var(--mis-border);">MIS</span>
+      <div>
+        <div class="subject-title-text">Management Information System</div>
+        <div class="subject-desc">AKTU MBA Semester 2 · 3 Years Available</div>
+      </div>
+    </div>
+    <div class="subject-divider" style="background:var(--mis-color);opacity:0.25;"></div>
+    <div class="cards-grid">
+
+      <div class="paper-card" data-subject="MIS" style="--card-color: var(--mis-color);">
+        <div class="card-top">
+          <span class="card-subject-chip" style="background:var(--mis-bg);color:var(--mis-color);border:1px solid var(--mis-border);">MIS</span>
+          <span class="year-pill">2024</span>
+        </div>
+        <div>
+          <div class="card-title">MIS — 2024</div>
+          <div class="card-subtitle">Management Information System · AKTU MBA Sem 2</div>
+        </div>
+        <div class="card-footer">
+          <a class="btn-solve" href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-mis-2024" target="_blank" style="background:var(--mis-color);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><polyline points="9,12 11,14 15,10"/></svg>
+            View Solution
+          </a>
+        </div>
+      </div>
+
+      <div class="paper-card" data-subject="MIS" style="--card-color: var(--mis-color);">
+        <div class="card-top">
+          <span class="card-subject-chip" style="background:var(--mis-bg);color:var(--mis-color);border:1px solid var(--mis-border);">MIS</span>
+          <span class="year-pill">2023</span>
+        </div>
+        <div>
+          <div class="card-title">MIS — 2023</div>
+          <div class="card-subtitle">Management Information System · AKTU MBA Sem 2</div>
+        </div>
+        <div class="card-footer">
+          <a class="btn-solve" href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-mis-2023" target="_blank" style="background:var(--mis-color);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><polyline points="9,12 11,14 15,10"/></svg>
+            View Solution
+          </a>
+        </div>
+      </div>
+
+      <div class="paper-card" data-subject="MIS" style="--card-color: var(--mis-color);">
+        <div class="card-top">
+          <span class="card-subject-chip" style="background:var(--mis-bg);color:var(--mis-color);border:1px solid var(--mis-border);">MIS</span>
+          <span class="year-pill">2022</span>
+        </div>
+        <div>
+          <div class="card-title">MIS — 2022</div>
+          <div class="card-subtitle">Management Information System · AKTU MBA Sem 2</div>
+        </div>
+        <div class="card-footer">
+          <a class="btn-solve" href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-mis-2022" target="_blank" style="background:var(--mis-color);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><polyline points="9,12 11,14 15,10"/></svg>
+            View Solution
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== QTM SECTION ===== -->
+  <div class="subject-section" data-subject="QTM" id="sec-QTM">
+    <div class="subject-head">
+      <span class="subject-badge" style="background:var(--qtm-bg);color:var(--qtm-color);border:1.5px solid var(--qtm-border);">QTM</span>
+      <div>
+        <div class="subject-title-text">Quantitative Techniques for Managers</div>
+        <div class="subject-desc">AKTU MBA Semester 2 · 3 Years Available</div>
+      </div>
+    </div>
+    <div class="subject-divider" style="background:var(--qtm-color);opacity:0.25;"></div>
+    <div class="cards-grid">
+
+      <div class="paper-card" data-subject="QTM" style="--card-color: var(--qtm-color);">
+        <div class="card-top">
+          <span class="card-subject-chip" style="background:var(--qtm-bg);color:var(--qtm-color);border:1px solid var(--qtm-border);">QTM</span>
+          <span class="year-pill">2024</span>
+        </div>
+        <div>
+          <div class="card-title">QTM — 2024</div>
+          <div class="card-subtitle">Quantitative Techniques for Managers · AKTU MBA Sem 2</div>
+        </div>
+        <div class="card-footer">
+          <a class="btn-solve" href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-qtm-2024" target="_blank" style="background:var(--qtm-color);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><polyline points="9,12 11,14 15,10"/></svg>
+            View Solution
+          </a>
+        </div>
+      </div>
+
+      <div class="paper-card" data-subject="QTM" style="--card-color: var(--qtm-color);">
+        <div class="card-top">
+          <span class="card-subject-chip" style="background:var(--qtm-bg);color:var(--qtm-color);border:1px solid var(--qtm-border);">QTM</span>
+          <span class="year-pill">2023</span>
+        </div>
+        <div>
+          <div class="card-title">QTM — 2023</div>
+          <div class="card-subtitle">Quantitative Techniques for Managers · AKTU MBA Sem 2</div>
+        </div>
+        <div class="card-footer">
+          <a class="btn-solve" href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-qtm-2023" target="_blank" style="background:var(--qtm-color);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><polyline points="9,12 11,14 15,10"/></svg>
+            View Solution
+          </a>
+        </div>
+      </div>
+
+      <div class="paper-card" data-subject="QTM" style="--card-color: var(--qtm-color);">
+        <div class="card-top">
+          <span class="card-subject-chip" style="background:var(--qtm-bg);color:var(--qtm-color);border:1px solid var(--qtm-border);">QTM</span>
+          <span class="year-pill">2022</span>
+        </div>
+        <div>
+          <div class="card-title">QTM — 2022</div>
+          <div class="card-subtitle">Quantitative Techniques for Managers · AKTU MBA Sem 2</div>
+        </div>
+        <div class="card-footer">
+          <a class="btn-solve" href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-qtm-2022" target="_blank" style="background:var(--qtm-color);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><polyline points="9,12 11,14 15,10"/></svg>
+            View Solution
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== BE SECTION ===== -->
+  <div class="subject-section" data-subject="BE" id="sec-BE">
+    <div class="subject-head">
+      <span class="subject-badge" style="background:var(--be-bg);color:var(--be-color);border:1.5px solid var(--be-border);">BE</span>
+      <div>
+        <div class="subject-title-text">Business Environment & Legal Aspect</div>
+        <div class="subject-desc">AKTU MBA Semester 2 · 3 Years Available</div>
+      </div>
+    </div>
+    <div class="subject-divider" style="background:var(--be-color);opacity:0.25;"></div>
+    <div class="cards-grid">
+
+      <div class="paper-card" data-subject="BE" style="--card-color: var(--be-color);">
+        <div class="card-top">
+          <span class="card-subject-chip" style="background:var(--be-bg);color:var(--be-color);border:1px solid var(--be-border);">BE</span>
+          <span class="year-pill">2024</span>
+        </div>
+        <div>
+          <div class="card-title">Business Environment — 2024</div>
+          <div class="card-subtitle">BE & Legal Aspect · AKTU MBA Sem 2</div>
+        </div>
+        <div class="card-footer">
+          <a class="btn-solve" href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-be-2024" target="_blank" style="background:var(--be-color);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><polyline points="9,12 11,14 15,10"/></svg>
+            View Solution
+          </a>
+        </div>
+      </div>
+
+      <div class="paper-card" data-subject="BE" style="--card-color: var(--be-color);">
+        <div class="card-top">
+          <span class="card-subject-chip" style="background:var(--be-bg);color:var(--be-color);border:1px solid var(--be-border);">BE</span>
+          <span class="year-pill">2023</span>
+        </div>
+        <div>
+          <div class="card-title">Business Environment — 2023</div>
+          <div class="card-subtitle">BE & Legal Aspect · AKTU MBA Sem 2</div>
+        </div>
+        <div class="card-footer">
+          <a class="btn-solve" href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-be-2023" target="_blank" style="background:var(--be-color);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><polyline points="9,12 11,14 15,10"/></svg>
+            View Solution
+          </a>
+        </div>
+      </div>
+
+      <div class="paper-card" data-subject="BE" style="--card-color: var(--be-color);">
+        <div class="card-top">
+          <span class="card-subject-chip" style="background:var(--be-bg);color:var(--be-color);border:1px solid var(--be-border);">BE</span>
+          <span class="year-pill">2022</span>
+        </div>
+        <div>
+          <div class="card-title">Business Environment — 2022</div>
+          <div class="card-subtitle">BE & Legal Aspect · AKTU MBA Sem 2</div>
+        </div>
+        <div class="card-footer">
+          <a class="btn-solve" href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-be-2022" target="_blank" style="background:var(--be-color);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><polyline points="9,12 11,14 15,10"/></svg>
+            View Solution
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== CMA SECTION ===== -->
+  <div class="subject-section" data-subject="CMA" id="sec-CMA">
+    <div class="subject-head">
+      <span class="subject-badge" style="background:var(--cma-bg);color:var(--cma-color);border:1.5px solid var(--cma-border);">CMA</span>
+      <div>
+        <div class="subject-title-text">Cost & Management Accounting</div>
+        <div class="subject-desc">AKTU MBA Semester 2 · 1 Year Available</div>
+      </div>
+    </div>
+    <div class="subject-divider" style="background:var(--cma-color);opacity:0.25;"></div>
+    <div class="cards-grid">
+
+      <div class="paper-card" data-subject="CMA" style="--card-color: var(--cma-color);">
+        <div class="card-top">
+          <span class="card-subject-chip" style="background:var(--cma-bg);color:var(--cma-color);border:1px solid var(--cma-border);">CMA</span>
+          <span class="year-pill">2024</span>
+        </div>
+        <div>
+          <div class="card-title">Cost & Management Accounting — 2024</div>
+          <div class="card-subtitle">CMA · AKTU MBA Sem 2</div>
+        </div>
+        <div class="card-footer">
+          <a class="btn-solve" href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-cma-2024" target="_blank" style="background:var(--cma-color);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><polyline points="9,12 11,14 15,10"/></svg>
+            View Solution
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== BRM SECTION ===== -->
+  <div class="subject-section" data-subject="BRM" id="sec-BRM">
+    <div class="subject-head">
+      <span class="subject-badge" style="background:var(--brm-bg);color:var(--brm-color);border:1.5px solid var(--brm-border);">BRM</span>
+      <div>
+        <div class="subject-title-text">Business Research Method</div>
+        <div class="subject-desc">AKTU MBA Semester 2 · 3 Years Available</div>
+      </div>
+    </div>
+    <div class="subject-divider" style="background:var(--brm-color);opacity:0.25;"></div>
+    <div class="cards-grid">
+
+      <div class="paper-card" data-subject="BRM" style="--card-color: var(--brm-color);">
+        <div class="card-top">
+          <span class="card-subject-chip" style="background:var(--brm-bg);color:var(--brm-color);border:1px solid var(--brm-border);">BRM</span>
+          <span class="year-pill">2024</span>
+        </div>
+        <div>
+          <div class="card-title">Business Research Method — 2024</div>
+          <div class="card-subtitle">BRM · AKTU MBA Sem 2</div>
+        </div>
+        <div class="card-footer">
+          <a class="btn-solve" href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-brm-2024" target="_blank" style="background:var(--brm-color);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><polyline points="9,12 11,14 15,10"/></svg>
+            View Solution
+          </a>
+        </div>
+      </div>
+
+      <div class="paper-card" data-subject="BRM" style="--card-color: var(--brm-color);">
+        <div class="card-top">
+          <span class="card-subject-chip" style="background:var(--brm-bg);color:var(--brm-color);border:1px solid var(--brm-border);">BRM</span>
+          <span class="year-pill">2023</span>
+        </div>
+        <div>
+          <div class="card-title">Business Research Method — 2023</div>
+          <div class="card-subtitle">BRM · AKTU MBA Sem 2</div>
+        </div>
+        <div class="card-footer">
+          <a class="btn-solve" href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-brm-2023" target="_blank" style="background:var(--brm-color);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><polyline points="9,12 11,14 15,10"/></svg>
+            View Solution
+          </a>
+        </div>
+      </div>
+
+      <div class="paper-card" data-subject="BRM" style="--card-color: var(--brm-color);">
+        <div class="card-top">
+          <span class="card-subject-chip" style="background:var(--brm-bg);color:var(--brm-color);border:1px solid var(--brm-border);">BRM</span>
+          <span class="year-pill">2022</span>
+        </div>
+        <div>
+          <div class="card-title">Business Research Method — 2022</div>
+          <div class="card-subtitle">BRM · AKTU MBA Sem 2</div>
+        </div>
+        <div class="card-footer">
+          <a class="btn-solve" href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-brm-2022" target="_blank" style="background:var(--brm-color);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><polyline points="9,12 11,14 15,10"/></svg>
+            View Solution
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== EXAM TIPS ===== -->
+  <div class="tips-strip">
+    <div class="tip-item">
+      <div class="tip-num">1</div>
+      <div><h4>Pehle Syllabus Padho</h4><p>Solved papers dekhne se pehle apna syllabus ek baar zaroor complete karo.</p></div>
+    </div>
+    <div class="tip-item">
+      <div class="tip-num">2</div>
+      <div><h4>Khud Solve Karo Pehle</h4><p>Solution dekhne se pehle question khud solve karne ki koshish karo.</p></div>
+    </div>
+    <div class="tip-item">
+      <div class="tip-num">3</div>
+      <div><h4>Pattern Note Karo</h4><p>Repeated questions aur important topics ko highlight karo revision ke liye.</p></div>
+    </div>
+    <div class="tip-item">
+      <div class="tip-num">4</div>
+      <div><h4>3–5 Papers Practice Karo</h4><p>Ek subject ke liye kam se kam 3 papers solve karke dekho exam se pehle.</p></div>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT & WHY ===== -->
+  <div class="about-card">
+    <div>
+      <div class="sec-tag" style="margin-bottom:0.75rem;">Why These Solutions?</div>
+      <h3 style="font-size:1.2rem;font-weight:800;margin-bottom:1rem;color:var(--text);">AKTU MBA Solved Papers kyun important hain?</h3>
+      <div class="about-point">
+        <div class="about-icon" style="background:var(--primary-light);">🎯</div>
+        <div>
+          <strong style="font-size:13.5px;color:var(--text);">Exam Pattern Samajhna</strong>
+          <p style="font-size:13px;color:var(--muted);margin-top:2px;">AKTU exam structure aur marking scheme bilkul clear ho jati hai.</p>
+        </div>
+      </div>
+      <div class="about-point">
+        <div class="about-icon" style="background:#e8faf2;">✅</div>
+        <div>
+          <strong style="font-size:13.5px;color:var(--text);">Sahi Answer Format Seekhna</strong>
+          <p style="font-size:13px;color:var(--muted);margin-top:2px;">Solved papers se pata chalta hai ki answer kaise likhna chahiye.</p>
+        </div>
+      </div>
+      <div class="about-point">
+        <div class="about-icon" style="background:#fef5ec;">⚡</div>
+        <div>
+          <strong style="font-size:13.5px;color:var(--text);">Revision Fast Hoti Hai</strong>
+          <p style="font-size:13px;color:var(--muted);margin-top:2px;">Important topics quickly cover ho jaate hain solved papers se.</p>
+        </div>
+      </div>
+      <div class="about-point">
+        <div class="about-icon" style="background:#f5eefa;">💪</div>
+        <div>
+          <strong style="font-size:13.5px;color:var(--text);">Confidence Badhta Hai</strong>
+          <p style="font-size:13px;color:var(--muted);margin-top:2px;">Jab solutions pata hote hain, exam ke time confidence hota hai.</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="sec-tag" style="margin-bottom:0.75rem;">Subjects Covered</div>
+      <h3 style="font-size:1.2rem;font-weight:800;margin-bottom:1rem;color:var(--text);">MBA Sem 2 ke main subjects</h3>
+      <div style="display:flex;flex-direction:column;gap:0.6rem;">
+        <div style="display:flex;gap:10px;align-items:center;padding:0.75rem;background:var(--hrm-bg);border-radius:10px;border:1px solid var(--hrm-border);">
+          <span style="font-size:13px;font-weight:800;color:var(--hrm-color);font-family:'JetBrains Mono',monospace;min-width:44px;">HRM</span>
+          <span style="font-size:13px;color:var(--muted);">Human Resource Management</span>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;padding:0.75rem;background:var(--mis-bg);border-radius:10px;border:1px solid var(--mis-border);">
+          <span style="font-size:13px;font-weight:800;color:var(--mis-color);font-family:'JetBrains Mono',monospace;min-width:44px;">MIS</span>
+          <span style="font-size:13px;color:var(--muted);">Management Information System</span>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;padding:0.75rem;background:var(--qtm-bg);border-radius:10px;border:1px solid var(--qtm-border);">
+          <span style="font-size:13px;font-weight:800;color:var(--qtm-color);font-family:'JetBrains Mono',monospace;min-width:44px;">QTM</span>
+          <span style="font-size:13px;color:var(--muted);">Quantitative Techniques for Managers</span>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;padding:0.75rem;background:var(--be-bg);border-radius:10px;border:1px solid var(--be-border);">
+          <span style="font-size:13px;font-weight:800;color:var(--be-color);font-family:'JetBrains Mono',monospace;min-width:44px;">BE</span>
+          <span style="font-size:13px;color:var(--muted);">Business Environment & Legal Aspect</span>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;padding:0.75rem;background:var(--cma-bg);border-radius:10px;border:1px solid var(--cma-border);">
+          <span style="font-size:13px;font-weight:800;color:var(--cma-color);font-family:'JetBrains Mono',monospace;min-width:44px;">CMA</span>
+          <span style="font-size:13px;color:var(--muted);">Cost & Management Accounting</span>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;padding:0.75rem;background:var(--brm-bg);border-radius:10px;border:1px solid var(--brm-border);">
+          <span style="font-size:13px;font-weight:800;color:var(--brm-color);font-family:'JetBrains Mono',monospace;min-width:44px;">BRM</span>
+          <span style="font-size:13px;color:var(--muted);">Business Research Method</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ALSO EXPLORE ===== -->
+  <div class="sec-header" style="margin-bottom:1rem;">
+    <span class="sec-tag">Explore More</span>
+    <h2>Ye Bhi Dekho</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-bottom:2.5rem;">
+    <a href="https://sabkacode.vercel.app/p" style="text-decoration:none;background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.25rem;display:flex;gap:12px;align-items:center;transition:all 0.18s;box-shadow:var(--shadow-sm);" onmouseover="this.style.borderColor='#3498db';this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='var(--shadow-sm)'">
+      <div style="width:42px;height:42px;background:var(--primary-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">📄</div>
+      <div><div style="font-size:14px;font-weight:700;color:var(--text);">Previous Papers</div><div style="font-size:12.5px;color:var(--muted);">AKTU, DBRAU, CCSU, CSJMU</div></div>
+    </a>
+    <a href="https://sabkacode.vercel.app/notes" style="text-decoration:none;background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.25rem;display:flex;gap:12px;align-items:center;transition:all 0.18s;box-shadow:var(--shadow-sm);" onmouseover="this.style.borderColor='#3498db';this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='var(--shadow-sm)'">
+      <div style="width:42px;height:42px;background:#e8faf2;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">📚</div>
+      <div><div style="font-size:14px;font-weight:700;color:var(--text);">Study Notes</div><div style="font-size:12.5px;color:var(--muted);">All subjects, all semesters</div></div>
+    </a>
+    <a href="https://sabkacode.vercel.app/jee" style="text-decoration:none;background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.25rem;display:flex;gap:12px;align-items:center;transition:all 0.18s;box-shadow:var(--shadow-sm);" onmouseover="this.style.borderColor='#3498db';this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='var(--shadow-sm)'">
+      <div style="width:42px;height:42px;background:#fef5ec;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">🏆</div>
+      <div><div style="font-size:14px;font-weight:700;color:var(--text);">JEE Papers</div><div style="font-size:12.5px;color:var(--muted);">JEE Mains & Advanced</div></div>
+    </a>
+    <a href="https://sabkacode.vercel.app/blog" style="text-decoration:none;background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.25rem;display:flex;gap:12px;align-items:center;transition:all 0.18s;box-shadow:var(--shadow-sm);" onmouseover="this.style.borderColor='#3498db';this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='var(--shadow-sm)'">
+      <div style="width:42px;height:42px;background:#f5eefa;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">✏️</div>
+      <div><div style="font-size:14px;font-weight:700;color:var(--text);">Blog</div><div style="font-size:12.5px;color:var(--muted);">Study tips & guides</div></div>
+    </a>
+  </div>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<div id="footer"></div>
+
+<script>
+
+  // Filter functionality
+  function filterCards(subject, btn) {
+    // Update filter buttons
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+
+    // Show/hide sections
+    const sections = document.querySelectorAll('.subject-section');
+    sections.forEach(sec => {
+      if (subject === 'ALL' || sec.dataset.subject === subject) {
+        sec.classList.remove('hidden');
+      } else {
+        sec.classList.add('hidden');
+      }
+    });
+
+    // Scroll to section if specific subject
+    if (subject !== 'ALL') {
+      const target = document.getElementById('sec-' + subject);
+      if (target) {
+        setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+      }
+    }
+  }
+</script>
+</body>
+</html>
