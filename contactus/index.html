@@ -172,6 +172,16 @@
       .form-row { grid-template-columns: 1fr; }
       .form-section { padding: 24px 20px; }
     }
+    .breadcrumb {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 12.5px; color: rgba(255,255,255,0.5);
+  margin-bottom: 1.25rem;
+}
+.breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.15s; }
+.breadcrumb a:hover { color: rgba(255,255,255,0.9); }
+.breadcrumb span.sep { opacity: 0.4; }
+.breadcrumb span.cur { color: rgba(255,255,255,0.85); font-weight: 500; }
+
   </style>
 </head>
 <body>
@@ -195,6 +205,11 @@
 <script src="/script.js"></script>
 <!-- HERO -->
 <section class="hero">
+  <div class="breadcrumb">
+      <a href="https://sabkacode.vercel.app">Home</a>
+      <span class="sep">›</span>
+      <a href="https://sabkacode.vercel.app/contactus">Contact Us</a>
+    </div>
   <div class="hero-badge">✦ Contact SabkaCode</div>
   <h1>Hum Yahan Hain — <span>Baat Karo!</span></h1>
   <p>Koi sawaal, feedback, ya suggestion? Apne favorite platform pe humse directly connect karo.</p>
