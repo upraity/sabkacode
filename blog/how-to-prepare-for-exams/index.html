@@ -599,23 +599,8 @@
   </div>
 </div>
 
-<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to Top">
-  <i class="fa-solid fa-arrow-up"></i>
-</button>
-
-<script>
-  // Read Progress Bar
-  window.addEventListener('scroll', function() {
-    var doc = document.documentElement;
-    var scrollTop = doc.scrollTop || document.body.scrollTop;
-    var scrollHeight = doc.scrollHeight - doc.clientHeight;
-    var progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
-    document.getElementById('readProgress').style.width = progress + '%';
-    document.getElementById('backToTop').style.display = scrollTop > 300 ? 'block' : 'none';
-  });
-
-  // Load nav
-  fetch("nav.html").then(r => r.text()).then(d => { document.getElementById("nav").innerHTML = d; }).catch(e => console.error(e));
-</script>
+<div id="footer">
+</div>
+  <script src="/script.js"></script>
 </body>
 </html>
