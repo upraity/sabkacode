@@ -103,6 +103,7 @@ a{text-decoration:none;color:inherit;}
 .highlight-card h4{font-size:13.5px;color:#2c3e50;margin-bottom:4px;}
 .highlight-card p{font-size:12.5px;color:#7f8c8d;margin:0;}
 </style></head><body>
+  
 <div id="readProgress"></div><div id="nav"></div>
 <section class="blog-hero"><div class="hero-c1"></div><div class="hero-c2"></div>
 <div class="hero-inner">
@@ -174,12 +175,6 @@ a{text-decoration:none;color:inherit;}
 <a href="https://chat.whatsapp.com/JUE7O4DHVC2DnqYj6hLfug" target="_blank" class="btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp Join Karo</a>
 <a href="https://t.me/sabkacode" target="_blank" class="btn-tg"><i class="fa-brands fa-telegram"></i> Telegram Join Karo</a>
 </div></div></div>
-<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-arrow-up"></i></button>
-<script>
-window.addEventListener('scroll',function(){
-  var d=document.documentElement,st=d.scrollTop||document.body.scrollTop,sh=d.scrollHeight-d.clientHeight;
-  document.getElementById('readProgress').style.width=(sh>0?(st/sh)*100:0)+'%';
-  document.getElementById('backToTop').style.display=st>300?'block':'none';
-});
-fetch("nav.html").then(r=>r.text()).then(d=>{document.getElementById("nav").innerHTML=d;}).catch(e=>{});
-</script></body></html>
+  <div id="footer"></div>
+  <script src="/script.js"></script>
+</body></html>
