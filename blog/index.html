@@ -1,123 +1,704 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Read SabkaCode blog articles on study tips, coding guides, exams, and productivity.">
-    <title>SabkaCode Blog</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SabkaCode Blog – Study tips, coding guides, exam strategies aur educational articles students ke liye, Hinglish mein.">
+  <meta name="keywords" content="SabkaCode blog, study tips, coding guide, exam preparation, programming articles, AKTU tips, BCA notes guide">
+  <meta name="author" content="SabkaCode">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#3498db">
+  <meta property="og:title" content="Blog | SabkaCode">
+  <meta property="og:description" content="Study tips, coding guides aur exam strategies — students ke liye, Hinglish mein.">
+  <meta property="og:image" content="https://sabkacode.vercel.app/logo.png">
+  <meta property="og:url" content="https://sabkacode.vercel.app/blog">
+  <link rel="canonical" href="https://sabkacode.vercel.app/blog">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Blog – Study Tips & Coding Guides | SabkaCode</title>
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","otqed8ed9r");
+  </script>
+  <script language="JavaScript" type="text/javascript">
+    var message="Sorry, Right Click have been disabled.";
+    function click(e){if(document.all){if(event.button==2||event.button==3){alert(message);return false;}}else{if(e.button==2||e.button==3){e.preventDefault();e.stopPropagation();alert(message);return false;}}}
+    if(document.all){document.onmousedown=click;}else{document.onclick=click;}
+    document.oncontextmenu=function(){return false;};
+  </script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:Arial,sans-serif;background:#f4f6f8;color:#2c3e50;overflow-x:hidden;}
+    a{text-decoration:none;color:inherit;}
+    #pageCount{color:transparent;font-size:0;}
+
+    /* ── HERO ── */
+    .hero{background:linear-gradient(135deg,#1a252f 0%,#2c3e50 45%,#3498db 100%);color:#fff;padding:58px 20px 50px;text-align:center;position:relative;overflow:hidden;}
+    .hero-c1{position:absolute;top:-70px;left:-70px;width:340px;height:340px;background:rgba(52,152,219,.12);border-radius:50%;}
+    .hero-c2{position:absolute;bottom:-90px;right:-50px;width:400px;height:400px;background:rgba(255,255,255,.04);border-radius:50%;}
+    .hero-inner{position:relative;z-index:1;}
+    .hero-badge{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.32);border-radius:20px;padding:6px 20px;font-size:12px;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:20px;}
+    .hero h1{font-size:clamp(1.9em,6vw,3em);font-weight:700;line-height:1.2;margin-bottom:14px;}
+    .hero h1 .accent{color:#74d0f5;}
+    .hero-sub{font-size:clamp(13px,2.5vw,16px);opacity:.87;max-width:560px;margin:0 auto 26px;line-height:1.7;}
+    .hero-pills{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+    .hero-pill{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:5px 14px;font-size:13px;display:inline-flex;align-items:center;gap:6px;}
+
+    /* ── STATS ── */
+    .stats-strip{background:#fff;display:grid;grid-template-columns:repeat(4,1fr);box-shadow:0 4px 18px rgba(0,0,0,.09);}
+    .stat-item{text-align:center;padding:20px 10px;border-right:1px solid #ecf0f1;transition:background .3s;}
+    .stat-item:last-child{border-right:none;}
+    .stat-item:hover{background:#eaf4fd;}
+    .stat-num{font-size:clamp(1.5em,4vw,2.1em);font-weight:700;color:#3498db;display:block;}
+    .stat-label{font-size:11px;color:#7f8c8d;margin-top:3px;text-transform:uppercase;letter-spacing:.5px;}
+
+    /* ── LAYOUT ── */
+    main{padding-bottom:120px;}
+    .section{padding:48px 20px;max-width:1060px;margin:0 auto;}
+    .bg-white{background:#fff;}
+    .section-header{text-align:center;margin-bottom:32px;}
+    .sec-badge{display:inline-block;background:#eaf4fd;color:#3498db;border:1px solid #bee3f8;border-radius:20px;padding:4px 16px;font-size:12px;letter-spacing:1px;text-transform:uppercase;font-weight:bold;margin-bottom:10px;}
+    .section-header h2{font-size:clamp(1.3em,3.5vw,1.9em);color:#2c3e50;margin-bottom:8px;}
+    .section-header h2 .hi{color:#3498db;}
+    .section-header p{color:#7f8c8d;font-size:14.5px;max-width:540px;margin:0 auto;line-height:1.65;}
+    .divider{width:50px;height:4px;background:linear-gradient(90deg,#3498db,#74d0f5);border-radius:2px;margin:12px auto 0;}
+
+    /* ── SEARCH BAR ── */
+    .search-wrap{max-width:520px;margin:0 auto 32px;position:relative;}
+    .search-wrap input{width:100%;padding:13px 50px 13px 20px;border-radius:30px;border:2px solid #ecf0f1;font-size:14.5px;font-family:Arial,sans-serif;color:#2c3e50;outline:none;transition:border-color .3s;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.06);}
+    .search-wrap input:focus{border-color:#3498db;}
+    .search-wrap i{position:absolute;right:18px;top:50%;transform:translateY(-50%);color:#3498db;font-size:16px;}
+
+    /* ── CATEGORY TABS ── */
+    .cat-tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:30px;}
+    .cat-btn{background:#fff;border:2px solid #ecf0f1;border-radius:22px;padding:8px 18px;font-size:13.5px;font-weight:bold;color:#7f8c8d;cursor:pointer;transition:all .3s;font-family:Arial,sans-serif;display:inline-flex;align-items:center;gap:7px;}
+    .cat-btn.active{background:#3498db;border-color:#3498db;color:#fff;box-shadow:0 4px 14px rgba(52,152,219,.3);}
+    .cat-btn:hover:not(.active){border-color:#3498db;color:#3498db;}
+    .cat-count{background:rgba(52,152,219,.15);color:#3498db;font-size:11px;padding:1px 7px;border-radius:8px;font-weight:bold;}
+    .cat-btn.active .cat-count{background:rgba(255,255,255,.25);color:#fff;}
+
+    /* ── FEATURED ARTICLE ── */
+    .featured-card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.09);display:grid;grid-template-columns:1fr 1fr;margin-bottom:36px;transition:all .3s;}
+    .featured-card:hover{transform:translateY(-4px);box-shadow:0 10px 32px rgba(52,152,219,.18);}
+    .featured-visual{background:linear-gradient(135deg,#1a252f,#3498db);padding:40px 36px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
+    .featured-visual::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:rgba(255,255,255,.05);border-radius:50%;}
+    .featured-visual::after{content:'';position:absolute;bottom:-50px;left:-30px;width:180px;height:180px;background:rgba(116,208,245,.08);border-radius:50%;}
+    .featured-label{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:5px 14px;font-size:12px;color:#fff;letter-spacing:1px;text-transform:uppercase;font-weight:bold;margin-bottom:20px;position:relative;z-index:1;width:fit-content;}
+    .featured-visual h2{font-size:clamp(1.2em,2.5vw,1.8em);color:#fff;line-height:1.3;margin-bottom:14px;position:relative;z-index:1;}
+    .featured-visual p{font-size:14px;color:rgba(255,255,255,.8);line-height:1.65;margin-bottom:22px;position:relative;z-index:1;}
+    .featured-meta{display:flex;align-items:center;gap:14px;position:relative;z-index:1;}
+    .featured-meta span{font-size:12.5px;color:rgba(255,255,255,.7);display:flex;align-items:center;gap:5px;}
+    .featured-read{display:inline-flex;align-items:center;gap:7px;background:#fff;color:#2c3e50;padding:10px 22px;border-radius:22px;font-size:13px;font-weight:bold;transition:all .3s;position:relative;z-index:1;width:fit-content;margin-top:18px;}
+    .featured-read:hover{background:#ecf0f1;transform:translateX(4px);}
+    .featured-info{padding:36px;display:flex;flex-direction:column;justify-content:center;}
+    .featured-tag{display:inline-block;background:#eaf4fd;color:#3498db;font-size:11px;padding:3px 12px;border-radius:10px;font-weight:bold;text-transform:uppercase;margin-bottom:14px;}
+    .featured-info h3{font-size:1.25em;font-weight:700;color:#2c3e50;line-height:1.4;margin-bottom:10px;}
+    .featured-info p{font-size:13.5px;color:#555;line-height:1.7;margin-bottom:16px;}
+    .fi-meta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+    .fi-meta span{font-size:12px;color:#7f8c8d;display:flex;align-items:center;gap:5px;}
+    .fi-meta i{color:#3498db;}
+    .read-link{display:inline-flex;align-items:center;gap:6px;color:#3498db;font-size:13.5px;font-weight:bold;margin-top:14px;transition:gap .3s;}
+    .read-link:hover{gap:10px;}
+
+    /* ── BLOG GRID ── */
+    .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;}
+    .blog-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.07);transition:all .3s;display:block;color:#2c3e50;}
+    .blog-card:hover{transform:translateY(-5px);box-shadow:0 12px 32px rgba(0,0,0,.12);}
+    .blog-card-top{padding:24px 22px 0;position:relative;}
+    .blog-card-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5em;margin-bottom:14px;}
+    .ic-blue{background:#eaf4fd;color:#3498db;} .ic-green{background:#eafaf1;color:#2ecc71;}
+    .ic-orange{background:#fef5e7;color:#e67e22;} .ic-red{background:#fdf2f0;color:#e74c3c;}
+    .ic-purple{background:#f4f0fb;color:#9b59b6;} .ic-teal{background:#e8f8f5;color:#1abc9c;}
+    .ic-pink{background:#fdf0f7;color:#e91e8c;} .ic-indigo{background:#eef2ff;color:#5c6bc0;}
+    .blog-cat-tag{display:inline-block;font-size:11px;padding:3px 11px;border-radius:10px;font-weight:bold;text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px;}
+    .tag-blue{background:#eaf4fd;color:#3498db;} .tag-green{background:#eafaf1;color:#2ecc71;}
+    .tag-orange{background:#fef5e7;color:#e67e22;} .tag-red{background:#fdf2f0;color:#e74c3c;}
+    .tag-purple{background:#f4f0fb;color:#9b59b6;} .tag-teal{background:#e8f8f5;color:#1abc9c;}
+    .tag-pink{background:#fdf0f7;color:#e91e8c;} .tag-indigo{background:#eef2ff;color:#5c6bc0;}
+    .blog-card h3{font-size:15.5px;font-weight:700;line-height:1.4;margin-bottom:8px;color:#2c3e50;}
+    .blog-card p{font-size:13px;color:#7f8c8d;line-height:1.6;margin-bottom:0;}
+    .blog-card-bottom{padding:14px 22px 20px;border-top:1px solid #f4f6f8;display:flex;align-items:center;justify-content:space-between;margin-top:14px;}
+    .blog-card-meta{display:flex;align-items:center;gap:12px;}
+    .blog-card-meta span{font-size:12px;color:#95a5a6;display:flex;align-items:center;gap:4px;}
+    .blog-card-meta i{font-size:11px;}
+    .blog-read-btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:bold;color:#3498db;transition:gap .3s;}
+    .blog-read-btn:hover{gap:10px;}
+    .blog-card.hidden-card{display:none;}
+
+    /* ── LOAD MORE ── */
+    .load-more-wrap{text-align:center;margin-top:32px;}
+    .btn-load{background:#fff;border:2px solid #3498db;color:#3498db;padding:12px 32px;border-radius:28px;font-size:15px;font-weight:bold;cursor:pointer;transition:all .3s;font-family:Arial,sans-serif;display:inline-flex;align-items:center;gap:8px;}
+    .btn-load:hover{background:#3498db;color:#fff;}
+
+    /* ── TOPICS SECTION ── */
+    .topics-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;}
+    .topic-pill{background:#fff;border-radius:12px;padding:16px 14px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.06);transition:all .3s;cursor:pointer;border:2px solid transparent;}
+    .topic-pill:hover{border-color:#3498db;transform:translateY(-3px);background:#eaf4fd;}
+    .topic-pill i{font-size:1.6em;color:#3498db;margin-bottom:8px;display:block;}
+    .topic-pill span{font-size:13px;font-weight:bold;color:#2c3e50;display:block;}
+    .topic-pill small{font-size:11px;color:#7f8c8d;}
+
+    /* ── NEWSLETTER / WHATSAPP CTA ── */
+    .join-section{background:linear-gradient(135deg,#2c3e50,#34495e);padding:52px 20px;}
+    .join-inner{max-width:700px;margin:0 auto;text-align:center;}
+    .join-inner h2{font-size:clamp(1.3em,3.5vw,2em);color:#fff;margin-bottom:12px;}
+    .join-inner p{color:rgba(255,255,255,.78);font-size:15px;line-height:1.65;margin-bottom:28px;}
+    .join-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+    .btn-wa{display:inline-flex;align-items:center;gap:9px;background:#25d366;color:#fff;padding:13px 28px;border-radius:28px;font-size:15px;font-weight:bold;transition:all .3s;box-shadow:0 4px 14px rgba(37,211,102,.35);}
+    .btn-wa:hover{background:#1ebe5d;transform:translateY(-2px);}
+    .btn-tg{display:inline-flex;align-items:center;gap:9px;background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5);padding:13px 28px;border-radius:28px;font-size:15px;font-weight:bold;transition:all .3s;}
+    .btn-tg:hover{background:rgba(255,255,255,.1);transform:translateY(-2px);}
+
+    /* ── TIPS BANNER ── */
+    .tips-banner{background:#fff;border-left:5px solid #3498db;border-radius:12px;padding:20px 22px;margin-bottom:28px;display:flex;align-items:center;gap:16px;box-shadow:0 2px 10px rgba(0,0,0,.06);}
+    .tips-banner i{font-size:1.8em;color:#3498db;flex-shrink:0;}
+    .tips-banner h4{font-size:15px;font-weight:700;color:#2c3e50;margin-bottom:4px;}
+    .tips-banner p{font-size:13px;color:#7f8c8d;margin:0;line-height:1.5;}
+
+    /* ── CTA ── */
+    .cta-outer{padding:40px 20px;max-width:1060px;margin:0 auto;}
+    .cta-banner{background:linear-gradient(135deg,#3498db,#2c3e50);border-radius:20px;padding:44px 28px;text-align:center;color:#fff;box-shadow:0 8px 32px rgba(52,152,219,.25);}
+    .cta-banner h2{font-size:clamp(1.2em,3.5vw,1.9em);margin-bottom:10px;}
+    .cta-banner p{opacity:.88;font-size:15px;margin-bottom:26px;line-height:1.65;}
+    .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+    .btn-white{background:#fff;color:#2c3e50;padding:12px 28px;border-radius:28px;font-weight:bold;font-size:15px;display:inline-flex;align-items:center;gap:8px;transition:all .3s;}
+    .btn-white:hover{background:#ecf0f1;transform:translateY(-2px);}
+    .btn-outline-w{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55);padding:12px 28px;border-radius:28px;font-weight:bold;font-size:15px;display:inline-flex;align-items:center;gap:8px;transition:all .3s;}
+    .btn-outline-w:hover{background:rgba(255,255,255,.1);transform:translateY(-2px);}
+
+    /* ── BACK TO TOP ── */
+    #backToTop{display:none;position:fixed;bottom:70px;right:20px;background:#3498db;color:#fff;border:none;border-radius:50%;width:46px;height:46px;font-size:18px;cursor:pointer;z-index:998;box-shadow:0 4px 14px rgba(0,0,0,.22);transition:background .3s;}
+    #backToTop:hover{background:#2c3e50;}
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:768px){
+      .featured-card{grid-template-columns:1fr;}
+      .featured-visual{padding:28px 24px;}
+      .featured-info{padding:24px;}
+    }
+    @media(max-width:640px){
+      .stats-strip{grid-template-columns:repeat(2,1fr);}
+      .stats-strip .stat-item:nth-child(2){border-right:none;}
+      .stats-strip .stat-item:nth-child(1),.stats-strip .stat-item:nth-child(2){border-bottom:1px solid #ecf0f1;}
+      .section{padding:36px 16px;}
+      .hero{padding:42px 16px 36px;}
+    }
+  </style>
 </head>
 <body>
-    <div id="nav"></div>
+<div id="nav"></div>
+<main>
+  <center><span id="pageCount"></span></center>
 
-    <main class="blog-home">
-        <section class="blog-hero">
-            <span class="eyebrow">SabkaCode Blog</span>
-            <h1>Learn Smarter With Notes, Coding Guides, and Study Strategy</h1>
-            <p>Explore hand-picked articles for students who want better exam results, cleaner coding habits, and stronger daily productivity.</p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-c1"></div><div class="hero-c2"></div>
+    <div class="hero-inner">
+      <div class="hero-badge">✦ SabkaCode Blog</div>
+      <h1>Padhte Raho,<br><span class="accent">Badhte Raho</span></h1>
+      <p class="hero-sub">Study tips, coding guides, exam strategies aur educational articles — simple Hinglish mein, students ke liye.</p>
+      <div class="hero-pills">
+        <span class="hero-pill"><i class="fa-solid fa-pen-to-square"></i> Study Tips</span>
+        <span class="hero-pill"><i class="fa-solid fa-code"></i> Coding Guides</span>
+        <span class="hero-pill"><i class="fa-solid fa-graduation-cap"></i> Exam Strategies</span>
+        <span class="hero-pill"><i class="fa-solid fa-book-open"></i> Resources</span>
+      </div>
+    </div>
+  </section>
 
-            <div class="blog-search">
-                <input type="text" placeholder="Search articles..." id="searchInput" aria-label="Search articles">
+  <!-- STATS -->
+  <div class="stats-strip">
+    <div class="stat-item"><span class="stat-num">15+</span><div class="stat-label">Articles</div></div>
+    <div class="stat-item"><span class="stat-num">6</span><div class="stat-label">Categories</div></div>
+    <div class="stat-item"><span class="stat-num">100%</span><div class="stat-label">Free</div></div>
+    <div class="stat-item"><span class="stat-num">Hindi</span><div class="stat-label">+ English</div></div>
+  </div>
+
+  <!-- FEATURED + SEARCH -->
+  <div class="section">
+
+    <!-- TIPS BANNER -->
+    <div class="tips-banner">
+      <i class="fa-solid fa-fire"></i>
+      <div>
+        <h4>Exam Season Chal Raha Hai!</h4>
+        <p>Neeche diye exam tips articles zaroor padho — previous papers aur solution links bhi available hain.</p>
+      </div>
+    </div>
+
+    <!-- FEATURED ARTICLE -->
+    <div class="section-header">
+      <div class="sec-badge">Featured</div>
+      <h2>Sabse <span class="hi">Popular Article</span></h2>
+      <div class="divider"></div>
+    </div>
+
+    <a href="https://sabkacode.vercel.app/blog/how-to-prepare-for-exams" class="featured-card">
+      <div class="featured-visual">
+        <div class="featured-label"><i class="fa-solid fa-fire"></i> Most Read</div>
+        <h2>Exams Ki Preparation Effectively Kaise Karein?</h2>
+        <p>Ek proven strategy jo students ko better score dilane mein help karti hai — AKTU, DBRAU, CSJMU sab ke liye.</p>
+        <div class="featured-meta">
+          <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+          <span><i class="fa-solid fa-tag"></i> Exam Tips</span>
+        </div>
+        <div class="featured-read">Read Article <i class="fa-solid fa-arrow-right"></i></div>
+      </div>
+      <div class="featured-info">
+        <span class="featured-tag">Exam Tips</span>
+        <h3>Is Article Mein Kya Milega?</h3>
+        <p>Study schedule kaise banayein, important topics kaise identify karein, last-minute revision tips, aur exam hall mein time management ke baare mein complete guide.</p>
+        <div class="fi-meta">
+          <span><i class="fa-regular fa-calendar"></i> January 2025</span>
+          <span><i class="fa-regular fa-eye"></i> 5.2k views</span>
+          <span><i class="fa-solid fa-graduation-cap"></i> All Students</span>
+        </div>
+        <div class="read-link">Poora Padho <i class="fa-solid fa-arrow-right"></i></div>
+      </div>
+    </a>
+  </div>
+
+  <!-- ALL ARTICLES -->
+  <div class="bg-white">
+    <div class="section">
+      <div class="section-header">
+        <div class="sec-badge">All Articles</div>
+        <h2>Saare <span class="hi">Blog Posts</span></h2>
+        <p>Category filter karo ya search karo — apna article jaldi dhundho.</p>
+        <div class="divider"></div>
+      </div>
+
+      <!-- SEARCH -->
+      <div class="search-wrap">
+        <input type="text" id="searchInput" placeholder="Article search karo... (e.g. 'Java tips', 'exam strategy')" oninput="filterCards()">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+      <!-- CATEGORY TABS -->
+      <div class="cat-tabs">
+        <button class="cat-btn active" onclick="filterCat('all',this)"><i class="fa-solid fa-layer-group"></i> Sab <span class="cat-count">15</span></button>
+        <button class="cat-btn" onclick="filterCat('exam',this)"><i class="fa-solid fa-graduation-cap"></i> Exam Tips <span class="cat-count">5</span></button>
+        <button class="cat-btn" onclick="filterCat('coding',this)"><i class="fa-solid fa-code"></i> Coding <span class="cat-count">4</span></button>
+        <button class="cat-btn" onclick="filterCat('resources',this)"><i class="fa-solid fa-book"></i> Resources <span class="cat-count">3</span></button>
+        <button class="cat-btn" onclick="filterCat('career',this)"><i class="fa-solid fa-briefcase"></i> Career <span class="cat-count">2</span></button>
+        <button class="cat-btn" onclick="filterCat('guide',this)"><i class="fa-solid fa-map"></i> Guides <span class="cat-count">1</span></button>
+      </div>
+
+      <!-- ARTICLES GRID -->
+      <div class="blog-grid" id="blogGrid">
+
+        <!-- 1 -->
+        <a href="https://sabkacode.vercel.app/blog/how-to-prepare-for-exams" class="blog-card" data-cat="exam" data-title="exams preparation effectively kaise karein">
+          <div class="blog-card-top">
+            <div class="blog-card-icon ic-red"><i class="fa-solid fa-graduation-cap"></i></div>
+            <span class="blog-cat-tag tag-red">Exam Tips</span>
+            <h3>Exams Ki Preparation Effectively Kaise Karein?</h3>
+            <p>Step-by-step guide jo students ko better score karne mein help karegi — AKTU, DBRAU, CSJMU sab ke liye.</p>
+          </div>
+          <div class="blog-card-bottom">
+            <div class="blog-card-meta">
+              <span><i class="fa-regular fa-clock"></i> 6 min</span>
+              <span><i class="fa-regular fa-calendar"></i> Jan 2025</span>
             </div>
-        </section>
+            <div class="blog-read-btn">Read <i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
 
-        <section class="featured-posts">
-            <div class="section-heading">
-                <h2>Featured Articles</h2>
-                <a href="#all-posts">Browse all posts</a>
+        <!-- 2 -->
+        <a href="https://sabkacode.vercel.app/blog/best-programming-languages" class="blog-card" data-cat="coding" data-title="beginners best programming languages 2025">
+          <div class="blog-card-top">
+            <div class="blog-card-icon ic-blue"><i class="fa-solid fa-code"></i></div>
+            <span class="blog-cat-tag tag-blue">Coding</span>
+            <h3>Beginners Ke Liye Best Programming Languages 2025</h3>
+            <p>Coding journey sahi language se shuru karo — Python, C, Java ya JavaScript? Poori guide yahan hai.</p>
+          </div>
+          <div class="blog-card-bottom">
+            <div class="blog-card-meta">
+              <span><i class="fa-regular fa-clock"></i> 5 min</span>
+              <span><i class="fa-regular fa-calendar"></i> Dec 2024</span>
             </div>
+            <div class="blog-read-btn">Read <i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
 
-            <div class="blog-grid">
-                <article class="card blog-card featured">
-                    <a href="/blog/how-to-prepare-for-exams">
-                        <span class="post-tag">Study Tips</span>
-                        <h3>How to Prepare for Exams Effectively</h3>
-                        <p>Build a study plan that improves retention, reduces stress, and keeps revision focused.</p>
-                        <span class="meta">5 min read</span>
-                    </a>
-                </article>
-
-                <article class="card blog-card featured">
-                    <a href="/blog/beginner-guide-to-coding-in-2026">
-                        <span class="post-tag">Coding</span>
-                        <h3>Beginner's Guide to Coding in 2026</h3>
-                        <p>Choose the right tools, follow a simple roadmap, and avoid the beginner mistakes that slow people down.</p>
-                        <span class="meta">6 min read</span>
-                    </a>
-                </article>
+        <!-- 3 -->
+        <a href="https://sabkacode.vercel.app/blog/top-books-for-bca" class="blog-card" data-cat="resources" data-title="bca students top recommended books">
+          <div class="blog-card-top">
+            <div class="blog-card-icon ic-green"><i class="fa-solid fa-book-open"></i></div>
+            <span class="blog-cat-tag tag-green">Resources</span>
+            <h3>BCA Students Ke Liye Top Recommended Books</h3>
+            <p>Programming aur management subjects dono ke liye best books ki curated list — sem-wise.</p>
+          </div>
+          <div class="blog-card-bottom">
+            <div class="blog-card-meta">
+              <span><i class="fa-regular fa-clock"></i> 4 min</span>
+              <span><i class="fa-regular fa-calendar"></i> Dec 2024</span>
             </div>
-        </section>
+            <div class="blog-read-btn">Read <i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
 
-        <section class="all-posts" id="all-posts">
-            <div class="section-heading">
-                <h2>All Articles</h2>
-                <p id="resultsInfo">Showing all posts</p>
+        <!-- 4 -->
+        <a href="https://sabkacode.vercel.app/blog/aktu-mba-exam-tips" class="blog-card" data-cat="exam" data-title="aktu mba exam tips strategy">
+          <div class="blog-card-top">
+            <div class="blog-card-icon ic-orange"><i class="fa-solid fa-file-lines"></i></div>
+            <span class="blog-cat-tag tag-orange">Exam Tips</span>
+            <h3>AKTU MBA Exams Kaise Clear Karein — Proven Tips</h3>
+            <p>MBA ke subjects jaise HRM, MIS, QTM aur BE — inke liye specific preparation strategy kya hogi.</p>
+          </div>
+          <div class="blog-card-bottom">
+            <div class="blog-card-meta">
+              <span><i class="fa-regular fa-clock"></i> 7 min</span>
+              <span><i class="fa-regular fa-calendar"></i> Nov 2024</span>
             </div>
+            <div class="blog-read-btn">Read <i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
 
-            <div class="blog-grid" id="blogContainer">
-                <article class="card blog-card" data-title="How to Prepare for Exams Effectively" data-category="Study Tips Exams">
-                    <a href="/blog/how-to-prepare-for-exams">
-                        <span class="post-tag">Study Tips</span>
-                        <h3>How to Prepare for Exams Effectively</h3>
-                        <p>Step-by-step guide to improve your exam performance with active recall and weekly revision.</p>
-                        <span class="meta">5 min read</span>
-                    </a>
-                </article>
-
-                <article class="card blog-card" data-title="Beginner's Guide to Coding in 2026" data-category="Coding Career">
-                    <a href="/blog/beginner-guide-to-coding-in-2026">
-                        <span class="post-tag">Coding</span>
-                        <h3>Beginner's Guide to Coding in 2026</h3>
-                        <p>Learn programming from scratch with a beginner-friendly roadmap that actually stays practical.</p>
-                        <span class="meta">6 min read</span>
-                    </a>
-                </article>
-
-                <article class="card blog-card" data-title="Top Productivity Tips for Students" data-category="Productivity Students">
-                    <a href="/blog/top-productivity-tips-for-students">
-                        <span class="post-tag">Productivity</span>
-                        <h3>Top Productivity Tips for Students</h3>
-                        <p>Improve focus, manage distractions, and get more meaningful work done every day.</p>
-                        <span class="meta">4 min read</span>
-                    </a>
-                </article>
-                <article class="card blog-card" data-title="Top Productivity Tips for Students" data-category="Productivity Students">
-                    <a href="/blog/top-productivity-tips-for-students">
-                        <span class="post-tag">Productivity</span>
-                        <h3>Top Productivity Tips for Students</h3>
-                        <p>Improve focus, manage distractions, and get more meaningful work done every day.</p>
-                        <span class="meta">4 min read</span>
-                    </a>
-                </article>
+        <!-- 5 -->
+        <a href="https://sabkacode.vercel.app/blog/how-to-learn-python" class="blog-card" data-cat="coding" data-title="python kaise seekhein beginners guide">
+          <div class="blog-card-top">
+            <div class="blog-card-icon ic-blue"><i class="fa-brands fa-python"></i></div>
+            <span class="blog-cat-tag tag-blue">Coding</span>
+            <h3>Python Kaise Seekhein? — Complete Beginner's Roadmap</h3>
+            <p>Zero se Python sikhne ka roadmap — kya padhein, kahan se padhein, aur kitna time lagega.</p>
+          </div>
+          <div class="blog-card-bottom">
+            <div class="blog-card-meta">
+              <span><i class="fa-regular fa-clock"></i> 8 min</span>
+              <span><i class="fa-regular fa-calendar"></i> Nov 2024</span>
             </div>
+            <div class="blog-read-btn">Read <i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
 
-            <div class="pagination">
-                <button type="button" id="prevBtn">Previous</button>
-                <button type="button" id="nextBtn">Next</button>
+        <!-- 6 -->
+        <a href="https://sabkacode.vercel.app/blog/time-management-for-students" class="blog-card" data-cat="exam" data-title="time management students study tips">
+          <div class="blog-card-top">
+            <div class="blog-card-icon ic-teal"><i class="fa-regular fa-clock"></i></div>
+            <span class="blog-cat-tag tag-teal">Exam Tips</span>
+            <h3>Students Ke Liye Time Management — Smart Study Karo</h3>
+            <p>Padhai, assignment, aur personal life ko balance karna seekho — practical techniques ke saath.</p>
+          </div>
+          <div class="blog-card-bottom">
+            <div class="blog-card-meta">
+              <span><i class="fa-regular fa-clock"></i> 5 min</span>
+              <span><i class="fa-regular fa-calendar"></i> Oct 2024</span>
             </div>
-        </section>
+            <div class="blog-read-btn">Read <i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
 
-        <section class="categories">
-            <div class="section-heading">
-                <h2>Categories</h2>
+        <!-- 7 -->
+        <a href="https://sabkacode.vercel.app/blog/dbms-important-topics" class="blog-card" data-cat="coding" data-title="dbms important topics exam notes">
+          <div class="blog-card-top">
+            <div class="blog-card-icon ic-purple"><i class="fa-solid fa-database"></i></div>
+            <span class="blog-cat-tag tag-purple">Coding</span>
+            <h3>DBMS Ke Most Important Topics — Exam Ke Liye</h3>
+            <p>Normalization, ER Diagram, SQL, Transactions — exam mein most asked topics ka quick summary.</p>
+          </div>
+          <div class="blog-card-bottom">
+            <div class="blog-card-meta">
+              <span><i class="fa-regular fa-clock"></i> 6 min</span>
+              <span><i class="fa-regular fa-calendar"></i> Oct 2024</span>
             </div>
-            <div class="category-list">
-                <span>Study Tips</span>
-                <span>Coding</span>
-                <span>Exams</span>
-                <span>Productivity</span>
+            <div class="blog-read-btn">Read <i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
+
+        <!-- 8 -->
+        <a href="https://sabkacode.vercel.app/blog/career-after-bca" class="blog-card" data-cat="career" data-title="bca ke baad career options jobs">
+          <div class="blog-card-top">
+            <div class="blog-card-icon ic-green"><i class="fa-solid fa-briefcase"></i></div>
+            <span class="blog-cat-tag tag-green">Career</span>
+            <h3>BCA Ke Baad Career Kya Karein? — Top 7 Options</h3>
+            <p>MCA, MBA, job, freelancing — BCA complete karne ke baad kya karna best rahega, poori guide.</p>
+          </div>
+          <div class="blog-card-bottom">
+            <div class="blog-card-meta">
+              <span><i class="fa-regular fa-clock"></i> 7 min</span>
+              <span><i class="fa-regular fa-calendar"></i> Sep 2024</span>
             </div>
-        </section>
+            <div class="blog-read-btn">Read <i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
 
-        <section class="blog-cta">
-            <h2>Stay Updated</h2>
-            <p>Get the latest articles and free study resources directly from SabkaCode.</p>
-            <a class="cta-button" href="https://whatsapp.com/channel/0029VaElLRrAYlUMk0qIHX1G" target="_blank" rel="noopener noreferrer">Join Our Channel</a>
-        </section>
-    </main>
+        <!-- 9 — initially hidden, shown on load more -->
+        <a href="https://sabkacode.vercel.app/blog/how-to-use-previous-papers" class="blog-card hidden-card" data-cat="exam" data-title="previous year papers effectively use kaise karein">
+          <div class="blog-card-top">
+            <div class="blog-card-icon ic-red"><i class="fa-solid fa-file-pdf"></i></div>
+            <span class="blog-cat-tag tag-red">Exam Tips</span>
+            <h3>Previous Year Papers Ko Effectively Use Kaise Karein?</h3>
+            <p>Sirf solve karna kaafi nahi — sahi technique se PYQ practice karo aur actual exam mein better perform karo.</p>
+          </div>
+          <div class="blog-card-bottom">
+            <div class="blog-card-meta">
+              <span><i class="fa-regular fa-clock"></i> 5 min</span>
+              <span><i class="fa-regular fa-calendar"></i> Sep 2024</span>
+            </div>
+            <div class="blog-read-btn">Read <i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
 
-    <div id="footer"></div>
-    <script src="script.js"></script>
+        <!-- 10 -->
+        <a href="https://sabkacode.vercel.app/blog/java-vs-python" class="blog-card hidden-card" data-cat="coding" data-title="java vs python kaunsa seekhein">
+          <div class="blog-card-top">
+            <div class="blog-card-icon ic-orange"><i class="fa-solid fa-code-compare"></i></div>
+            <span class="blog-cat-tag tag-orange">Coding</span>
+            <h3>Java vs Python — BCA/MCA Students Ke Liye Kaunsa Better Hai?</h3>
+            <p>Dono languages ke pros/cons, job market, aur university syllabus ke perspective se comparison.</p>
+          </div>
+          <div class="blog-card-bottom">
+            <div class="blog-card-meta">
+              <span><i class="fa-regular fa-clock"></i> 6 min</span>
+              <span><i class="fa-regular fa-calendar"></i> Aug 2024</span>
+            </div>
+            <div class="blog-read-btn">Read <i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
+
+        <!-- 11 -->
+        <a href="https://sabkacode.vercel.app/blog/best-websites-for-students" class="blog-card hidden-card" data-cat="resources" data-title="best websites students free resources">
+          <div class="blog-card-top">
+            <div class="blog-card-icon ic-teal"><i class="fa-solid fa-globe"></i></div>
+            <span class="blog-cat-tag tag-teal">Resources</span>
+            <h3>Students Ke Liye Best Free Websites — 2025 List</h3>
+            <p>W3Schools, GeeksforGeeks, SabkaCode, YouTube channels — top free resources ka curated list.</p>
+          </div>
+          <div class="blog-card-bottom">
+            <div class="blog-card-meta">
+              <span><i class="fa-regular fa-clock"></i> 4 min</span>
+              <span><i class="fa-regular fa-calendar"></i> Aug 2024</span>
+            </div>
+            <div class="blog-read-btn">Read <i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
+
+        <!-- 12 -->
+        <a href="https://sabkacode.vercel.app/blog/mca-vs-mba" class="blog-card hidden-card" data-cat="career" data-title="mca vs mba after bca konsa better">
+          <div class="blog-card-top">
+            <div class="blog-card-icon ic-indigo"><i class="fa-solid fa-scale-balanced"></i></div>
+            <span class="blog-cat-tag tag-indigo">Career</span>
+            <h3>MCA vs MBA — BCA Ke Baad Kaunsa Karein?</h3>
+            <p>Salary, scope, interest aur future growth — dono options ko honestly compare kiya gaya hai.</p>
+          </div>
+          <div class="blog-card-bottom">
+            <div class="blog-card-meta">
+              <span><i class="fa-regular fa-clock"></i> 7 min</span>
+              <span><i class="fa-regular fa-calendar"></i> Jul 2024</span>
+            </div>
+            <div class="blog-read-btn">Read <i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
+
+        <!-- 13 -->
+        <a href="https://sabkacode.vercel.app/blog/how-to-make-notes" class="blog-card hidden-card" data-cat="guide" data-title="notes kaise banayein effective study notes">
+          <div class="blog-card-top">
+            <div class="blog-card-icon ic-pink"><i class="fa-solid fa-pen-to-square"></i></div>
+            <span class="blog-cat-tag tag-pink">Guide</span>
+            <h3>Effective Notes Kaise Banayein? — Student's Complete Guide</h3>
+            <p>Cornell method, mind maps, digital vs physical notes — apne liye best technique choose karo.</p>
+          </div>
+          <div class="blog-card-bottom">
+            <div class="blog-card-meta">
+              <span><i class="fa-regular fa-clock"></i> 6 min</span>
+              <span><i class="fa-regular fa-calendar"></i> Jul 2024</span>
+            </div>
+            <div class="blog-read-btn">Read <i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
+
+        <!-- 14 -->
+        <a href="https://sabkacode.vercel.app/blog/last-minute-exam-tips" class="blog-card hidden-card" data-cat="exam" data-title="last minute exam tips night before exam">
+          <div class="blog-card-top">
+            <div class="blog-card-icon ic-red"><i class="fa-solid fa-bolt"></i></div>
+            <span class="blog-cat-tag tag-red">Exam Tips</span>
+            <h3>Exam Se Pehle Raat Ko Kya Karein? — Last Minute Tips</h3>
+            <p>Exam ke ek din pehle kya padhein, kya nahi padhein, aur mind calm kaise rakhein — actionable tips.</p>
+          </div>
+          <div class="blog-card-bottom">
+            <div class="blog-card-meta">
+              <span><i class="fa-regular fa-clock"></i> 4 min</span>
+              <span><i class="fa-regular fa-calendar"></i> Jun 2024</span>
+            </div>
+            <div class="blog-read-btn">Read <i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
+
+        <!-- 15 -->
+        <a href="https://sabkacode.vercel.app/blog/free-online-courses" class="blog-card hidden-card" data-cat="resources" data-title="free online courses students certifications">
+          <div class="blog-card-top">
+            <div class="blog-card-icon ic-purple"><i class="fa-solid fa-laptop-code"></i></div>
+            <span class="blog-cat-tag tag-purple">Resources</span>
+            <h3>Students Ke Liye Best Free Online Courses — Certificates Bhi!</h3>
+            <p>NPTEL, Coursera, Google, Microsoft — ye platforms free certification courses dete hain students ko.</p>
+          </div>
+          <div class="blog-card-bottom">
+            <div class="blog-card-meta">
+              <span><i class="fa-regular fa-clock"></i> 5 min</span>
+              <span><i class="fa-regular fa-calendar"></i> May 2024</span>
+            </div>
+            <div class="blog-read-btn">Read <i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </a>
+
+      </div><!-- /blogGrid -->
+
+      <!-- LOAD MORE -->
+      <div class="load-more-wrap" id="loadMoreWrap">
+        <button class="btn-load" onclick="loadMore()"><i class="fa-solid fa-plus"></i> Aur Articles Dekho</button>
+      </div>
+
+      <!-- NO RESULT -->
+      <div id="noResult" style="display:none;text-align:center;padding:40px 20px;">
+        <i class="fa-solid fa-magnifying-glass" style="font-size:2.5em;color:#bdc3c7;margin-bottom:14px;display:block;"></i>
+        <p style="color:#7f8c8d;font-size:15px;">Koi article nahi mila — dusre keywords try karo.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOPICS / CATEGORIES -->
+  <div class="section">
+    <div class="section-header">
+      <div class="sec-badge">Browse Topics</div>
+      <h2>Category Se <span class="hi">Dhundho</span></h2>
+      <p>Apni zaroorat ke hisaab se topic choose karo — seedha relevant articles milenge.</p>
+      <div class="divider"></div>
+    </div>
+    <div class="topics-grid">
+      <div class="topic-pill" onclick="filterCat('exam', document.querySelector('[onclick*=exam]'))">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>Exam Tips</span>
+        <small>5 Articles</small>
+      </div>
+      <div class="topic-pill" onclick="filterCat('coding', document.querySelector('[onclick*=coding]'))">
+        <i class="fa-solid fa-code"></i>
+        <span>Coding</span>
+        <small>4 Articles</small>
+      </div>
+      <div class="topic-pill" onclick="filterCat('resources', document.querySelector('[onclick*=resources]'))">
+        <i class="fa-solid fa-book"></i>
+        <span>Resources</span>
+        <small>3 Articles</small>
+      </div>
+      <div class="topic-pill" onclick="filterCat('career', document.querySelector('[onclick*=career]'))">
+        <i class="fa-solid fa-briefcase"></i>
+        <span>Career</span>
+        <small>2 Articles</small>
+      </div>
+      <div class="topic-pill" onclick="filterCat('guide', document.querySelector('[onclick*=guide]'))">
+        <i class="fa-solid fa-map"></i>
+        <span>Guides</span>
+        <small>1 Article</small>
+      </div>
+      <div class="topic-pill" onclick="filterCat('all', document.querySelector('[onclick*=all]'))">
+        <i class="fa-solid fa-layer-group"></i>
+        <span>Sab Dekho</span>
+        <small>15 Articles</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- JOIN CTA -->
+  <div class="join-section">
+    <div class="join-inner">
+      <div class="sec-badge" style="background:rgba(255,255,255,.1);color:#74d0f5;border-color:rgba(255,255,255,.2);">Updates</div>
+      <h2>New Articles Miss Mat Karo!</h2>
+      <p>Jab bhi naya article aaye — WhatsApp ya Telegram pe instantly notification pao. Hazaron students already joined hain.</p>
+      <div class="join-btns">
+        <a href="https://chat.whatsapp.com/JUE7O4DHVC2DnqYj6hLfug" target="_blank" class="btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp Join Karo</a>
+        <a href="https://t.me/sabkacode" target="_blank" class="btn-tg"><i class="fa-brands fa-telegram"></i> Telegram Join Karo</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-outer">
+    <div class="cta-banner">
+      <h2>Notes aur Papers Bhi Chahiye?</h2>
+      <p>Blog ke saath saath — AKTU, DBRAU, CSJMU ke notes aur previous year papers bhi free mein available hain!</p>
+      <div class="cta-btns">
+        <a href="https://sabkacode.vercel.app/notes" class="btn-white"><i class="fa-solid fa-book-open"></i> Notes Dekho</a>
+        <a href="https://sabkacode.vercel.app/p" class="btn-outline-w"><i class="fa-solid fa-file-lines"></i> Previous Papers</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to Top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script>
+  var allLoaded = false;
+
+  /* ── Load More ── */
+  function loadMore() {
+    document.querySelectorAll('.hidden-card').forEach(c => c.classList.remove('hidden-card'));
+    document.getElementById('loadMoreWrap').style.display = 'none';
+    allLoaded = true;
+  }
+
+  /* ── Category Filter ── */
+  function filterCat(cat, btn) {
+    if (btn) {
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+    var cards = document.querySelectorAll('#blogGrid .blog-card');
+    var visible = 0;
+    cards.forEach(function(card) {
+      var match = cat === 'all' || card.dataset.cat === cat;
+      card.style.display = match ? 'block' : 'none';
+      if (match) visible++;
+    });
+    document.getElementById('noResult').style.display = visible === 0 ? 'block' : 'none';
+    document.getElementById('loadMoreWrap').style.display = 'none';
+    // scroll to grid
+    document.getElementById('blogGrid').scrollIntoView({behavior:'smooth', block:'start'});
+  }
+
+  /* ── Search ── */
+  function filterCards() {
+    var q = document.getElementById('searchInput').value.toLowerCase().trim();
+    var cards = document.querySelectorAll('#blogGrid .blog-card');
+    var visible = 0;
+    cards.forEach(function(card) {
+      var title = (card.dataset.title || '').toLowerCase();
+      var h3 = (card.querySelector('h3') ? card.querySelector('h3').textContent : '').toLowerCase();
+      var show = title.includes(q) || h3.includes(q);
+      card.style.display = show ? 'block' : 'none';
+      if (show) visible++;
+    });
+    document.getElementById('noResult').style.display = visible === 0 ? 'block' : 'none';
+    if (q.length > 0) {
+      document.getElementById('loadMoreWrap').style.display = 'none';
+      // reset cat tabs
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      document.querySelector('.cat-btn').classList.add('active');
+    } else {
+      if (!allLoaded) {
+        document.querySelectorAll('#blogGrid .blog-card').forEach((c,i) => {
+          if (i >= 8) c.style.display = 'none';
+          else c.style.display = 'block';
+        });
+        document.getElementById('loadMoreWrap').style.display = 'block';
+      }
+    }
+  }
+
+  /* ── Back to Top ── */
+  window.addEventListener('scroll', function() {
+    document.getElementById('backToTop').style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+
+  /* ── Initial: hide cards 9+ ── */
+  window.addEventListener('DOMContentLoaded', function() {
+    var cards = document.querySelectorAll('#blogGrid .blog-card');
+    cards.forEach(function(c, i) { if (i >= 8) c.classList.add('hidden-card'); });
+  });
+</script>
+<script src="/script.js"></script>
+<div id="footer"></div>
 </body>
 </html>
