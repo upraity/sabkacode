@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Previous Year Question Papers - SabkaCode</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #3498db;
+      --primary-dark: #2178b5;
+      --primary-light: #e8f4fd;
+      --secondary: #2c3e50;
+      --accent: #e74c3c;
+      --success: #27ae60;
+      --text: #2d3748;
+      --text-light: #718096;
+      --border: #e2e8f0;
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --shadow: 0 4px 20px rgba(52,152,219,0.10);
+      --shadow-md: 0 8px 32px rgba(52,152,219,0.15);
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--text); }
+
+   
+    /* ─── HERO ─── */
+    .hero {
+      background: linear-gradient(135deg, #2178b5 0%, #3498db 50%, #5dade2 100%);
+      padding: 60px 20px 50px;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -60px; right: -60px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.07);
+    }
+    .hero::after {
+      content: '';
+      position: absolute; bottom: -80px; left: -40px;
+      width: 250px; height: 250px; border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+    }
+    .hero-inner { max-width: 900px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      color: white; font-size: 0.8rem; font-weight: 700;
+      padding: 5px 14px; border-radius: 20px; margin-bottom: 16px;
+      letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .hero h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 800; color: white; line-height: 1.2; margin-bottom: 16px;
+    }
+    .hero p {
+      font-size: 1.05rem; color: rgba(255,255,255,0.88);
+      max-width: 680px; margin: 0 auto 28px; line-height: 1.7;
+    }
+    .hero-stats {
+      display: flex; gap: 32px; justify-content: center; flex-wrap: wrap;
+    }
+    .stat { text-align: center; }
+    .stat-num {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.8rem; font-weight: 800; color: white;
+    }
+    .stat-lbl { font-size: 0.8rem; color: rgba(255,255,255,0.75); font-weight: 600; }
+
+    /* ─── WHY SECTION ─── */
+    .section { max-width: 1200px; margin: 0 auto; padding: 48px 20px; }
+    .section-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem; font-weight: 700; color: var(--secondary);
+      margin-bottom: 8px;
+    }
+    .section-sub { color: var(--text-light); margin-bottom: 28px; font-size: 0.95rem; }
+
+    .benefits-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px; margin-bottom: 40px;
+    }
+    .benefit-card {
+      background: white; border-radius: var(--radius);
+      padding: 20px; border: 1.5px solid var(--border);
+      display: flex; align-items: flex-start; gap: 12px;
+      transition: all 0.25s; box-shadow: var(--shadow);
+    }
+    .benefit-card:hover { border-color: var(--primary); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .benefit-icon {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: var(--primary-light); display: flex; align-items: center;
+      justify-content: center; font-size: 1.1rem; flex-shrink: 0;
+    }
+    .benefit-card h4 { font-size: 0.9rem; font-weight: 700; color: var(--secondary); margin-bottom: 4px; }
+    .benefit-card p { font-size: 0.8rem; color: var(--text-light); line-height: 1.5; }
+
+    /* ─── UNIVERSITY TABS ─── */
+    .uni-section { max-width: 1200px; margin: 0 auto; padding: 0 20px 60px; }
+    .uni-tabs {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px;
+    }
+    .uni-tab {
+      padding: 10px 24px; border-radius: 30px;
+      border: 2px solid var(--border);
+      background: white; cursor: pointer;
+      font-family: 'Poppins', sans-serif; font-weight: 600;
+      font-size: 0.9rem; color: var(--text-light);
+      transition: all 0.2s; display: flex; align-items: center; gap: 8px;
+    }
+    .uni-tab:hover { border-color: var(--primary); color: var(--primary); }
+    .uni-tab.active {
+      background: var(--primary); border-color: var(--primary);
+      color: white; box-shadow: 0 4px 14px rgba(52,152,219,0.35);
+    }
+    .uni-tab .tab-badge {
+      background: rgba(255,255,255,0.25);
+      border-radius: 12px; font-size: 0.7rem; padding: 2px 8px; font-weight: 700;
+    }
+    .uni-tab:not(.active) .tab-badge { background: var(--primary-light); color: var(--primary); }
+
+    .uni-panel { display: none; }
+    .uni-panel.active { display: block; }
+
+    /* ─── COURSE TABS ─── */
+    .course-tabs {
+      display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap;
+    }
+    .course-tab {
+      padding: 8px 20px; border-radius: var(--radius-sm);
+      border: 2px solid var(--border); background: white;
+      cursor: pointer; font-weight: 600; font-size: 0.88rem;
+      color: var(--text-light); transition: all 0.2s;
+    }
+    .course-tab:hover { border-color: var(--primary); color: var(--primary); }
+    .course-tab.active {
+      background: var(--primary-light); border-color: var(--primary);
+      color: var(--primary-dark);
+    }
+    .course-panel { display: none; }
+    .course-panel.active { display: block; }
+
+    /* ─── SEMESTER ACCORDION ─── */
+    .sem-card {
+      background: white; border-radius: var(--radius);
+      border: 1.5px solid var(--border);
+      margin-bottom: 12px; overflow: hidden;
+      box-shadow: var(--shadow); transition: box-shadow 0.2s;
+    }
+    .sem-card:hover { box-shadow: var(--shadow-md); }
+    .sem-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 20px; cursor: pointer;
+      background: white; transition: background 0.2s;
+    }
+    .sem-header:hover { background: var(--primary-light); }
+    .sem-header.open { background: var(--primary-light); border-bottom: 1.5px solid var(--border); }
+    .sem-header-left { display: flex; align-items: center; gap: 12px; }
+    .sem-number {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: var(--primary); color: white;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.85rem;
+    }
+    .sem-title { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1rem; color: var(--secondary); }
+    .sem-sub { font-size: 0.8rem; color: var(--text-light); margin-top: 2px; }
+    .sem-chevron { color: var(--primary); font-size: 1.1rem; transition: transform 0.3s; }
+    .sem-header.open .sem-chevron { transform: rotate(180deg); }
+    .sem-body { display: none; padding: 20px; }
+    .sem-body.open { display: block; }
+
+    /* ─── SUBJECT JUMP TABLE ─── */
+    .subject-jumps {
+      background: var(--primary-light); border-radius: var(--radius-sm);
+      padding: 16px; margin-bottom: 24px;
+    }
+    .subject-jumps h4 { font-size: 0.85rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 10px; }
+    .jump-links { display: flex; flex-wrap: wrap; gap: 8px; }
+    .jump-link {
+      padding: 5px 12px; background: white; border-radius: 20px;
+      font-size: 0.8rem; font-weight: 600; color: var(--primary);
+      text-decoration: none; border: 1.5px solid var(--primary);
+      transition: all 0.2s;
+    }
+    .jump-link:hover { background: var(--primary); color: white; }
+
+    /* ─── SUBJECT SECTION ─── */
+    .subject-block { margin-bottom: 28px; }
+    .subject-heading {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem; font-weight: 700; color: var(--secondary);
+      padding: 10px 0 8px; border-bottom: 2px solid var(--primary-light);
+      margin-bottom: 12px; display: flex; align-items: center; gap: 8px;
+    }
+    .subject-heading::before {
+      content: ''; display: block;
+      width: 4px; height: 20px; background: var(--primary); border-radius: 2px;
+    }
+
+    /* ─── PAPER TABLE ─── */
+    .paper-table { width: 100%; border-collapse: collapse; }
+    .paper-table th {
+      background: var(--secondary); color: white;
+      padding: 10px 14px; font-size: 0.82rem; font-weight: 700;
+      text-align: left; letter-spacing: 0.03em;
+    }
+    .paper-table th:first-child { border-radius: 8px 0 0 0; }
+    .paper-table th:last-child { border-radius: 0 8px 0 0; }
+    .paper-table td {
+      padding: 10px 14px; border-bottom: 1px solid var(--border);
+      font-size: 0.88rem;
+    }
+    .paper-table tr:last-child td { border-bottom: none; }
+    .paper-table tr:nth-child(even) td { background: #f9fbfc; }
+    .paper-table tr:hover td { background: var(--primary-light); }
+    .paper-btn {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 5px 14px; border-radius: 20px; font-size: 0.8rem;
+      font-weight: 700; text-decoration: none; transition: all 0.2s;
+    }
+    .btn-view { background: var(--primary-light); color: var(--primary); border: 1.5px solid var(--primary); }
+    .btn-view:hover { background: var(--primary); color: white; }
+    .btn-solve { background: #e8f8f0; color: var(--success); border: 1.5px solid var(--success); }
+    .btn-solve:hover { background: var(--success); color: white; }
+    .btn-mcq { background: #fff3e0; color: #e67e22; border: 1.5px solid #e67e22; }
+    .btn-mcq:hover { background: #e67e22; color: white; }
+    .year-tag { font-weight: 700; color: var(--secondary); }
+
+    /* ─── INFO BOX ─── */
+    .info-box {
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 14px 18px; margin-bottom: 24px;
+    }
+    .info-box p { font-size: 0.88rem; color: var(--primary-dark); line-height: 1.6; }
+
+    /* ─── HOW TO USE ─── */
+    .howto-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin: 20px 0; }
+    .howto-step {
+      background: white; border-radius: var(--radius);
+      padding: 18px; border: 1.5px solid var(--border);
+      text-align: center; box-shadow: var(--shadow);
+    }
+    .step-num {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--primary); color: white;
+      font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 10px;
+    }
+    .howto-step h4 { font-size: 0.88rem; font-weight: 700; color: var(--secondary); margin-bottom: 4px; }
+    .howto-step p { font-size: 0.78rem; color: var(--text-light); line-height: 1.5; }
+
+    /* ─── FAQ ─── */
+    .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+    .faq-card {
+      background: white; border-radius: var(--radius);
+      padding: 20px; border: 1.5px solid var(--border); box-shadow: var(--shadow);
+    }
+    .faq-q { font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--secondary); font-size: 0.9rem; margin-bottom: 6px; }
+    .faq-a { font-size: 0.85rem; color: var(--text-light); line-height: 1.6; }
+
+
+
+    /* ─── DIVIDER ─── */
+    .divider {
+      height: 2px; background: linear-gradient(to right, var(--primary-light), var(--border), var(--primary-light));
+      margin: 0 auto; max-width: 1200px;
+    }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-inner { animation: fadeUp 0.6s ease both; }
+    .uni-panel.active .sem-card { animation: fadeUp 0.3s ease both; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════ NAVBAR ═══════════════ -->
+<div id="nav"></div>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">📄 Free Academic Resources</div>
+    <h1>Previous Year Question Papers</h1>
+    <p>Access university-wise, course-wise, and semester-wise previous year papers for AKTU, DBRAU, CCSU, and CSJMU. Boost your exam preparation with organized resources.</p>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">4+</div><div class="stat-lbl">Universities</div></div>
+      <div class="stat"><div class="stat-num">200+</div><div class="stat-lbl">Question Papers</div></div>
+      <div class="stat"><div class="stat-num">30+</div><div class="stat-lbl">Subjects Covered</div></div>
+      <div class="stat"><div class="stat-num">Free</div><div class="stat-lbl">Always Free</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ BENEFITS ═══════════════ -->
+<section class="section">
+  <h2 class="section-title">Why Solve Previous Year Papers?</h2>
+  <p class="section-sub">Solving past papers is one of the most proven strategies for university exam success.</p>
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <div class="benefit-icon">🗺️</div>
+      <div><h4>Know the Pattern</h4><p>Understand exam structure and marking distribution.</p></div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">🎯</div>
+      <div><h4>Identify Key Topics</h4><p>Spot repeated and important questions across years.</p></div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">⏱️</div>
+      <div><h4>Manage Time</h4><p>Practice under timed conditions to improve speed.</p></div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">💪</div>
+      <div><h4>Build Confidence</h4><p>Reduce exam anxiety through regular practice.</p></div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">📈</div>
+      <div><h4>Track Progress</h4><p>Evaluate your preparation level honestly.</p></div>
+    </div>
+  </div>
+
+  <!-- HOW TO USE -->
+  <h2 class="section-title">How to Use These Papers Effectively</h2>
+  <p class="section-sub">A simple 4-step approach to maximize your exam score.</p>
+  <div class="howto-grid">
+    <div class="howto-step"><div class="step-num">1</div><h4>Complete Syllabus</h4><p>Revise each unit thoroughly before attempting papers.</p></div>
+    <div class="howto-step"><div class="step-num">2</div><h4>Timed Practice</h4><p>Solve papers under real exam conditions (3 hours).</p></div>
+    <div class="howto-step"><div class="step-num">3</div><h4>Review Mistakes</h4><p>Compare answers and identify weak areas.</p></div>
+    <div class="howto-step"><div class="step-num">4</div><h4>Repeat</h4><p>Practice 3–5 papers per subject for best results.</p></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════ UNIVERSITY SELECTOR ═══════════════ -->
+<section class="uni-section">
+  <div style="padding: 40px 0 20px;">
+    <h2 class="section-title">Select Your University</h2>
+    <p class="section-sub">Choose your university to access organized question papers.</p>
+  </div>
+
+  <div class="uni-tabs">
+    <div class="uni-tab active" onclick="switchUni('aktu')">
+      🎓 AKTU <span class="tab-badge">MBA · MCA</span>
+    </div>
+    <div class="uni-tab" onclick="switchUni('dbrau')">
+      📚 DBRAU <span class="tab-badge">BCA</span>
+    </div>
+    <div class="uni-tab" onclick="switchUni('ccsu')">
+      🏛️ CCSU <span class="tab-badge">BCA</span>
+    </div>
+    <div class="uni-tab" onclick="switchUni('csjmu')">
+      🎯 CSJMU <span class="tab-badge">BCA</span>
+    </div>
+  </div>
+
+  <!-- ══ AKTU PANEL ══ -->
+  <div class="uni-panel active" id="panel-aktu">
+    <div class="info-box">
+      <p><strong>Dr. A.P.J. Abdul Kalam Technical University (AKTU)</strong> — Conducts exams for MBA, MCA, and other professional programs. Papers are organized semester-wise for easy navigation.</p>
+    </div>
+
+    <div class="course-tabs">
+      <div class="course-tab active" onclick="switchCourse('aktu','mba')">MBA</div>
+      <div class="course-tab" onclick="switchCourse('aktu','mca')">MCA</div>
+    </div>
+
+    <!-- AKTU MBA -->
+    <div class="course-panel active" id="aktu-mba">
+      <!-- SEM 1 -->
+      <div class="sem-card">
+        <div class="sem-header" onclick="toggleSem(this)">
+          <div class="sem-header-left">
+            <div class="sem-number">S1</div>
+            <div><div class="sem-title">MBA 1st Semester</div><div class="sem-sub">Management, Economics, Accounting, Statistics & more</div></div>
+          </div>
+          <div class="sem-chevron">▼</div>
+        </div>
+        <div class="sem-body">
+          <div class="subject-jumps">
+            <h4>📌 Quick Jump</h4>
+            <div class="jump-links">
+              <a href="#mba1-mcob" class="jump-link">MCOB</a>
+              <a href="#mba1-me" class="jump-link">Managerial Economics</a>
+              <a href="#mba1-faa" class="jump-link">Financial Accounting</a>
+              <a href="#mba1-bsa" class="jump-link">Business Statistics</a>
+              <a href="#mba1-mm" class="jump-link">Marketing Mgmt</a>
+              <a href="#mba1-cie" class="jump-link">CIE</a>
+              <a href="#mba1-bc" class="jump-link">Business Communication</a>
+            </div>
+          </div>
+
+          <!-- MCOB -->
+          <div class="subject-block" id="mba1-mcob">
+            <div class="subject-heading">Management Concept & Organizational Behaviour</div>
+            <table class="paper-table">
+              <thead><tr><th>Year</th><th>Actions</th></tr></thead>
+              <tbody>
+                <tr><td class="year-tag">2025</td><td><a href="https://drive.google.com/file/d/1YWop5xoa28FBvKoTO-auHRs5CTgndSO5/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2024</td><td><a href="https://drive.google.com/file/d/1OnxHv6viHhTHXGB6tg-ol5aMSjzlzgdc/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2023</td><td><a href="https://drive.google.com/file/d/1_21tiKvf3s8ooLRydtpmuPzOWMFv6DJX/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2022</td><td><a href="https://drive.google.com/file/d/1EvC8g816OPFdMzcY3g7Mipg3ANkZlrLu/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Managerial Economics -->
+          <div class="subject-block" id="mba1-me">
+            <div class="subject-heading">Managerial Economics</div>
+            <table class="paper-table">
+              <thead><tr><th>Year</th><th>Actions</th></tr></thead>
+              <tbody>
+                <tr><td class="year-tag">2025</td><td><a href="https://drive.google.com/file/d/1P4QibJSSw_xskWxXSY6Xlsrz9ktv0x2J/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2024</td><td><a href="https://drive.google.com/file/d/1a4iqQ4E75fRiO4D18Ot136JFtMKoZ8Yi/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2023</td><td><a href="https://drive.google.com/file/d/1mvkuo0yGybBNhJjRIs2OcCSZ1wikE2H5/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2022</td><td><a href="https://drive.google.com/file/d/1qxCRkSTI0_fHjAkxFfp57wME6TAX4MMr/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Financial Accounting -->
+          <div class="subject-block" id="mba1-faa">
+            <div class="subject-heading">Financial Accounting & Analytics</div>
+            <table class="paper-table">
+              <thead><tr><th>Year</th><th>Actions</th></tr></thead>
+              <tbody>
+                <tr><td class="year-tag">2025</td><td><a href="https://drive.google.com/file/d/1b95cnenLCIkGJp3u8gI9CvbnZq2L6N1P/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2024</td><td><a href="https://drive.google.com/file/d/1sYOT5fw93sF4WoUcPdV4v13FPkZoShrW/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2023</td><td><a href="https://drive.google.com/file/d/1c_6D-nvxlWDDXR_47fP48Wee_2Ng1Dbv/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2022</td><td><a href="https://drive.google.com/file/d/1shgqiza0W1dx5TxgKn6sYayyHtFou4ie/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Business Statistics -->
+          <div class="subject-block" id="mba1-bsa">
+            <div class="subject-heading">Business Statistics & Analytics</div>
+            <table class="paper-table">
+              <thead><tr><th>Year</th><th>Actions</th></tr></thead>
+              <tbody>
+                <tr><td class="year-tag">2025</td><td><a href="https://drive.google.com/file/d/1jUOivULk3py-Q1NFFTsJ2ucR_zXzPH2z/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2024</td><td><a href="https://drive.google.com/file/d/1ekf_2ADi9H3fMGGGvGoI/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2023</td><td><a href="https://drive.google.com/file/d/1LODn-FNzA4G1A8v52BcVbs7lZFy_ghwi/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2022</td><td><a href="https://drive.google.com/file/d/1D89K9iIA6JLaIw_pw2u4DAhX2wCALiKp/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2020</td><td><a href="https://drive.google.com/file/d/19-Bp0-JxdK4WkcQszNzOIViT0RxrOftH/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2018</td><td><a href="https://drive.google.com/file/d/1G1QHdc1P8haX4XoWTVaNH_bgrOBZjohJ/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2017</td><td><a href="https://drive.google.com/file/d/1wbtbP8hfg-HJqjLDgRhc55LzrRH-1moL/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2016</td><td><a href="https://drive.google.com/file/d/1aftKLdEg45zOGO6mLarn0zKm6qKXp80g/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Marketing Mgmt -->
+          <div class="subject-block" id="mba1-mm">
+            <div class="subject-heading">Marketing Management</div>
+            <table class="paper-table">
+              <thead><tr><th>Year</th><th>Actions</th></tr></thead>
+              <tbody>
+                <tr><td class="year-tag">2024</td><td><a href="https://drive.google.com/file/d/1G-P6UL1KphNVBwou_Z7xCpUjz-rwn_N0/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2023</td><td><a href="https://drive.google.com/file/d/1ub1-ztUVTx30bdojfGe9WSFqP632FsFq/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- CIE -->
+          <div class="subject-block" id="mba1-cie">
+            <div class="subject-heading">Creativity, Innovation & Entrepreneurship</div>
+            <table class="paper-table">
+              <thead><tr><th>Year</th><th>Actions</th></tr></thead>
+              <tbody>
+                <tr><td class="year-tag">2025</td><td><a href="https://drive.google.com/file/d/1nFcxLfyqJ8TDelec8R2VxNMrDavL6Wl-/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2024</td><td><a href="https://drive.google.com/file/d/1_mSHlAe1IDJHBf78FUKQmJTg_xcZUAwM/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2023</td><td><a href="https://drive.google.com/file/d/1cNbYIvKYU5iM5E7IXUHv-ny8cvpnrKCP/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2022</td><td><a href="https://drive.google.com/file/d/14c0-XBNdNJKN9F8wpxMy7rBtHNgFnuJV/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Business Communication -->
+          <div class="subject-block" id="mba1-bc">
+            <div class="subject-heading">Business Communication</div>
+            <table class="paper-table">
+              <thead><tr><th>Year</th><th>Actions</th></tr></thead>
+              <tbody>
+                <tr><td class="year-tag">2025</td><td><a href="https://drive.google.com/file/d/1Aqdvvg2B2jVVYVc0VNF7gvt_C8SKtKMJ/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2024</td><td><a href="https://drive.google.com/file/d/1C0IXyng2di50NedcLMhNWeXuDU1UywyQ/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2023</td><td><a href="https://drive.google.com/file/d/1r_3eweTx643z1CGSl1LuQFZOFkBBk7WDMozLCi/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2022</td><td><a href="https://drive.google.com/file/d/1jR8XoZsk1uOpx1_DhWnHP933lqapy98y/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div><!-- /sem1 card -->
+
+      <!-- SEM 2 -->
+      <div class="sem-card">
+        <div class="sem-header" onclick="toggleSem(this)">
+          <div class="sem-header-left">
+            <div class="sem-number">S2</div>
+            <div><div class="sem-title">MBA 2nd Semester</div><div class="sem-sub">HRM, MIS, QTM, FMCF, Operations & more</div></div>
+          </div>
+          <div class="sem-chevron">▼</div>
+        </div>
+        <div class="sem-body">
+          <div class="subject-jumps">
+            <h4>📌 Quick Jump</h4>
+            <div class="jump-links">
+              <a href="#mba2-be" class="jump-link">Business Environment</a>
+              <a href="#mba2-hrm" class="jump-link">HRM</a>
+              <a href="#mba2-brm" class="jump-link">BRM</a>
+              <a href="#mba2-fm" class="jump-link">Financial Mgmt</a>
+              <a href="#mba2-om" class="jump-link">Operations Mgmt</a>
+              <a href="#mba2-qtm" class="jump-link">QTM</a>
+              <a href="#mba2-cma" class="jump-link">CMA</a>
+              <a href="#mba2-mis" class="jump-link">MIS</a>
+            </div>
+          </div>
+
+          <div class="subject-block" id="mba2-be">
+            <div class="subject-heading">Business Environment & Legal Aspect of Business (BE)</div>
+            <table class="paper-table">
+              <thead><tr><th>Year</th><th>Actions</th></tr></thead>
+              <tbody>
+                <tr><td class="year-tag">2024</td><td><a href="https://drive.google.com/file/d/1M2dyNxqQHPEVCNcqxn-Mt-4DEV7S7Szd/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a> &nbsp;<a href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-be-2024" target="_blank" class="paper-btn btn-solve">✅ Solution</a></td></tr>
+                <tr><td class="year-tag">2023</td><td><a href="https://drive.google.com/file/d/1-dP0IFatvS7OE3nGW4NyIm_jXy9IdYAW/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a> &nbsp;<a href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-be-2023" target="_blank" class="paper-btn btn-solve">✅ Solution</a></td></tr>
+                <tr><td class="year-tag">2022</td><td><a href="https://drive.google.com/file/d/1Q__t0Iuplk4nBVx7t5Ctl6PDo5KKZtcg/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a> &nbsp;<a href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-be-2022" target="_blank" class="paper-btn btn-solve">✅ Solution</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="subject-block" id="mba2-hrm">
+            <div class="subject-heading">Human Resource Management (HRM)</div>
+            <table class="paper-table">
+              <thead><tr><th>Year</th><th>Actions</th></tr></thead>
+              <tbody>
+                <tr><td class="year-tag">2024</td><td><a href="https://drive.google.com/file/d/1veN7CqRPZ75darUx-gU1yBHV23AdQG0w/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a> &nbsp;<a href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-hrm-2024" target="_blank" class="paper-btn btn-solve">✅ Solution</a></td></tr>
+                <tr><td class="year-tag">2023</td><td><a href="https://drive.google.com/file/d/1vRcvPZY42Nq5KnUc_IwAA_3M__pgiZWo/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a> &nbsp;<a href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-hrm-2023" target="_blank" class="paper-btn btn-solve">✅ Solution</a></td></tr>
+                <tr><td class="year-tag">2022</td><td><a href="https://drive.google.com/file/d/1yFoNpa4iHDGUS73GkF2ahkC0PFSPD6hL/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a> &nbsp;<a href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-hrm-2022" target="_blank" class="paper-btn btn-solve">✅ Solution</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="subject-block" id="mba2-brm">
+            <div class="subject-heading">Business Research Method (BRM)</div>
+            <table class="paper-table">
+              <thead><tr><th>Year</th><th>Actions</th></tr></thead>
+              <tbody>
+                <tr><td class="year-tag">2024</td><td><a href="https://drive.google.com/file/d/1OdxpieeDGOZUxDGBlib1I9igV8eVs31F/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2023</td><td><a href="https://drive.google.com/file/d/1VLyAGTRiUb3eoiQDO2FM2S3GFp7GQDYk/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2022</td><td><a href="https://drive.google.com/file/d/1Zzz6Cj4OXqLa9KYnxoGNBwIRLb5T9V4/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="subject-block" id="mba2-fm">
+            <div class="subject-heading">Financial Management & Corporate Finance (FMCF)</div>
+            <table class="paper-table">
+              <thead><tr><th>Year</th><th>Actions</th></tr></thead>
+              <tbody>
+                <tr><td class="year-tag">2024</td><td><a href="https://drive.google.com/file/d/1A6N_ag5oTymKmRGLtG3Jhx8emAW_mUzW/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2023</td><td><a href="https://drive.google.com/file/d/1ZL1sEzvBHveGEa53Otcz7ESMlevP16BJ/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2022</td><td><a href="https://drive.google.com/file/d/1sMgh-lr3ncNA29gEr_Qyznqo_jZgnIS/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2021</td><td><a href="https://drive.google.com/file/d/1LKSw6Hfr3ncNA29gEr_Qyznqo_jZgnIS/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2018</td><td><a href="https://drive.google.com/file/d/1wlzPldhC7Y_p7wW3PlwWe7A5a-l5TJT_/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="subject-block" id="mba2-om">
+            <div class="subject-heading">Operation Management (OM)</div>
+            <table class="paper-table">
+              <thead><tr><th>Year</th><th>Actions</th></tr></thead>
+              <tbody>
+                <tr><td class="year-tag">2024</td><td><a href="https://drive.google.com/file/d/1ThbJCgxyhXoNj80bnRA8yDoN7wxba7N6/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2023</td><td><a href="https://drive.google.com/file/d/1Du_CesSN61qakm8rPWj2NLZClLd99tyH/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2022</td><td><a href="https://drive.google.com/file/d/1czJrAJkmfldNqQfe8hICy2hhD-2eQAOo/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="subject-block" id="mba2-qtm">
+            <div class="subject-heading">Quantitative Techniques for Managers (QTM)</div>
+            <table class="paper-table">
+              <thead><tr><th>Year</th><th>Actions</th></tr></thead>
+              <tbody>
+                <tr><td class="year-tag">2024</td><td><a href="https://drive.google.com/file/d/1Kffkf1eeo0dYDSPFIe4wgXB-p2kQjCfJ/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2023</td><td><a href="https://drive.google.com/file/d/1e9dR03w0I7EHmnYzffkZIaavOU8Q1qo5/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+                <tr><td class="year-tag">2022</td><td><a href="https://drive.google.com/file/d/1l5pv2Wv9Dx6twOB-bL6t0ZARmg78hTd7/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a> &nbsp;<a href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-qtm-2022" target="_blank" class="paper-btn btn-solve">✅ Solution</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="subject-block" id="mba2-cma">
+            <div class="subject-heading">Cost & Management Accounting (CMA)</div>
+            <table class="paper-table">
+              <thead><tr><th>Year</th><th>Actions</th></tr></thead>
+              <tbody>
+                <tr><td class="year-tag">2024</td><td><a href="https://drive.google.com/file/d/1KSLgg6f5p7JFfI_f7lFGtK8M9O2faQEV/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a> &nbsp;<a href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-cma-2024" target="_blank" class="paper-btn btn-solve">✅ Solution</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="subject-block" id="mba2-mis">
+            <div class="subject-heading">Management Information System (MIS)</div>
+            <table class="paper-table">
+              <thead><tr><th>Year</th><th>Actions</th></tr></thead>
+              <tbody>
+                <tr><td class="year-tag">2024</td><td><a href="https://drive.google.com/file/d/1JSIV6g7Yv841rpIbtQI2yJ_1sx-tcue5/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a> &nbsp;<a href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-mis-2024" target="_blank" class="paper-btn btn-solve">✅ Solution</a></td></tr>
+                <tr><td class="year-tag">2023</td><td><a href="https://drive.google.com/file/d/1xB9SBNHZXXMafaHeSgm1zu7cYby2th9f/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a> &nbsp;<a href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-mis-2023" target="_blank" class="paper-btn btn-solve">✅ Solution</a></td></tr>
+                <tr><td class="year-tag">2022</td><td><a href="https://drive.google.com/file/d/1qrhobDsGfFE6tYOkC2YLBpgL_xrRrRcT/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a> &nbsp;<a href="https://sabkacode.vercel.app/solve/aktu-mba-sem2-mis-2022" target="_blank" class="paper-btn btn-solve">✅ Solution</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div><!-- /sem2 card -->
+    </div><!-- /aktu-mba -->
+
+    <!-- AKTU MCA -->
+    <div class="course-panel" id="aktu-mca">
+      <!-- MCA SEM 1 -->
+      <div class="sem-card">
+        <div class="sem-header" onclick="toggleSem(this)">
+          <div class="sem-header-left">
+            <div class="sem-number">S1</div>
+            <div><div class="sem-title">MCA 1st Semester</div><div class="sem-sub">FOC, C Programming, Discrete Maths, COA, POM</div></div>
+          </div>
+          <div class="sem-chevron">▼</div>
+        </div>
+        <div class="sem-body">
+          <div class="subject-jumps">
+            <h4>📌 Quick Jump</h4>
+            <div class="jump-links">
+              <a href="#mca1-foc" class="jump-link">FOC</a>
+              <a href="#mca1-c" class="jump-link">C Programming</a>
+              <a href="#mca1-dm" class="jump-link">Discrete Maths</a>
+              <a href="#mca1-coa" class="jump-link">COA</a>
+              <a href="#mca1-pom" class="jump-link">POM</a>
+            </div>
+          </div>
+          <div class="subject-block" id="mca1-foc">
+            <div class="subject-heading">Fundamental of Computer & Emerging Technology (FOC)</div>
+            <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+              <tr><td class="year-tag">2023</td><td><a href="https://drive.google.com/file/d/1Rn3mZNbaq55xAgcZsKm1Lg010RGvr_C9/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              <tr><td class="year-tag">2022</td><td><a href="https://drive.google.com/file/d/1gGmzk7uS64fZdVi4mrwGpoULb4pd_ZNG/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              <tr><td class="year-tag">2021</td><td><a href="https://drive.google.com/file/d/1EhNarmZI4m_0uwz3mgyhcEEFRze861xK/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            </tbody></table>
+          </div>
+          <div class="subject-block" id="mca1-c">
+            <div class="subject-heading">Problem Solving Using C</div>
+            <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+              <tr><td class="year-tag">2023</td><td><a href="https://drive.google.com/file/d/1-LIwa54WVMufbt-CwIBK2e2Ty8zSzJEP/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              <tr><td class="year-tag">2022</td><td><a href="https://drive.google.com/file/d/1eR5uu9BguP1M_EYjiETW0DPy_JdLS-6H/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            </tbody></table>
+          </div>
+          <div class="subject-block" id="mca1-dm">
+            <div class="subject-heading">Discrete Mathematics (DM)</div>
+            <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+              <tr><td class="year-tag">2024</td><td><a href="https://drive.google.com/file/d/1bNL4FgfgS-fRQCh1Nrm7TREKmFludeJC/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              <tr><td class="year-tag">2023</td><td><a href="https://drive.google.com/file/d/1yhdYzTxWbxmPlo21pwJ6tcdnF2OiIdBr/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              <tr><td class="year-tag">2022</td><td><a href="https://drive.google.com/file/d/16ovZXJv3Lse6B1nLq5lOOn3MxcxFNSs1/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              <tr><td class="year-tag">2021</td><td><a href="https://drive.google.com/file/d/1_dFeIKA6N1YbHmwkRQ1mfVD3pVnc0iKt/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            </tbody></table>
+          </div>
+          <div class="subject-block" id="mca1-coa">
+            <div class="subject-heading">Computer Organization & Architecture (COA)</div>
+            <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+              <tr><td class="year-tag">2023</td><td><a href="https://drive.google.com/file/d/1M3jExuLPwtX1Cu_LSMKT9fUgDrDUvfhy/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              <tr><td class="year-tag">2022</td><td><a href="https://drive.google.com/file/d/1Zi9iCqF-NAGeoLSn4dA3N3JIN0raPW7S/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              <tr><td class="year-tag">2021</td><td><a href="https://drive.google.com/file/d/1FWFOJe0ZZyYYX8AGl1AQV3aStqss_3ud/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            </tbody></table>
+          </div>
+          <div class="subject-block" id="mca1-pom">
+            <div class="subject-heading">Principle of Management (POM)</div>
+            <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+              <tr><td class="year-tag">2023</td><td><a href="https://drive.google.com/file/d/1icn4gB6DpAMyDZWtRgy8EVIXfjYyJx2x/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              <tr><td class="year-tag">2022</td><td><a href="https://drive.google.com/file/d/1V3JlXQdeW8NtqjlC0NpROiwvxVRYMyS6/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            </tbody></table>
+          </div>
+        </div>
+      </div>
+
+      <!-- MCA SEM 2 -->
+      <div class="sem-card">
+        <div class="sem-header" onclick="toggleSem(this)">
+          <div class="sem-header-left">
+            <div class="sem-number">S2</div>
+            <div><div class="sem-title">MCA 2nd Semester</div><div class="sem-sub">OOP, OS, DBMS, Data Structures & Algorithms</div></div>
+          </div>
+          <div class="sem-chevron">▼</div>
+        </div>
+        <div class="sem-body">
+          <div class="subject-jumps">
+            <h4>📌 Quick Jump</h4>
+            <div class="jump-links">
+              <a href="#mca2-oop" class="jump-link">OOP</a>
+              <a href="#mca2-os" class="jump-link">OS</a>
+              <a href="#mca2-dbms" class="jump-link">DBMS</a>
+              <a href="#mca2-dsa" class="jump-link">DSA</a>
+            </div>
+          </div>
+          <div class="subject-block" id="mca2-oop">
+            <div class="subject-heading">Object Oriented Programming (OOP)</div>
+            <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+              <tr><td class="year-tag">2022</td><td><a href="https://drive.google.com/file/d/1CbfWaRKVR1wwBoWvP_hKm5YEcbxkm-47/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              <tr><td class="year-tag">2021</td><td><a href="https://drive.google.com/file/d/1I-iuGBRJf9BcD5C2X3_hX_0k514EoK4x/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            </tbody></table>
+          </div>
+          <div class="subject-block" id="mca2-os">
+            <div class="subject-heading">Operating System (OS)</div>
+            <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+              <tr><td class="year-tag">2022</td><td><a href="https://drive.google.com/file/d/1kA2PcqwsIQmUnofEHqpOplz0lf63CbAR/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            </tbody></table>
+          </div>
+          <div class="subject-block" id="mca2-dbms">
+            <div class="subject-heading">Database Management System (DBMS)</div>
+            <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+              <tr><td class="year-tag">2023</td><td><a href="https://drive.google.com/file/d/115KczwejqYZSEzkLQxRCis1p2qdPb-by/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              <tr><td class="year-tag">2022</td><td><a href="https://drive.google.com/file/d/1g4GQ5tUSocR7MXr5dCezOb-f-ppqazT1/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              <tr><td class="year-tag">2021</td><td><a href="https://drive.google.com/file/d/1VeueGbcv2Kfzicr08AFLtznLovXw71Uu/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            </tbody></table>
+          </div>
+          <div class="subject-block" id="mca2-dsa">
+            <div class="subject-heading">Data Structures & Analysis of Algorithms (DSA)</div>
+            <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+              <tr><td class="year-tag">2024</td><td><a href="https://drive.google.com/file/d/1i07uL6cJ4rc5Vw8gx4qD8M0MfBzOlBgQ/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+              <tr><td class="year-tag">2022</td><td><a href="https://drive.google.com/file/d/116fBFYaG4HLWxQEpKDquThtZewM-HsCC/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            </tbody></table>
+          </div>
+        </div>
+      </div>
+    </div><!-- /aktu-mca -->
+  </div><!-- /aktu panel -->
+
+  <!-- ══ DBRAU PANEL ══ -->
+  <div class="uni-panel" id="panel-dbrau">
+    <div class="info-box">
+      <p><strong>Dr. Bhim Rao Ambedkar University (DBRAU)</strong> — BCA program papers organized semester-wise from 1st to 5th semester. Includes subject-wise year collections.</p>
+    </div>
+
+    <div class="sem-card">
+      <div class="sem-header" onclick="toggleSem(this)">
+        <div class="sem-header-left"><div class="sem-number">S1</div><div><div class="sem-title">BCA 1st Semester</div><div class="sem-sub">C, HTML, Maths-I, Business Communication</div></div></div>
+        <div class="sem-chevron">▼</div>
+      </div>
+      <div class="sem-body">
+        <div class="subject-block"><div class="subject-heading">C Programming</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2012–2024</td><td><a href="https://drive.google.com/file/d/1AlLrUMH2QZRQcrRifrxkF_HjCSsG06di/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View 2012</a> &nbsp;<a href="https://drive.google.com/file/d/1t5ZH4I9LITLLzYaaRdrpXKvyAmKho-Sy/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View 2024</a> &nbsp;<a href="https://drive.google.com/file/d/1yHysWtD-qUtt-1AwGKcwqB9yPQcZYzH-/view?usp=drive_link" target="_blank" class="paper-btn btn-mcq">📝 MCQ</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block"><div class="subject-heading">HTML</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2019–2024</td><td><a href="https://drive.google.com/file/d/1VJqRDIw7niE87RJtxUObyPzFopmQhf7f/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View 2019</a> &nbsp;<a href="https://drive.google.com/file/d/1ItATBcKrg4QydiFmpUNUVdKu1c8Amlta/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View 2024</a> &nbsp;<a href="https://drive.google.com/file/d/1Fot61HCAzmLZFMR0SPJl7e3kFbQ0Jle9/view?usp=drive_link" target="_blank" class="paper-btn btn-mcq">📝 MCQ</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block"><div class="subject-heading">Mathematics-I</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2012–2024</td><td><a href="https://drive.google.com/file/d/1QMaLeP6hFzKsoHaOivo1-tHXUlOdihh-/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 2012</a> &nbsp;<a href="https://drive.google.com/file/d/1sgB62e5vGuXdPlBo94gVICky1IEF1pzM/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 2024</a> &nbsp;<a href="https://drive.google.com/file/d/1DzaPBAiEg4pxvB9DBM-HLTLjRxCCPpx2/view?usp=drive_link" target="_blank" class="paper-btn btn-mcq">📝 MCQ</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block"><div class="subject-heading">Business Communication (BC)</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2016–2024</td><td><a href="https://drive.google.com/file/d/1rQ273JCELl7EokXjz-xJDCjTINiK8UUA/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 2016</a> &nbsp;<a href="https://drive.google.com/file/d/1Xa3szQ47kbzm6ZzeGWe84y8C20ga78j5/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 2024</a></td></tr>
+          </tbody></table>
+        </div>
+      </div>
+    </div>
+
+    <div class="sem-card">
+      <div class="sem-header" onclick="toggleSem(this)">
+        <div class="sem-header-left"><div class="sem-number">S2</div><div><div class="sem-title">BCA 2nd Semester</div><div class="sem-sub">C++, DSA, Numerical Methods, Digital Electronics</div></div></div>
+        <div class="sem-chevron">▼</div>
+      </div>
+      <div class="sem-body">
+        <div class="subject-block"><div class="subject-heading">C++ Programming</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2015</td><td><a href="https://drive.google.com/file/d/1oiv7M-yPMHVvk0Pg-hlFxPUoBQG2eA2M/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2018</td><td><a href="https://drive.google.com/file/d/1Ub6npAg3bL-owUJgwfhoaV0oKmqgpMGD/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2022</td><td><a href="https://drive.google.com/file/d/1ZclZ_BX2LI0p9ADI0tx_96BNcE91VvAuF/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2023</td><td><a href="https://drive.google.com/file/d/1bbUYBiU-gSLx5Ur0x1y91H8m85ALzE1e/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block"><div class="subject-heading">Data Structures & Algorithms (DSA)</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2015</td><td><a href="https://drive.google.com/file/d/1BUF7j7mMxXMYypOqgagPpVeiwO5AtMgr/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2024</td><td><a href="https://drive.google.com/file/d/1s7uQk1x8BvIFm5jT-g_w9J8t79afmgf1/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block"><div class="subject-heading">Numerical Methods (NM)</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2018</td><td><a href="https://drive.google.com/file/d/1nHXRn05F4KTQXZGCA6CyOB2UnTw8__jG/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2024</td><td><a href="https://drive.google.com/file/d/1-72_hO4J-uupNJU0Lb4RvhY_mWchCD2t/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block"><div class="subject-heading">Digital Electronics (DE)</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2014</td><td><a href="https://drive.google.com/file/d/12_0IvOvBtn9fkzOL0cNWEUc1dSYCJOud/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2023</td><td><a href="https://drive.google.com/file/d/1zy9na7ZC5hxkUqS7sOK5bb_aaul8bOCZ/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+          </tbody></table>
+        </div>
+      </div>
+    </div>
+
+    <div class="sem-card">
+      <div class="sem-header" onclick="toggleSem(this)">
+        <div class="sem-header-left"><div class="sem-number">S3</div><div><div class="sem-title">BCA 3rd Semester</div><div class="sem-sub">DBMS, E-Commerce, OS, COA, Statistics</div></div></div>
+        <div class="sem-chevron">▼</div>
+      </div>
+      <div class="sem-body">
+        <div class="subject-block"><div class="subject-heading">Database Management System (DBMS)</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2015–2024</td><td><a href="https://drive.google.com/file/d/1wNghCbZOu-KkxLyC43rQUVKImmCWMsAL/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 2015</a> &nbsp;<a href="https://drive.google.com/file/d/1EfSQhjOBivHmrTc0BJmRc5CJ6DW7ZQyk/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 2024</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block"><div class="subject-heading">E-Commerce</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2015–2023</td><td><a href="https://drive.google.com/file/d/10mW-znQ2f390qxavjntjyN_p2D6zAkVD/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 2015</a> &nbsp;<a href="https://drive.google.com/file/d/1RqVGwM-dF5x5d-3gZDA8Tf4zwCQZE2VU/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 2023</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block"><div class="subject-heading">Operating System (OS)</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2018–2023</td><td><a href="https://drive.google.com/file/d/1VEPoRWbr-xURQHYzSa1y5-9yiIHjwHk_/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 2018</a> &nbsp;<a href="https://drive.google.com/file/d/1MatFojV50i1GnyPgMmupqYFB17pVQlvL/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 2023</a></td></tr>
+          </tbody></table>
+        </div>
+      </div>
+    </div>
+
+    <div class="sem-card">
+      <div class="sem-header" onclick="toggleSem(this)">
+        <div class="sem-header-left"><div class="sem-number">S4</div><div><div class="sem-title">BCA 4th Semester</div><div class="sem-sub">PHP, Java, AI, Computer Networks, OT</div></div></div>
+        <div class="sem-chevron">▼</div>
+      </div>
+      <div class="sem-body">
+        <div class="subject-block"><div class="subject-heading">PHP</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2022</td><td><a href="https://drive.google.com/file/d/15hHRHcjR9AdI0TlRGNOKe_PlnILEV1ZL/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2023</td><td><a href="https://drive.google.com/file/d/15j72IAMjGJT4PI4I5oJVpen-v1nn3qS5/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2024</td><td><a href="https://drive.google.com/file/d/1ccrhBBvbKrbVMRSfzMsW-rBKdkdYPpHR/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a> &nbsp;<a href="https://drive.google.com/file/d/15f0pzQLoy5rmV8zhme8sDYLWuZEypUBu/view?usp=drive_link" target="_blank" class="paper-btn btn-mcq">📝 MCQ</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block"><div class="subject-heading">Java</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2022</td><td><a href="https://drive.google.com/file/d/17GfWGaGQZvumUsaBs1_JormJ5mqUc_Xd/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2023</td><td><a href="https://drive.google.com/file/d/17Ih5Gi9YZL2JSUEDsWdtDL2ywfxJpUyD/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2024</td><td><a href="https://drive.google.com/file/d/1QJy5O2H4HJpi0_eK8uFMLFdcZlWd2WsF/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a> &nbsp;<a href="https://drive.google.com/file/d/16C0RJ3HUdvSQZaWEUGZlrqt5u4AcqVrs/view?usp=drive_link" target="_blank" class="paper-btn btn-mcq">📝 MCQ</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block"><div class="subject-heading">Artificial Intelligence (AI)</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2022</td><td><a href="https://drive.google.com/file/d/15Hh5GsrqHB0EjFCpsmX8YEnQFq3kheiR/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2023</td><td><a href="https://drive.google.com/file/d/1Jc4WLXp-kKaZ6obH2kTqyC1XDnd-t4rR/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2024</td><td><a href="https://drive.google.com/file/d/1rmVp705KriHqh3BGfV3VyJdqDAZoKVWu/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a> &nbsp;<a href="https://drive.google.com/file/d/12hG8kF2h972ywOoJJ_2bI-iKM0M97w1-/view?usp=sharing" target="_blank" class="paper-btn btn-mcq">📝 MCQ</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block"><div class="subject-heading">Computer Networks (CN)</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2022</td><td><a href="https://drive.google.com/file/d/1j8PpmYtM-XSH8UQ5AUS57QsJeMgGS2yq/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2024</td><td><a href="https://drive.google.com/file/d/1NDHH7g2Bc-FOOjwKt48IFUoNpkhnJELt/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a> &nbsp;<a href="https://drive.google.com/file/d/14iKsDTJ-wky1YR3NARHbNH8DAKGRDW5/view?usp=drive_link" target="_blank" class="paper-btn btn-mcq">📝 MCQ</a></td></tr>
+          </tbody></table>
+        </div>
+      </div>
+    </div>
+
+    <div class="sem-card">
+      <div class="sem-header" onclick="toggleSem(this)">
+        <div class="sem-header-left"><div class="sem-number">S5</div><div><div class="sem-title">BCA 5th Semester</div><div class="sem-sub">CG, SAD, Network Security, VB.Net, DAA</div></div></div>
+        <div class="sem-chevron">▼</div>
+      </div>
+      <div class="sem-body">
+        <div class="subject-block"><div class="subject-heading">Computer Graphics (CG)</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2022</td><td><a href="https://drive.google.com/file/d/1Ph5lR9QA52yuyn8Mnai7rZb0QqBnPwWs/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2023</td><td><a href="https://drive.google.com/file/d/1D_V6rLlp1p0R42xmEYX7Cx-YW2Q3XrRn/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2024</td><td><a href="https://drive.google.com/file/d/1-Ce-v3cIBdLlBcnin4iFV3CPOhgx3_c7/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block"><div class="subject-heading">Security Analysis & Design (SAD)</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2021</td><td><a href="https://drive.google.com/file/d/18Uh4ldK4R-Q3Dl53IiWaCG45yjDjbQ5y/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2024</td><td><a href="https://drive.google.com/file/d/1RaHy0EYJ-f52NBM2VC0rZo9poQk3ky02/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a> &nbsp;<a href="https://drive.google.com/file/d/1lkgxZlzmIg-UwM-T9KfHx94Pm_7_bB/view?usp=sharing" target="_blank" class="paper-btn btn-mcq">📝 MCQ</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block"><div class="subject-heading">Network Security (NS)</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2019</td><td><a href="https://drive.google.com/file/d/1hMGZQhzoSIn_8ON0cDESUGzNWW-IhbF_/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2024</td><td><a href="https://drive.google.com/file/d/1Z1jbHould_kkvXDxaXUccm5pYVz1Rde_/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a> &nbsp;<a href="https://drive.google.com/file/d/1Ehk-K-kdc_PMVzSyB606ZO2rthcxqMg2/view?usp=sharing" target="_blank" class="paper-btn btn-mcq">📝 MCQ</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block"><div class="subject-heading">Visual Basic .NET (VB.Net)</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2022</td><td><a href="https://drive.google.com/file/d/1NPy1B2pPM330dpbN8avN5FJoqdVnu_bP/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2024</td><td><a href="https://drive.google.com/file/d/1DytTBP-woTSfE5W8oj7lsyL3Vo0mBuul/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a> &nbsp;<a href="https://drive.google.com/file/d/1aO61dyihqEEfZSjZ-97rwX49fl0Xhrdd/view?usp=sharing" target="_blank" class="paper-btn btn-mcq">📝 MCQ</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block"><div class="subject-heading">Design & Analysis of Algorithms (DAA)</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2021</td><td><a href="https://drive.google.com/file/d/1S8GhQih6zFeaDlbwQQ9cmnJFLdZ8j5oC/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2024</td><td><a href="https://drive.google.com/file/d/1VQnl_CHSyG08fx-QJ2WyliflE7NnMJq3/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a> &nbsp;<a href="https://drive.google.com/file/d/1cY7U8ZEtcetDdVxvQeaVL06tFfYxjViI/view?usp=sharing" target="_blank" class="paper-btn btn-mcq">📝 MCQ</a></td></tr>
+          </tbody></table>
+        </div>
+      </div>
+    </div>
+  </div><!-- /dbrau panel -->
+
+  <!-- ══ CCSU PANEL ══ -->
+  <div class="uni-panel" id="panel-ccsu">
+    <div class="info-box">
+      <p><strong>Chaudhary Charan Singh University (CCSU)</strong> — BCA 1st semester papers including Programming, Computer Fundamentals, Mathematics, Business Communication, and Principle of Management.</p>
+    </div>
+    <div class="sem-card">
+      <div class="sem-header" onclick="toggleSem(this)">
+        <div class="sem-header-left"><div class="sem-number">S1</div><div><div class="sem-title">BCA 1st Semester</div><div class="sem-sub">PPA, FOC, Maths, BC, POM</div></div></div>
+        <div class="sem-chevron">▼</div>
+      </div>
+      <div class="sem-body">
+        <div class="subject-block"><div class="subject-heading">Programming Principle & Algorithm (PPA)</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2020</td><td><a href="https://drive.google.com/file/d/1gNR3hLqPpgAy0q0NmYYgJzJDUcnPUR7E/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2023</td><td><a href="https://drive.google.com/file/d/1yH9HKvlE3cM1YLAzFyrrawPdtfsn-DGc/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a> &nbsp;<a href="https://drive.google.com/file/d/1yHysWtD-qUtt-1AwGKcwqB9yPQcZYzH-/view?usp=drive_link" target="_blank" class="paper-btn btn-mcq">📝 MCQ</a> &nbsp;<a href="https://drive.google.com/file/d/140tumJWwESKV0PsOTFKrnrPSI-URlyVJ/view?usp=drive_link" target="_blank" class="paper-btn btn-mcq">📝 Pattern Q</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block"><div class="subject-heading">Computer Fundamental & Office Automation (FOC)</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2020</td><td><a href="https://drive.google.com/file/d/1DTfxwaKNjVauTWyW22V0GCZAQeMvmYs4/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2021</td><td><a href="https://drive.google.com/file/d/1BHxF6lK7Rain5aWwEAhgjdjO6vtSDdMQ/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2022</td><td><a href="https://drive.google.com/file/d/105ZIC-hwCkjtUybkdggXEbASquZUWRnR/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2023</td><td><a href="https://drive.google.com/file/d/1Z2K7fdWo6MSv4mZfILoeK9PT_GO0M78h/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block"><div class="subject-heading">Mathematics</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2021</td><td><a href="https://drive.google.com/file/d/1GKd72pVMLP8aJGF2puGCkU48N8Nj1tbJ/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2022</td><td><a href="https://drive.google.com/file/d/1PC2yuMavwti501BeXX4L_0nc98Cmj-6I/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2023</td><td><a href="https://drive.google.com/file/d/1tXcRO0X5gOTfX-PJWR0gBf5RhX6-R4c2/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block"><div class="subject-heading">Business Communication</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2020</td><td><a href="https://drive.google.com/file/d/1lZGRPzk3mz0n7beUCFKm6_b-rrArsNHi/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2022</td><td><a href="https://drive.google.com/file/d/16Yx5Bsyq8XzZ_BIbbyKOzImvDtFx1344/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2023</td><td><a href="https://drive.google.com/file/d/1ViMJRLxD391td2gqywEDxBqWU8PDTEle/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block"><div class="subject-heading">Principle of Management (POM)</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2020</td><td><a href="https://drive.google.com/file/d/1LW-ZajHtJ97cl6fda1v_5R7kIMFrLj/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2021</td><td><a href="https://drive.google.com/file/d/1qlhVjSrZCWLn0o7OJBtXpRTeLnaYH1eb/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2023</td><td><a href="https://drive.google.com/file/d/1o7gxyeQ_ts2kI2ul79HImlNChr-TiOYC/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+          </tbody></table>
+        </div>
+      </div>
+    </div>
+  </div><!-- /ccsu panel -->
+
+  <!-- ══ CSJMU PANEL ══ -->
+  <div class="uni-panel" id="panel-csjmu">
+    <div class="info-box">
+      <p><strong>Chhatrapati Shahu Ji Maharaj University (CSJMU)</strong> — BCA complete previous year paper collection organized subject-wise for easy access.</p>
+    </div>
+    <div class="sem-card">
+      <div class="sem-header" onclick="toggleSem(this)">
+        <div class="sem-header-left"><div class="sem-number">📚</div><div><div class="sem-title">BCA — All Subjects</div><div class="sem-sub">C, C++, Python, Java, DBMS, OS, Networks & more</div></div></div>
+        <div class="sem-chevron">▼</div>
+      </div>
+      <div class="sem-body">
+        <div class="subject-jumps"><h4>📌 Quick Jump</h4><div class="jump-links">
+          <a href="#csjmu-c" class="jump-link">C Programming</a>
+          <a href="#csjmu-cpp" class="jump-link">C++</a>
+          <a href="#csjmu-python" class="jump-link">Python</a>
+          <a href="#csjmu-java" class="jump-link">Java</a>
+          <a href="#csjmu-dbms" class="jump-link">DBMS</a>
+          <a href="#csjmu-os" class="jump-link">OS</a>
+          <a href="#csjmu-cn" class="jump-link">Networks</a>
+          <a href="#csjmu-dsa" class="jump-link">DSA</a>
+        </div></div>
+
+        <div class="subject-block" id="csjmu-c"><div class="subject-heading">C Programming</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2019</td><td><a href="https://drive.google.com/file/d/1MVEv_Egm8y3odrBi9FBcQ14VbN8fOnLE/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2021</td><td><a href="https://drive.google.com/file/d/1ox5Aazs9E7DVQ_9VsD7xuZ6n6Ybj_RCv/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2023</td><td><a href="https://drive.google.com/file/d/1mpjMajDsOGFtjh1zyqdd8R8QDyYm8hE5/view?usp=sharing" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block" id="csjmu-cpp"><div class="subject-heading">C++ Programming</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Note</th></tr></thead><tbody>
+            <tr><td>2019–2022</td><td style="color:var(--text-light); font-size:0.85rem;">Papers coming soon</td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block" id="csjmu-python"><div class="subject-heading">Python</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2022</td><td><a href="https://drive.google.com/file/d/1yuvR9Pd7u96-_tAwsAraLflRME33T7Wb/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2023</td><td><a href="https://drive.google.com/file/d/1_5ZW-UXkoBl3sz6g8q7w3_2ZjHC-G0qg/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block" id="csjmu-java"><div class="subject-heading">Java</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2019</td><td><a href="https://drive.google.com/file/d/1n98iKCIhIxdN_jahsNPNZnm_uO1Sn1Qd/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2022</td><td><a href="https://drive.google.com/file/d/1fX4aTdbckedP6LkiIksLskEAHLID3SLk/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2023</td><td><a href="https://drive.google.com/file/d/1ooqkCv2U-7OHDLWIMUhX1vW5wGYFMsNg/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block" id="csjmu-dbms"><div class="subject-heading">Database Management System (DBMS)</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2019</td><td><a href="https://drive.google.com/file/d/1bSlJlWtNdqYv4PI51okzyQXF5tWOYncX/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2022</td><td><a href="https://drive.google.com/file/d/1ujAfmhFOimRAcHRy8yQXF5tWOYncX/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block" id="csjmu-os"><div class="subject-heading">Operating System (OS)</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2019</td><td><a href="https://drive.google.com/file/d/1fnY7vRmYqzqF2db1fP_P5uQIzQbdevHm/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2022</td><td><a href="https://drive.google.com/file/d/1pBoSKLqLR0bUw7YQEey4UoL-8LBdsY6R/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block" id="csjmu-cn"><div class="subject-heading">Computer Networks (CN)</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2019</td><td><a href="https://drive.google.com/file/d/1LrM7XHRX4xhKcuABIwEyd68qKdWCyESf/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2022</td><td><a href="https://drive.google.com/file/d/1Xm7mvmB__bqrZtwpKda9yqMeshKE1sPh/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2023</td><td><a href="https://drive.google.com/file/d/1y9NGZu5EHwDvjVm2MXGzNQae6OzSpe21/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+          </tbody></table>
+        </div>
+        <div class="subject-block" id="csjmu-dsa"><div class="subject-heading">Data Structures (DSA)</div>
+          <table class="paper-table"><thead><tr><th>Year</th><th>Actions</th></tr></thead><tbody>
+            <tr><td>2021</td><td><a href="https://drive.google.com/file/d/1xc_BXUPuknzPnHkTzJhNks7z3ILT-JAz/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+            <tr><td>2022</td><td><a href="https://drive.google.com/file/d/1FwOrRJQj8cN0LhMolFMZsXA6vUNYLUWc/view?usp=drive_link" target="_blank" class="paper-btn btn-view">📄 View</a></td></tr>
+          </tbody></table>
+        </div>
+      </div>
+    </div>
+  </div><!-- /csjmu panel -->
+</section>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section class="section" style="padding-top:0;">
+  <h2 class="section-title">Frequently Asked Questions</h2>
+  <p class="section-sub">Common questions about these resources.</p>
+  <div class="faq-grid">
+    <div class="faq-card"><div class="faq-q">Are these official question papers?</div><div class="faq-a">These papers are shared for educational and reference purposes to help students in preparation.</div></div>
+    <div class="faq-card"><div class="faq-q">Do university exams repeat questions?</div><div class="faq-a">While exact questions may not repeat, similar patterns and topics are often seen across years.</div></div>
+    <div class="faq-card"><div class="faq-q">Should I rely only on previous papers?</div><div class="faq-a">No. Previous papers should be used along with proper study of syllabus and notes.</div></div>
+    <div class="faq-card"><div class="faq-q">How many papers should I solve?</div><div class="faq-a">Solving at least 3–5 previous year papers per subject is recommended for best results.</div></div>
+    <div class="faq-card"><div class="faq-q">Are MBA question papers repeated in AKTU?</div><div class="faq-a">Exact questions may not repeat, but similar concepts and patterns often appear each year.</div></div>
+    <div class="faq-card"><div class="faq-q">Is this service free?</div><div class="faq-a">Yes! All papers on SabkaCode are completely free for educational purposes.</div></div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<div id="footer"></div>
+  <script src="/script.js"></script>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+
+  function switchUni(id) {
+    document.querySelectorAll('.uni-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.uni-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.uni-tab').forEach(t => {
+      if (t.getAttribute('onclick').includes(id)) t.classList.add('active');
+    });
+    document.getElementById('panel-' + id).classList.add('active');
+    window.scrollTo({ top: document.querySelector('.uni-section').offsetTop - 80, behavior: 'smooth' });
+  }
+
+  function switchCourse(uni, course) {
+    document.querySelectorAll('#panel-' + uni + ' .course-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('#panel-' + uni + ' .course-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('#panel-' + uni + ' .course-tab').forEach(t => {
+      if (t.getAttribute('onclick').includes(course)) t.classList.add('active');
+    });
+    document.getElementById(uni + '-' + course).classList.add('active');
+  }
+
+  function toggleSem(header) {
+    const body = header.nextElementSibling;
+    const isOpen = body.classList.contains('open');
+    body.classList.toggle('open');
+    header.classList.toggle('open');
+  }
+</script>
+</body>
+</html>
